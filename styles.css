@@ -78,6 +78,7 @@ h2 { font-size: clamp(29px, 3vw, 38px); line-height: 1.5; font-weight: 700; lett
 .game-art { background: #eae0d1; color: #5c4635; }
 .paper-art { background: #e0e5db; color: #435541; }
 .project-info { padding: 24px 2px 0; }
+.download-button { max-width: 100%; gap: 12px; margin: 8px 0 12px; padding: 14px 16px; font-size: 12px; }
 .project-category { min-height: 22px; display: flex; gap: 10px; align-items: center; font-size: 9px; letter-spacing: .06em; color: var(--muted); }
 .project-status { padding: 3px 7px; border: 1px solid #c8cebd; border-radius: 4px; font-size: 9px; line-height: 1.3; }
 .project h3 { font-size: 25px; font-weight: 650; letter-spacing: -.04em; margin: 10px 0 12px; }
