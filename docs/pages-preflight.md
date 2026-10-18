@@ -125,6 +125,10 @@ GitHub 도메인 소유권 인증을 완료했으며, `_github-pages-challenge-f
 도메인 이전은 의도한 리디렉션이므로, 검사기는 호스트만 바뀌고 경로·정책 본문이 보존됐는지 확인합니다.
 다른 경로나 다른 사이트로의 이동은 계속 오류로 처리합니다.
 
+루트 도메인과 `www`의 GitHub Pages 인증서 발급을 확인했습니다. 회사 홈페이지,
+`reel-nest`, `heavenlydemonreborn` 저장소 모두 **Enforce HTTPS**를 적용했습니다.
+정책 본문과 app-ads.txt 게시자 코드는 도메인 연결 전과 동일하게 유지합니다.
+
 도메인 연결 직전 기준 보고서는 `.preview/domain-setup-20261018/baseline.json`입니다.
 연결 후에는 다음 명령으로 새 도메인, 기존 GitHub 주소, www 및 HTTP 변형을 검사합니다.
 

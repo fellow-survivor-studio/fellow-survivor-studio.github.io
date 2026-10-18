@@ -3,7 +3,7 @@
 펠로우서바이버스튜디오의 회사 소개 및 프로덕트 웹사이트입니다.
 HTML과 CSS로 구성하며, 별도의 빌드·패키지 설치·JavaScript 없이 실행됩니다. 본문 웹폰트는 로컬 파일로 제공합니다.
 
-- [공식 웹사이트](https://fellow-survivor-studio.github.io/)
+- [공식 웹사이트](https://fellowsurvivor.com/)
 - [GitHub 저장소](https://github.com/fellow-survivor-studio/fellow-survivor-studio.github.io)
 - [Reel Nest Google Play](https://play.google.com/store/apps/details?id=studio.fellowsurvivor.reelnest)
 
@@ -22,13 +22,13 @@ Reel Nest 목록에서는 설명 바로 아래에 자세히 보기 링크를 배
 ### 별도로 운영하는 정책·지원 페이지
 
 아래 주소는 이 저장소의 제품 소개 페이지와 별도로 운영합니다.
-기존 주소를 유지하고, 필요한 곳에서 전체 URL로 연결합니다.
+기존 경로를 유지하고, 필요한 곳에서 전체 URL로 연결합니다. 이전 `github.io` 주소도 같은 경로의 새 도메인으로 이동합니다.
 
 | 페이지 | 주소 |
 | --- | --- |
-| Reel Nest 개인정보처리방침 | [정책 페이지](https://fellow-survivor-studio.github.io/reel-nest/) |
-| Reel Nest 이용약관 | [이용약관](https://fellow-survivor-studio.github.io/reel-nest/terms/) |
-| 환생천마 정책 및 고객지원 | [정책·지원 페이지](https://fellow-survivor-studio.github.io/heavenlydemonreborn/) |
+| Reel Nest 개인정보처리방침 | [정책 페이지](https://fellowsurvivor.com/reel-nest/) |
+| Reel Nest 이용약관 | [이용약관](https://fellowsurvivor.com/reel-nest/terms/) |
+| 환생천마 정책 및 고객지원 | [정책·지원 페이지](https://fellowsurvivor.com/heavenlydemonreborn/) |
 | Paper Markdown for Windows | [제품 저장소](https://github.com/fellow-survivor-studio/paper-markdown-for-windows) |
 
 Reel Nest 소개는 `/products/reel-nest/`, 개인정보처리방침은 `/reel-nest/`입니다.
@@ -175,6 +175,7 @@ Cloudflare는 DNS를 관리하고, 실제 정적 호스팅과 자동 배포는 �
 루트 A/AAAA 레코드는 GitHub Pages 주소를, `www` CNAME은 `fellow-survivor-studio.github.io`를 가리키며 DNS only로 설정합니다.
 기존 `github.io` 주소와 `www`·HTTP 주소가 대표 HTTPS 도메인의 동일한 경로로 이동하는지도 배포 후 검사합니다.
 GitHub 계정의 도메인 소유권 인증도 완료했습니다. Cloudflare의 `_github-pages-challenge-fellow-survivor-studio` TXT 레코드는 인증 유지용이므로 삭제하지 않습니다.
+루트와 `www`의 HTTPS 인증서가 발급되었으며, 회사 홈페이지와 두 정책 저장소 모두 **Enforce HTTPS**를 켰습니다.
 
 1. 로컬에서 세 페이지와 연결 경로를 확인합니다.
 2. 배포할 소스와 에셋을 검토해 커밋하고 `main`에 푸시합니다. 로컬 `.preview/` 작업 파일은 제외합니다.
