@@ -174,6 +174,7 @@ GitHub Pages 설정은 **Settings → Pages → Deploy from a branch → main �
 Cloudflare는 DNS를 관리하고, 실제 정적 호스팅과 자동 배포는 기존 GitHub Pages가 담당합니다.
 루트 A/AAAA 레코드는 GitHub Pages 주소를, `www` CNAME은 `fellow-survivor-studio.github.io`를 가리키며 DNS only로 설정합니다.
 기존 `github.io` 주소와 `www`·HTTP 주소가 대표 HTTPS 도메인의 동일한 경로로 이동하는지도 배포 후 검사합니다.
+GitHub 계정의 도메인 소유권 인증도 완료했습니다. Cloudflare의 `_github-pages-challenge-fellow-survivor-studio` TXT 레코드는 인증 유지용이므로 삭제하지 않습니다.
 
 1. 로컬에서 세 페이지와 연결 경로를 확인합니다.
 2. 배포할 소스와 에셋을 검토해 커밋하고 `main`에 푸시합니다. 로컬 `.preview/` 작업 파일은 제외합니다.

@@ -49,7 +49,7 @@ def digest(data):
 def deployment_bytes(name):
     data = (ROOT / name).read_bytes()
     # Git core.autocrlf=true checks out CRLF on Windows, but commits LF.
-    if Path(name).suffix in (".html", ".css", ".svg", ".txt"):
+    if name == "CNAME" or Path(name).suffix in (".html", ".css", ".svg", ".txt"):
         data = data.replace(b"\r\n", b"\n")
     return data
 

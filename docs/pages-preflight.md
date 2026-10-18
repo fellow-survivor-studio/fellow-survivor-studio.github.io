@@ -117,6 +117,7 @@ python -X utf8 scripts/check-pages.py --after-deploy --compare .preview/pages-pr
 기존 공개 저장소와 GitHub Pages 자동 배포를 유지하고 `fellowsurvivor.com`을 대표 도메인으로 사용합니다.
 Cloudflare DNS의 루트 A 4개, AAAA 4개는 GitHub Pages 주소를 가리키며,
 `www` CNAME은 `fellow-survivor-studio.github.io`를 가리킵니다. 프록시는 DNS only입니다.
+GitHub 도메인 소유권 인증을 완료했으며, `_github-pages-challenge-fellow-survivor-studio` TXT 레코드는 유지합니다.
 `CNAME` 파일, 세 페이지의 canonical/OG URL, Reel Nest 정책 링크를 대표 도메인에 맞춥니다.
 
 `/reel-nest/`와 `/heavenlydemonreborn/`은 기존 별도 저장소에서 계속 제공합니다.
