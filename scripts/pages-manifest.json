@@ -1,9 +1,11 @@
 {
-  "base_url": "https://fellow-survivor-studio.github.io/",
+  "base_url": "https://fellowsurvivor.com/",
+  "legacy_base_urls": ["https://fellow-survivor-studio.github.io/"],
+  "domain_aliases": ["https://www.fellowsurvivor.com/", "http://fellowsurvivor.com/", "http://www.fellowsurvivor.com/"],
   "source_commit": "6f067dcc9c9034c3312c56625ee8373f3ebcf7bf",
   "pages": ["/", "/products/", "/products/reel-nest/"],
   "files": [
-    ".nojekyll", "app-ads.txt", "googleabe82689611d6157.html",
+    ".nojekyll", "CNAME", "app-ads.txt", "googleabe82689611d6157.html",
     "index.html", "favicon.svg", "styles.css", "home.css", "product.css", "reel-nest.css",
     "products/index.html", "products/reel-nest/index.html",
     "assets/fonts/Pretendard-Regular.woff2", "assets/fonts/Pretendard-LICENSE.txt",

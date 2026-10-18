@@ -170,10 +170,15 @@ Reel Nest의 기능, Android 요구사항, 무료·Pro 조건은
 
 GitHub Pages 설정은 **Settings → Pages → Deploy from a branch → main → / (root)**를 사용합니다.
 
+대표 도메인은 `https://fellowsurvivor.com/`이며 루트 `CNAME` 파일에 호스트명을 유지합니다.
+Cloudflare는 DNS를 관리하고, 실제 정적 호스팅과 자동 배포는 기존 GitHub Pages가 담당합니다.
+루트 A/AAAA 레코드는 GitHub Pages 주소를, `www` CNAME은 `fellow-survivor-studio.github.io`를 가리키며 DNS only로 설정합니다.
+기존 `github.io` 주소와 `www`·HTTP 주소가 대표 HTTPS 도메인의 동일한 경로로 이동하는지도 배포 후 검사합니다.
+
 1. 로컬에서 세 페이지와 연결 경로를 확인합니다.
 2. 배포할 소스와 에셋을 검토해 커밋하고 `main`에 푸시합니다. 로컬 `.preview/` 작업 파일은 제외합니다.
 3. GitHub Actions의 **pages build and deployment** 완료 여부를 확인합니다.
-4. [공식 웹사이트](https://fellow-survivor-studio.github.io/)에서 변경된 페이지와 이미지가 표시되는지 확인합니다.
+4. [공식 웹사이트](https://fellowsurvivor.com/)에서 변경된 페이지와 이미지가 표시되는지 확인합니다.
 
 로컬 미리보기의 변경은 `main`에 푸시하고 Pages 배포가 완료되어야 공개 사이트에 반영됩니다.
 

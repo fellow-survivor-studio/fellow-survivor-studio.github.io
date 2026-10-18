@@ -72,8 +72,8 @@ def git(*args):
     return subprocess.check_output(["git", *args], cwd=ROOT).decode("utf-8")
 
 
-def fetch(path):
-    url = urljoin(BASE, path)
+def fetch(path, base=BASE):
+    url = urljoin(base, path)
     result = {"path": path, "url": url}
     try:
         with urlopen(Request(url, headers={"User-Agent": "FellowSurvivor-Pages-Preflight/1"}), timeout=20) as response:
@@ -81,8 +81,8 @@ def fetch(path):
             result.update(status=response.status, final_url=response.url,
                           content_type=response.headers.get_content_type(), sha256=digest(body))
         issues = []
-        if result["status"] != 200 or result["final_url"] != url:
-            issues.append("Expected HTTP 200 at the original URL, without redirect")
+        if result["status"] != 200 or result["final_url"] != urljoin(BASE, path):
+            issues.append("Expected HTTP 200 at the canonical HTTPS URL with the same path")
         if path.endswith("/"):
             text = body.decode("utf-8")
             doc = Document(text)
@@ -109,7 +109,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--online", action="store_true", help="Check the existing 40 public URLs")
     parser.add_argument("--require-index", action="store_true", help="Require every deployment file staged or committed")
-    parser.add_argument("--after-deploy", action="store_true", help="Also compare all live deployment files to local bytes")
+    parser.add_argument("--after-deploy", action="store_true", help="Compare deployed files and check legacy/alias redirects")
     parser.add_argument("--compare", type=Path, help="Compare preserved live content to an earlier JSON report")
     parser.add_argument("--report", type=Path, help="Write a JSON report (use .preview/ to avoid publishing it)")
     args = parser.parse_args()
@@ -131,7 +131,10 @@ def main():
     for prefix in CONFIG["reserved_prefixes"]:
         if (ROOT / prefix).exists() or (ROOT / (prefix + ".html")).exists():
             errors.append(f"Project-site path collision: /{prefix}/")
-    for name in ("CNAME", "robots.txt", "404.html", "_config.yml"):
+    cname = ROOT / "CNAME"
+    if not cname.is_file() or cname.read_text(encoding="utf-8").strip() != urlsplit(BASE).hostname:
+        errors.append("CNAME must contain only the configured canonical hostname")
+    for name in ("robots.txt", "404.html", "_config.yml"):
         if (ROOT / name).exists():
             errors.append(f"New routing/crawling configuration needs review: {name}")
     ref_count = 0
@@ -188,7 +191,7 @@ def main():
         message = f"{len(pending)} files need explicit staging before deployment"
         (errors if args.require_index else notes).append(message)
 
-    results = []
+    results, redirect_results = [], []
     if args.online or args.after_deploy:
         targets = live | ({"/" + name for name in files} | set(CONFIG["pages"]) if args.after_deploy else set())
         with ThreadPoolExecutor(max_workers=4) as pool:
@@ -212,18 +215,31 @@ def main():
                     before = previous.get(row["path"])
                     if not before or before.get("sha256") != row.get("sha256"):
                         errors.append(f"Preserved live content changed since baseline: {row['path']}")
+        if args.after_deploy:
+            redirects = [(origin, path) for origin in CONFIG.get("legacy_base_urls", [])
+                         for path in sorted(live | set(CONFIG["pages"]))]
+            redirects += [(origin, path) for origin in CONFIG.get("domain_aliases", [])
+                          for path in ("/", "/app-ads.txt", "/reel-nest/terms/")]
+            with ThreadPoolExecutor(max_workers=4) as pool:
+                redirect_results = list(pool.map(lambda target: fetch(target[1], target[0]), redirects))
+            canonical = {row["path"]: row for row in results}
+            for row in redirect_results:
+                errors.extend(f"{row['url']}: {issue}" for issue in row["errors"])
+                if row.get("sha256") != canonical.get(row["path"], {}).get("sha256"):
+                    errors.append(f"Redirected content differs from canonical page: {row['url']}")
     report = {
         "checked_at": datetime.now(timezone.utc).isoformat(),
         "mode": "after-deploy" if args.after_deploy else "pre-deploy",
         "status": "PASS" if not errors else "FAIL",
         "deployment_file_count": len(files), "local_reference_count": ref_count,
-        "live_url_count": len(results), "pending_index_files": pending,
-        "errors": errors, "notes": notes, "live_results": results,
+        "live_url_count": len(results), "redirect_url_count": len(redirect_results),
+        "pending_index_files": pending, "errors": errors, "notes": notes,
+        "live_results": results, "redirect_results": redirect_results,
     }
     if args.report:
         args.report.parent.mkdir(parents=True, exist_ok=True)
         args.report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"{report['status']}: {len(files)} deployment files, {ref_count} local references, {len(results)} live URLs")
+    print(f"{report['status']}: {len(files)} deployment files, {ref_count} local references, {len(results)} live URLs, {len(redirect_results)} redirects")
     for line in notes:
         print("NOTE: " + line)
     for line in errors:

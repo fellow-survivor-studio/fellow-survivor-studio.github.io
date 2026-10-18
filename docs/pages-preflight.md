@@ -111,3 +111,22 @@ python -X utf8 scripts/check-pages.py --after-deploy --compare .preview/pages-pr
 
 로컬 검사는 GitHub Pages의 실제 배포 결과나 Google의 재크롤링을 대신하지 않습니다.
 공개 반영 후 위 검사와 스토어·AdMob 상태 확인을 마쳐야 배포 후 검증이 완료됩니다.
+
+## 도메인 연결 설정 — 2026-10-18
+
+기존 공개 저장소와 GitHub Pages 자동 배포를 유지하고 `fellowsurvivor.com`을 대표 도메인으로 사용합니다.
+Cloudflare DNS의 루트 A 4개, AAAA 4개는 GitHub Pages 주소를 가리키며,
+`www` CNAME은 `fellow-survivor-studio.github.io`를 가리킵니다. 프록시는 DNS only입니다.
+`CNAME` 파일, 세 페이지의 canonical/OG URL, Reel Nest 정책 링크를 대표 도메인에 맞춥니다.
+
+`/reel-nest/`와 `/heavenlydemonreborn/`은 기존 별도 저장소에서 계속 제공합니다.
+기존 GitHub 주소의 리디렉션은 같은 경로의 대표 HTTPS 주소로 도착해야 합니다.
+도메인 이전은 의도한 리디렉션이므로, 검사기는 호스트만 바뀌고 경로·정책 본문이 보존됐는지 확인합니다.
+다른 경로나 다른 사이트로의 이동은 계속 오류로 처리합니다.
+
+도메인 연결 직전 기준 보고서는 `.preview/domain-setup-20261018/baseline.json`입니다.
+연결 후에는 다음 명령으로 새 도메인, 기존 GitHub 주소, www 및 HTTP 변형을 검사합니다.
+
+```powershell
+python -X utf8 scripts/check-pages.py --after-deploy --compare .preview/domain-setup-20261018/baseline.json --report .preview/domain-setup-20261018/postdeploy.json
+```
