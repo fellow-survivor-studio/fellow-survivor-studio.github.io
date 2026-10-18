@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="640" viewBox="0 0 600 640" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">일상에 필요한 것들을 간편하게</title>
+  <desc id="desc">링크, 사진, 문서 카드가 여백을 두고 가지런히 배치된 그래픽</desc>
+  <defs>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%" color-interpolation-filters="sRGB"><feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#242628" flood-opacity=".055"/></filter>
+    <clipPath id="photo"><rect x="97" y="278" width="170" height="174" rx="10"/></clipPath>
+  </defs>
+  <rect width="600" height="640" rx="28" fill="#ECEEF0"/>
+  <g filter="url(#shadow)">
+    <rect x="77" y="139" width="446" height="100" rx="16" fill="white"/>
+    <rect x="77" y="259" width="210" height="252" rx="16" fill="white"/>
+    <rect x="307" y="259" width="216" height="252" rx="16" fill="white"/>
+  </g>
+  <!-- Link: one simple symbol, no text labels. -->
+  <rect x="99" y="162" width="54" height="54" rx="13" fill="#FFF0E7"/>
+  <g stroke="#D44B00" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m122 184 6-6a7 7 0 0 1 10 10l-5 5m-7 1-6 6a7 7 0 0 1-10-10l5-5m6 6 9-9"/>
+  </g>
+  <rect x="174" y="175" width="168" height="8" rx="4" fill="#373B40"/>
+  <rect x="174" y="195" width="116" height="6" rx="3" fill="#D9DDE1"/>
+  <path d="m477 181 8 8-8 8m-13-8h20" stroke="#9EA6AE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Photo: quiet color inside a generous white border. -->
+  <g clip-path="url(#photo)">
+    <rect x="97" y="278" width="170" height="174" fill="#DFE8ED"/>
+    <circle cx="228" cy="313" r="17" fill="#F2BA83"/>
+    <path d="m80 430 70-85 103 124H80Z" fill="#9FB8AB"/>
+    <path d="m148 461 92-109 57 68v41Z" fill="#4F7065"/>
+  </g>
+  <rect x="99" y="472" width="98" height="6" rx="3" fill="#A8AFB6"/>
+  <rect x="99" y="486" width="64" height="5" rx="2.5" fill="#E0E3E6"/>
+  <!-- Document: content lines rather than a file or folder silhouette. -->
+  <rect x="331" y="284" width="30" height="5" rx="2.5" fill="#F56923"/>
+  <rect x="331" y="307" width="125" height="10" rx="4" fill="#34393E"/>
+  <rect x="331" y="328" width="87" height="10" rx="4" fill="#34393E"/>
+  <g fill="#DDE1E5">
+    <rect x="331" y="362" width="166" height="6" rx="3"/>
+    <rect x="331" y="378" width="166" height="6" rx="3"/>
+    <rect x="331" y="394" width="130" height="6" rx="3"/>
+    <rect x="331" y="428" width="166" height="6" rx="3"/>
+    <rect x="331" y="444" width="150" height="6" rx="3"/>
+    <rect x="331" y="460" width="112" height="6" rx="3"/>
+  </g>
+  <path d="M331 484h58" stroke="#FFC5A5" stroke-width="4" stroke-linecap="round"/>
+</svg>

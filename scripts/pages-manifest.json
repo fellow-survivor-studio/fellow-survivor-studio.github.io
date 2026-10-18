@@ -1,0 +1,33 @@
+{
+  "base_url": "https://fellow-survivor-studio.github.io/",
+  "source_commit": "6f067dcc9c9034c3312c56625ee8373f3ebcf7bf",
+  "pages": ["/", "/products/", "/products/reel-nest/"],
+  "files": [
+    ".nojekyll", "app-ads.txt", "googleabe82689611d6157.html",
+    "index.html", "favicon.svg", "styles.css", "home.css", "product.css", "reel-nest.css",
+    "products/index.html", "products/reel-nest/index.html",
+    "assets/fonts/Pretendard-Regular.woff2", "assets/fonts/Pretendard-LICENSE.txt",
+    "assets/google-play-icon.png", "assets/reel-nest-icon.png",
+    "assets/reel-nest-screen-1.png", "assets/reel-nest-screen-2.png",
+    "assets/reel-nest-screen-3.png", "assets/reel-nest-screen-4.png",
+    "assets/studio-everyday.jpg", "assets/studio-games.jpg",
+    "assets/studio-utilities.svg", "assets/studio-utilities.jpg"
+  ],
+  "maintenance_files": [
+    ".gitignore", "README.md", "docs/pages-preflight.md",
+    "scripts/pages-manifest.json", "scripts/check-pages.py"
+  ],
+  "protected_sha256": {
+    "app-ads.txt": "8c2bbca5f9ff26163ef688863943cd998c9fdfaaba330d93c4998222292a88fa",
+    "googleabe82689611d6157.html": "ac61074237a2dba280461b64fa2c75a5502807df2d7c4616dd30fc60f3bae2e9",
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "reserved_prefixes": ["reel-nest", "heavenlydemonreborn"],
+  "home_fragments": ["main", "about", "projects", "contact"],
+  "policy_links": ["/reel-nest/", "/reel-nest/terms/"],
+  "play_url": "https://play.google.com/store/apps/details?id=studio.fellowsurvivor.reelnest",
+  "locales": ["", "en/", "ja/", "zh/", "es/", "pt/"],
+  "privacy_archives": ["2026-09-11", "2026-09-13"],
+  "game_paths": ["", "terms/", "privacy/", "delete-account/", "refund/", "probabilities/", "operation-policy/", "consent/", "support/", "notices/"],
+  "other_live_paths": ["/", "/app-ads.txt", "/googleabe82689611d6157.html", "/reel-nest/home/", "/reel-nest/sitemap.xml", "/heavenlydemonreborn/sitemap.xml"]
+}

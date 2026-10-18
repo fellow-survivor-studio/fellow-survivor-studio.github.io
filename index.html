@@ -3,153 +3,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f5f4ee">
-  <meta name="description" content="펠로우서바이버스튜디오는 일상에 유용함과 즐거움을 더하는 앱, 게임, 소프트웨어를 만듭니다. 스튜디오와 프로젝트를 만나보세요.">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="펠로우서바이버스튜디오는 유틸리티와 게임을 만드는 독립 개발 스튜디오입니다.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ko_KR">
   <meta property="og:site_name" content="Fellow Survivor Studio">
-  <meta property="og:title" content="Fellow Survivor Studio — 함께, 더 좋은 경험을">
-  <meta property="og:description" content="일상에 유용함과 즐거움을 더하는 앱, 게임, 소프트웨어를 만듭니다.">
+  <meta property="og:title" content="Fellow Survivor Studio — 당신의 오늘이 조금 더 편해지고, 조금 더 즐거워지는 것">
+  <meta property="og:description" content="거창한 변화보다, 당신의 하루에 닿는 작은 차이를 믿습니다. 유틸리티와 게임을 만드는 Fellow Survivor Studio.">
   <meta property="og:url" content="https://fellow-survivor-studio.github.io/">
   <title>Fellow Survivor Studio — 펠로우서바이버스튜디오</title>
   <link rel="canonical" href="https://fellow-survivor-studio.github.io/">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preload" as="image" href="assets/studio-everyday.jpg">
+  <link rel="stylesheet" href="home.css">
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 건너뛰기</a>
-  <header class="site-header wrap">
+  <header class="site-header"><div class="header-inner">
     <a class="brand" href="./" aria-label="Fellow Survivor Studio 홈">
-      <svg class="brand-symbol" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-        <path d="M9 36V12h14M9 23h11M25 36V12h14M25 23h11" stroke="currentColor" stroke-width="6"/>
-        <circle cx="39" cy="35" r="4" fill="currentColor"/>
-      </svg>
-      <span>FELLOW SURVIVOR<span class="brand-small">STUDIO</span></span>
+      <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M9 36V12h14M9 23h11M25 36V12h14M25 23h11" stroke="currentColor" stroke-width="6"/><circle cx="39" cy="35" r="4" fill="#ff5f0a"/></svg>
+      <span>Fellow Survivor<span class="brand-small">Studio</span></span>
     </a>
-    <nav aria-label="주 메뉴">
-      <a href="#about">스튜디오</a>
-      <a href="#projects">프로젝트</a>
-      <a class="nav-contact" href="#contact">문의하기 <span aria-hidden="true">↗</span></a>
-    </nav>
-  </header>
-
+    <nav aria-label="주 메뉴"><a href="#about">스튜디오</a><a href="products/">프로덕트</a><a class="nav-contact" href="#contact">문의하기</a></nav>
+  </div></header>
   <main id="main">
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> SMALL IDEAS. SHARED POSSIBILITIES.</p>
-        <h1 id="hero-title">함께, 더 좋은<br>경험을 만듭니다<span class="title-dot">.</span></h1>
-        <p class="hero-description">일상에 유용함을, 순간에 즐거움을.<br>펠로우서바이버스튜디오는 작은 아이디어를<br class="desktop-break"> 오래 함께할 앱과 게임, 소프트웨어로 만듭니다.</p>
-        <a class="button button-dark" href="#projects">프로젝트 살펴보기 <span aria-hidden="true">↗</span></a>
+    <section class="company-hero" aria-labelledby="hero-title">
+      <img class="hero-photo" src="assets/studio-everyday.jpg" width="2200" height="1467" alt="" fetchpriority="high">
+      <div class="hero-content">
+        <h1 id="hero-title">당신의 오늘이<br>조금 더 편해지고,<br>조금 더 즐거워지는 것.</h1>
+        <p>거창한 변화보다,<br>당신의 하루에 닿는 작은 차이를 믿습니다.</p>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="art-grid"></div>
-        <span class="art-coordinate">F / S — 01</span>
-        <svg class="together-art" viewBox="0 0 500 460" fill="none">
-          <ellipse cx="252" cy="366" rx="168" ry="20" fill="#d9d9cc"/>
-          <path d="M80 257C40 182 99 79 214 69C325 59 431 141 439 233C450 352 294 406 174 352" stroke="#a0a58e" stroke-width="1.5" stroke-dasharray="4 7"/>
-          <g transform="rotate(-14 190 231)">
-            <rect x="87" y="121" width="202" height="234" rx="101" fill="#243c32"/>
-            <rect x="129" y="166" width="118" height="144" rx="59" fill="#f5f4ee"/>
-            <path d="M139 297C156 309 186 316 213 300" stroke="#243c32" stroke-width="12"/>
-          </g>
-          <g transform="rotate(17 312 253)">
-            <rect x="216" y="153" width="183" height="213" rx="91.5" fill="#dded75"/>
-            <rect x="255" y="195" width="105" height="131" rx="52.5" fill="#f5f4ee"/>
-            <path d="M276 309C291 318 316 319 335 308" stroke="#dded75" stroke-width="12"/>
-          </g>
-          <path d="M376 65L384 91L410 99L384 107L376 133L368 107L342 99L368 91Z" fill="#243c32"/>
-          <circle cx="92" cy="330" r="9" fill="#ed7954"/>
-          <circle cx="432" cy="283" r="5" fill="#243c32"/>
-          <path d="M61 126v18m-9-9h18" stroke="#243c32" stroke-width="2"/>
-        </svg>
-        <div class="art-caption"><span>BETTER, TOGETHER.</span><span>↗</span></div>
-      </div>
-      <div class="hero-footnote"><span>INDEPENDENT SPIRIT. THOUGHTFUL SOFTWARE.</span><a href="#about" aria-label="스튜디오 소개로 이동">스크롤하여 알아보기 <span aria-hidden="true">↓</span></a></div>
+      <a class="hero-next" href="#about" aria-label="스튜디오 소개로 이동"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 9 7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </section>
-
-    <section class="about section wrap" id="about" aria-labelledby="about-title">
-      <div class="section-label"><span class="section-number">01</span> ABOUT THE STUDIO</div>
-      <div class="about-content">
-        <h2 id="about-title">작은 시작을,<br>의미 있는 경험으로.</h2>
-        <div class="about-description">
-          <p>펠로우서바이버스튜디오는 앱과 게임, 소프트웨어를 만드는 개발 스튜디오입니다. 일상의 작은 불편을 덜어주는 도구부터 잠시 몰입할 수 있는 즐거움까지, 직접 써보고 싶은 경험을 만들어갑니다.</p>
-          <p>필요한 기능은 분명하게, 사용하는 과정은 편안하게.<br>사용자의 목소리에 귀 기울이며 하나씩 다듬어갑니다.</p>
+    <section class="company-story wrap" id="about" aria-labelledby="story-title">
+      <h2 id="story-title">Fellow Survivor Studio</h2>
+      <p>일상의 편리함과 즐거움을 만듭니다.</p>
+    </section>
+    <div id="projects">
+      <section class="field-section utility-section" aria-labelledby="utility-title"><div class="field-inner wrap">
+        <div class="field-copy">
+          <p class="field-name">유틸리티</p>
+          <h2 id="utility-title">일상에 필요한 기능을 편하게</h2>
+          <p class="field-description">웹 탐색부터 미디어 관리, 문서 작성까지</p>
+          <a class="field-link" href="products/#utilities">유틸리티 살펴보기 <span aria-hidden="true">→</span></a>
         </div>
-        <div class="values">
-          <div><span class="value-index">01 / USEFUL</span><h3>쓸모 있게</h3><p>실제 필요에서 출발합니다.</p></div>
-          <div><span class="value-index">02 / ENJOYABLE</span><h3>즐겁게</h3><p>다시 찾고 싶은 경험을 고민합니다.</p></div>
-          <div><span class="value-index">03 / TOGETHER</span><h3>함께, 꾸준히</h3><p>작은 개선을 차곡차곡 쌓습니다.</p></div>
+        <img class="field-photo utility-graphic" src="assets/studio-utilities.svg" width="600" height="640" loading="lazy" alt="링크, 사진, 문서 카드가 가지런히 정리된 그래픽">
+      </div></section>
+      <section class="field-section game-section" aria-labelledby="game-title"><div class="field-inner wrap">
+        <div class="field-copy">
+          <p class="field-name">게임</p>
+          <h2 id="game-title">쉬는 시간을 즐겁게.</h2>
+          <p class="field-description">잠깐의 휴식부터 깊은 몰입까지.</p>
+          <a class="field-link" href="products/#games">게임 살펴보기 <span aria-hidden="true">→</span></a>
         </div>
-      </div>
-    </section>
-
-    <section class="projects section wrap" id="projects" aria-labelledby="projects-title">
-      <div class="section-heading">
-        <div><div class="section-label"><span class="section-number">02</span> OUR PROJECTS</div><h2 id="projects-title">우리가 만드는 것들<span class="title-dot">.</span></h2></div>
-        <p>서로 다른 아이디어, 같은 마음으로.</p>
-      </div>
-      <div class="project-grid">
-        <article class="project">
-          <div class="project-art reel-art" aria-hidden="true">
-            <span class="art-tag">MOBILE APP</span>
-            <svg viewBox="0 0 320 220" fill="none">
-              <rect x="90" y="27" width="140" height="167" rx="38" fill="#dded75"/>
-              <path d="M136 153V73h34c35 0 35 45 0 45h-34m33 0 27 35" stroke="#243c32" stroke-width="13" stroke-linejoin="round"/>
-              <circle cx="242" cy="43" r="5" fill="#dded75"/><path d="M68 156v18m-9-9h18" stroke="#dded75" stroke-width="2"/>
-            </svg>
-            <span class="art-bottom">YOUR MEDIA, IN ONE NEST.</span>
-          </div>
-          <div class="project-info">
-            <p class="project-category">ANDROID · 미디어 도구</p>
-            <h3>Reel Nest</h3>
-            <p class="project-description">웹 탐색부터 미디어 저장과 관리까지.<br>한곳에서 이어지는 모바일 경험을 만듭니다.</p>
-            <a class="button button-dark download-button" href="https://play.google.com/store/apps/details?id=studio.fellowsurvivor.reelnest" aria-label="Reel Nest Google Play에서 다운로드">Google Play에서 다운로드 <span aria-hidden="true">↗</span></a>
-            <div>
-              <a class="text-link" href="reel-nest/">개인정보처리방침 <span aria-hidden="true">↗</span></a>
-              <a class="secondary-link" href="reel-nest/terms/">이용약관 <span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
-        </article>
-        <article class="project">
-          <div class="project-art game-art" aria-hidden="true">
-            <span class="art-tag">MOBILE GAME</span>
-            <svg viewBox="0 0 320 220" fill="none">
-              <circle cx="160" cy="110" r="70" stroke="#a59985" stroke-width="1"/>
-              <circle cx="160" cy="110" r="54" fill="#a64d36"/>
-              <path d="M161 29l10 88-10 53-10-53Z" fill="#f5ead7"/><path d="M133 143h56M161 145v47" stroke="#f5ead7" stroke-width="6"/>
-              <path d="M79 175c35-16 65-18 88-5s48 15 76-3" stroke="#cabda6" stroke-width="1.5"/>
-            </svg>
-            <span class="art-bottom">A NEW CHAPTER AWAITS.</span>
-          </div>
-          <div class="project-info"><p class="project-category">모바일 게임 <span class="project-status">출시 준비</span></p><h3>환생천마</h3><p class="project-description">새로운 모험을 준비하는 모바일 게임 프로젝트.<br>서비스 정책과 고객지원 안내를 만나보세요.</p><a class="text-link" href="heavenlydemonreborn/">정책 및 고객지원 <span aria-hidden="true">↗</span></a></div>
-        </article>
-        <article class="project">
-          <div class="project-art paper-art" aria-hidden="true">
-            <span class="art-tag">DESKTOP SOFTWARE</span>
-            <svg viewBox="0 0 320 220" fill="none">
-              <rect x="102" y="35" width="126" height="160" rx="5" transform="rotate(9 102 35)" fill="#c2c8bb"/>
-              <rect x="92" y="28" width="126" height="160" rx="5" fill="#fdfdf7" stroke="#8c9783"/>
-              <path d="M115 80V57l12 14 12-14v23m19-23v23m-8-8 8 8 8-8" stroke="#3f5544" stroke-width="4" stroke-linejoin="round"/>
-              <path d="M115 104h79m-79 15h79m-79 15h55m-55 25h68" stroke="#bdc6b6" stroke-width="3"/>
-            </svg>
-            <span class="art-bottom">ROOM FOR YOUR WORDS.</span>
-          </div>
-          <div class="project-info"><p class="project-category">WINDOWS · 문서 도구</p><h3>Paper Markdown</h3><p class="project-description">쓰기와 읽기에 집중하는 마크다운 에디터.<br>편집과 미리보기를 나란히, 더 간결하게.</p><a class="text-link" href="https://github.com/fellow-survivor-studio/paper-markdown-for-windows">GitHub에서 살펴보기 <span aria-hidden="true">↗</span></a></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="contact" id="contact" aria-labelledby="contact-title">
-      <div class="contact-inner wrap">
-        <div><div class="section-label"><span class="section-number">03</span> SAY HELLO</div><h2 id="contact-title">좋은 대화에서<br>다음 이야기가 시작됩니다.</h2><p>서비스에 대한 질문, 피드백, 협업 제안을 기다립니다.</p></div>
-        <a class="contact-link" href="mailto:fellow.survivor.studio@gmail.com"><span class="contact-link-label">이메일로 이야기 나누기 <span aria-hidden="true">↗</span></span><span class="email-address">fellow.survivor.studio@gmail.com</span></a>
-      </div>
-    </section>
+        <img class="field-photo" src="assets/studio-games.jpg" width="1200" height="800" loading="lazy" alt="오렌지색 배경 위의 흰색 게임 컨트롤러">
+      </div></section>
+    </div>
+    <section class="company-contact" id="contact" aria-labelledby="contact-title"><div class="wrap">
+      <h2 id="contact-title">제품 문의</h2>
+      <p>제품 관련 질문이나 오류 제보를 보내주세요.</p>
+      <a class="contact-email" href="mailto:fellow.survivor.studio@gmail.com">fellow.survivor.studio@gmail.com</a>
+    </div></section>
   </main>
-
-  <footer class="site-footer wrap">
-    <div class="footer-top"><a class="footer-brand" href="./">FELLOW SURVIVOR STUDIO<span>펠로우서바이버스튜디오</span></a><a class="text-link" href="https://github.com/fellow-survivor-studio">GitHub <span aria-hidden="true">↗</span></a></div>
-    <div class="footer-bottom"><p>사업자등록번호 773-26-02197</p><p>© 2026 Fellow Survivor Studio. All rights reserved.</p><a href="#main">맨 위로 <span aria-hidden="true">↑</span></a></div>
-  </footer>
+  <footer class="site-footer"><div class="wrap">
+    <div class="footer-top"><div><strong>Fellow Survivor Studio</strong><p>펠로우서바이버스튜디오</p></div><div class="footer-links"><a href="products/">프로덕트</a><a href="https://github.com/fellow-survivor-studio">GitHub ↗</a></div></div>
+    <div class="footer-bottom"><p>사업자등록번호 773-26-02197</p><p>© 2026 Fellow Survivor Studio. All rights reserved.</p></div>
+  </div></footer>
 </body>
 </html>

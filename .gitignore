@@ -1,0 +1,4 @@
+# Local design drafts, screenshots and preflight reports must not be published.
+/.preview/
+__pycache__/
+*.pyc
