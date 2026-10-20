@@ -135,3 +135,20 @@ GitHub 도메인 소유권 인증을 완료했으며, `_github-pages-challenge-f
 ```powershell
 python -X utf8 scripts/check-pages.py --after-deploy --compare .preview/domain-setup-20261018/baseline.json --report .preview/domain-setup-20261018/postdeploy.json
 ```
+
+## 영문 지원 — 2026-10-21
+
+회사 홈, 프로덕트 목록, Reel Nest 소개의 영어 버전을 `/en/` 아래에 제공합니다.
+기존 한국어 주소와 정책 저장소의 경로는 유지하며, 언어 전환은 같은 페이지의 번역본으로 연결합니다.
+이미지·폰트·CSS는 기존 파일을 공유합니다. 언어 감지 스크립트나 자동 리디렉션은 추가하지 않습니다.
+
+검사기는 여섯 페이지의 canonical, 문서 언어, 한국어·영어·기본 언어 alternate URL,
+언어 전환 링크와 현재 언어 표시, 양쪽 Google Play 링크 및 언어별 정책 링크를 확인합니다.
+배포 파일은 27개이며, 정책·인증 파일 보존 기준은 작업 직전 보고서입니다.
+Ego Lite에서 한국어·영어 여섯 페이지를 1440px, 390px, 320px 너비로 검사했으며,
+가로 넘침이나 이미지 누락은 없었습니다. 영문 홈 → 프로덕트 → Reel Nest 이동,
+같은 상세 페이지의 한국어↔영어 전환과 FAQ 펼치기도 확인했습니다.
+
+```powershell
+python -X utf8 scripts/check-pages.py --after-deploy --compare .preview/english-20261021/baseline.json --report .preview/english-20261021/postdeploy.json
+```

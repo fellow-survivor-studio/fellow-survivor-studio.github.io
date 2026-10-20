@@ -32,7 +32,7 @@ img, svg { display: block; max-width: 100%; }
 .skip-link { position: fixed; left: 20px; top: -100px; z-index: 100; padding: 14px 20px; background: #1c1d1e; color: #fff; border-radius: 8px; }
 .skip-link:focus { top: 12px; }
 .site-header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.96); backdrop-filter: blur(16px); }
-.header-inner { width: min(1200px, calc(100% - 80px)); min-height: 76px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+.header-inner { width: min(1200px, calc(100% - 80px)); min-height: 76px; margin: auto; display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 30px; }
 .brand { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 750; letter-spacing: -.04em; line-height: 1.15; }
 .brand svg { width: 38px; height: 38px; }
 .brand-small { display: block; font-size: 12px; letter-spacing: .015em; font-weight: 600; margin-top: 4px; }
@@ -40,6 +40,11 @@ img, svg { display: block; max-width: 100%; }
 .site-header nav a { padding: 12px 4px; }
 .site-header nav a:hover { color: #bd4300; }
 .site-header nav .nav-contact { padding: 11px 18px; background: #f3f4f5; border-radius: 10px; }
+.site-header .language-nav { gap: 2px; padding-left: 16px; border-left: 1px solid #e8eaed; font-size: 13px; white-space: nowrap; }
+.site-header .language-nav a { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; min-height: 44px; padding: 8px; border-radius: 8px; }
+.site-header .language-nav a[aria-current="page"] { color: #1c1d1e; font-weight: 650; background: #f3f4f5; }
+:lang(en) { word-break: normal; }
+html:lang(en) h1, html:lang(en) h2, html:lang(en) h3 { letter-spacing: -.035em; }
 .company-hero { position: relative; isolation: isolate; width: calc(100% - 32px); max-width: 1880px; height: min(820px, calc(100svh - 96px)); min-height: 620px; margin: 0 auto; border-radius: 32px; overflow: hidden; color: #fff; background: #333735; }
 .hero-photo { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 52%; }
 .company-hero::before { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(9,17,17,.69), rgba(9,17,17,.18) 74%), linear-gradient(0deg, rgba(0,0,0,.22), transparent 70%); }
@@ -87,14 +92,15 @@ h2 { font-size: 46px; line-height: 1.45; letter-spacing: -.045em; font-weight: 7
   .field-description { font-size: 18px; }
 }
 @media (max-width: 760px) {
-  html { scroll-padding-top: 82px; }
+  html { scroll-padding-top: 126px; }
   .wrap { width: calc(100% - 48px); }
-  .header-inner { min-height: 68px; width: calc(100% - 40px); gap: 16px; }
+  .header-inner { min-height: 106px; width: calc(100% - 40px); grid-template-columns: 1fr auto; gap: 0 12px; padding-block: 8px 4px; }
   .brand { font-size: 14px; gap: 7px; }
   .brand svg { width: 30px; height: 30px; }
   .brand-small { font-size: 10px; }
-  .site-header nav { gap: 16px; font-size: 13px; }
-  .site-header nav a:first-child { display: none; }
+  .site-header .main-nav { grid-column: 1 / -1; grid-row: 2; justify-content: center; gap: 28px; font-size: 13px; }
+  .site-header .main-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  .site-header .language-nav { grid-column: 2; grid-row: 1; border-left: 0; padding-left: 0; font-size: 12px; }
   .site-header nav .nav-contact { padding: 9px 10px; }
   .company-hero { width: calc(100% - 20px); min-height: 580px; height: calc(88svh - 68px); max-height: 760px; border-radius: 22px; }
   .hero-photo { object-position: 58% center; }

@@ -1,7 +1,7 @@
 # Fellow Survivor Studio
 
 펠로우서바이버스튜디오의 회사 소개 및 프로덕트 웹사이트입니다.
-HTML과 CSS로 구성하며, 별도의 빌드·패키지 설치·JavaScript 없이 실행됩니다. 본문 웹폰트는 로컬 파일로 제공합니다.
+한국어와 영어를 지원합니다. HTML과 CSS로 구성하며, 별도의 빌드·패키지 설치·JavaScript 없이 실행됩니다. 본문 웹폰트는 로컬 파일로 제공합니다.
 
 - [공식 웹사이트](https://fellowsurvivor.com/)
 - [GitHub 저장소](https://github.com/fellow-survivor-studio/fellow-survivor-studio.github.io)
@@ -14,6 +14,15 @@ HTML과 CSS로 구성하며, 별도의 빌드·패키지 설치·JavaScript 없�
 | `/` | `index.html` | 브랜드 메시지, 회사 소개, 개발 분야, 문의 |
 | `/products/` | `products/index.html` | 유틸리티(Reel Nest·Paper Markdown)과 게임(환생천마) 목록 |
 | `/products/reel-nest/` | `products/reel-nest/index.html` | Reel Nest 기능, 스크린샷, Free·Pro 비교, FAQ, 다운로드 안내 |
+| `/en/` | `en/index.html` | 영문 회사 소개 |
+| `/en/products/` | `en/products/index.html` | 영문 프로덕트 목록 |
+| `/en/products/reel-nest/` | `en/products/reel-nest/index.html` | 영문 Reel Nest 소개 |
+
+각 페이지 상단의 **한국어 / EN** 링크는 현재 페이지의 번역본으로 이동합니다.
+언어를 자동 감지해 리디렉션하지 않으며, 기본 주소는 기존 한국어 페이지입니다.
+영문 페이지에는 `lang="en"`, 독립 canonical/OG URL, 한국어·영어 `hreflang`을 제공합니다.
+이미지와 스타일은 공유하며, 한국어 본문이나 제품 조건을 바꾸면 대응하는 영문 HTML도 함께 갱신합니다.
+영문 Reel Nest 소개는 기존 `/reel-nest/en/` 개인정보처리방침과 `/reel-nest/terms/en/` 이용약관으로 연결합니다.
 
 홈페이지 메뉴에서 프로덕트 목록으로 이동하고, Reel Nest 소개 영역의 이미지나 자세히 보기 링크에서 상세 소개를 볼 수 있습니다.
 Reel Nest 목록에서는 설명 바로 아래에 자세히 보기 링크를 배치하고, 그다음에 Google Play 다운로드를 아이콘이 있는 텍스트 링크로 표시합니다. 이용약관은 상세 소개 페이지에서 안내합니다.
@@ -131,7 +140,7 @@ Reel Nest 상세는 중앙 정렬 제품 소개, 실제 스토어 이미지와 �
 홈은 `home.css`만 불러오고, 프로덕트 목록·상세는 `home.css` 다음에 `product.css`를 불러옵니다.
 Reel Nest 상세는 마지막에 `reel-nest.css`를 추가로 불러옵니다.
 `styles.css`는 이전 시안 보관용이며 현재 세 페이지에서는 불러오지 않습니다.
-헤더·푸터는 각 HTML 파일에 포함되어 있습니다. 공통 메뉴나 회사 정보를 바꾸면 세 페이지에 함께 반영합니다.
+헤더·푸터는 각 HTML 파일에 포함되어 있습니다. 공통 메뉴나 회사 정보를 바꾸면 한국어·영어 총 여섯 페이지에 함께 반영합니다.
 
 ### 홈 이미지 출처
 
@@ -164,7 +173,7 @@ Reel Nest의 기능, Android 요구사항, 무료·Pro 조건은
 
 앱 기능이나 구독 조건이 변경되면 스토어와 소개 페이지를 함께 갱신합니다.
 환생천마는 현재 페이지에서 **출시 준비**로 표시하며, 정책·고객지원 링크는 목록에 노출하지 않습니다. 출시 상태는 프로덕트 목록에 반영합니다.
-문의 이메일과 사업자 정보도 세 페이지에서 일치하도록 유지합니다.
+문의 이메일과 사업자 정보도 한국어·영어 여섯 페이지에서 일치하도록 유지합니다.
 
 ## 배포
 
@@ -177,7 +186,7 @@ Cloudflare는 DNS를 관리하고, 실제 정적 호스팅과 자동 배포는 �
 GitHub 계정의 도메인 소유권 인증도 완료했습니다. Cloudflare의 `_github-pages-challenge-fellow-survivor-studio` TXT 레코드는 인증 유지용이므로 삭제하지 않습니다.
 루트와 `www`의 HTTPS 인증서가 발급되었으며, 회사 홈페이지와 두 정책 저장소 모두 **Enforce HTTPS**를 켰습니다.
 
-1. 로컬에서 세 페이지와 연결 경로를 확인합니다.
+1. 로컬에서 한국어·영어 여섯 페이지와 연결 경로를 확인합니다.
 2. 배포할 소스와 에셋을 검토해 커밋하고 `main`에 푸시합니다. 로컬 `.preview/` 작업 파일은 제외합니다.
 3. GitHub Actions의 **pages build and deployment** 완료 여부를 확인합니다.
 4. [공식 웹사이트](https://fellowsurvivor.com/)에서 변경된 페이지와 이미지가 표시되는지 확인합니다.

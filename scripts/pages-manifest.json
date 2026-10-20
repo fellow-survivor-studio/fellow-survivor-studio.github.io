@@ -3,11 +3,17 @@
   "legacy_base_urls": ["https://fellow-survivor-studio.github.io/"],
   "domain_aliases": ["https://www.fellowsurvivor.com/", "http://fellowsurvivor.com/", "http://www.fellowsurvivor.com/"],
   "source_commit": "6f067dcc9c9034c3312c56625ee8373f3ebcf7bf",
-  "pages": ["/", "/products/", "/products/reel-nest/"],
+  "pages": ["/", "/products/", "/products/reel-nest/", "/en/", "/en/products/", "/en/products/reel-nest/"],
+  "language_pairs": [
+    {"ko": "/", "en": "/en/"},
+    {"ko": "/products/", "en": "/en/products/"},
+    {"ko": "/products/reel-nest/", "en": "/en/products/reel-nest/"}
+  ],
   "files": [
     ".nojekyll", "CNAME", "app-ads.txt", "googleabe82689611d6157.html",
     "index.html", "favicon.svg", "styles.css", "home.css", "product.css", "reel-nest.css",
     "products/index.html", "products/reel-nest/index.html",
+    "en/index.html", "en/products/index.html", "en/products/reel-nest/index.html",
     "assets/fonts/Pretendard-Regular.woff2", "assets/fonts/Pretendard-LICENSE.txt",
     "assets/google-play-icon.png", "assets/reel-nest-icon.png",
     "assets/reel-nest-screen-1.png", "assets/reel-nest-screen-2.png",
@@ -27,6 +33,7 @@
   "reserved_prefixes": ["reel-nest", "heavenlydemonreborn"],
   "home_fragments": ["main", "about", "projects", "contact"],
   "policy_links": ["/reel-nest/", "/reel-nest/terms/"],
+  "english_policy_links": ["/reel-nest/en/", "/reel-nest/terms/en/"],
   "play_url": "https://play.google.com/store/apps/details?id=studio.fellowsurvivor.reelnest",
   "locales": ["", "en/", "ja/", "zh/", "es/", "pt/"],
   "privacy_archives": ["2026-09-11", "2026-09-13"],

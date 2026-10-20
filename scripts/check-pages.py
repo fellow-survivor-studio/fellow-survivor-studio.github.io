@@ -22,11 +22,18 @@ class Document(HTMLParser):
     def __init__(self, text):
         super().__init__()
         self.ids, self.refs, self.canonicals = set(), [], []
+        self.language, self.alternates, self.language_links = None, {}, []
         self.refresh = False
         self.feed(text)
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        if tag == "html":
+            self.language = attrs.get("lang")
+        if tag == "link" and attrs.get("rel") == "alternate" and attrs.get("hreflang"):
+            self.alternates[attrs["hreflang"]] = attrs.get("href")
+        if tag == "a" and attrs.get("hreflang"):
+            self.language_links.append(attrs)
         if attrs.get("id"):
             self.ids.add(attrs["id"])
         if tag == "a" and attrs.get("name"):
@@ -167,15 +174,32 @@ def main():
             continue
         if doc.canonicals != [urljoin(BASE, route)] or doc.refresh:
             errors.append(f"Wrong canonical or automatic redirect: {route}")
+    for pair in CONFIG["language_pairs"]:
+        expected_alternates = {lang: urljoin(BASE, route) for lang, route in pair.items()}
+        expected_alternates["x-default"] = urljoin(BASE, pair["ko"])
+        for lang, route in pair.items():
+            doc = documents.get(page_file(route))
+            if not doc or doc.language != lang or doc.alternates != expected_alternates:
+                errors.append(f"Incorrect page language or alternate URLs: {route}")
+                continue
+            switches = {link["hreflang"]: link for link in doc.language_links}
+            for target_lang, target_route in pair.items():
+                link = switches.get(target_lang, {})
+                if (urljoin(BASE + page_file(route), link.get("href", "")) != urljoin(BASE, target_route)
+                        or link.get("lang") != target_lang
+                        or link.get("aria-current") != ("page" if target_lang == lang else None)):
+                    errors.append(f"Wrong language switch: {route} -> {target_lang}")
     home = documents.get("index.html")
     if home and not set(CONFIG["home_fragments"]).issubset(home.ids):
         errors.append("A published homepage anchor was removed")
-    detail = documents.get("products/reel-nest/index.html")
-    if detail:
-        for route in CONFIG["policy_links"]:
-            if urljoin(BASE, route) not in detail.refs:
-                errors.append(f"Missing Reel Nest policy link: {route}")
-    for name in ("products/index.html", "products/reel-nest/index.html"):
+    for prefix, policy_key in (("", "policy_links"), ("en/", "english_policy_links")):
+        detail = documents.get(prefix + "products/reel-nest/index.html")
+        if detail:
+            for route in CONFIG[policy_key]:
+                if urljoin(BASE, route) not in detail.refs:
+                    errors.append(f"Missing Reel Nest policy link: {route}")
+    for name in ("products/index.html", "products/reel-nest/index.html",
+                 "en/products/index.html", "en/products/reel-nest/index.html"):
         if name in documents and CONFIG["play_url"] not in documents[name].refs:
             errors.append(f"Missing Google Play download link: {name}")
 

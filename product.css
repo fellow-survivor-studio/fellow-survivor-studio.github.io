@@ -48,6 +48,7 @@
 .game-visual { background: #ede5db; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 25px; }
 .game-visual svg { width: 300px; max-height: 330px; }
 .game-visual > span { font-size: 40px; font-weight: 700; letter-spacing: .08em; color: #4c342c; margin-bottom: 22px; }
+html:lang(en) .game-visual > span { font-size: 30px; letter-spacing: -.02em; text-align: center; }
 .product-status { font-size: 13px; padding: 5px 10px; border-radius: 7px; color: #75523a; background: #ede5db; }
 .catalog-game-band .button-secondary { background: #fff; }
 .catalog-game-band .button-secondary:hover { background: #e8ebef; }
