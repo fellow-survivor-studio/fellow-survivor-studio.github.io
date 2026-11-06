@@ -214,6 +214,7 @@ python -X utf8 scripts/check-pages.py --online --report .preview/pages-preflight
 - `scripts/cloudflare-build.sh`: 배포 때마다 자동으로 실행되어, GitHub Pages가 공개하는 파일을 `.cf-dist/`에 복사합니다. README·`docs/`·`scripts/` 같은 저장소 관리 파일은 빼고, Search Console 확인 파일이 `.html` 주소 그대로 열리도록 규칙을 함께 만듭니다. 두 파일 모두 `scripts/pages-manifest.json`의 `maintenance_files`에 등록되어 있습니다.
 - `.cf-dist/`와 `.wrangler/`는 빌드 결과라 Git에서 제외합니다. 이 PC에서 직접 배포할 때도 `npx wrangler deploy`가 같은 스크립트를 먼저 실행합니다(Linux·macOS 또는 Git Bash 필요).
 - `/reel-nest/`와 `/heavenlydemonreborn/`은 각 저장소의 Cloudflare 프로젝트가 같은 주소의 하위 경로로 제공합니다.
+- 배포 확인: `main`에 푸시할 때마다 GitHub Actions **Cloudflare deploy check**가 Cloudflare 빌드 결과를 기다린 뒤, 실제 사이트가 푸시한 파일과 같은지 하나씩 비교합니다(`scripts/check-cloudflare-deploy.sh`). 빌드가 실패하거나 내용이 다르면 이 작업이 실패하고 GitHub이 실패 알림 메일을 보냅니다.
 - 대표 주소는 `wrangler.jsonc`의 `routes`에 있는 `fellowsurvivor.com/*` 경로 규칙으로 연결됩니다. GitHub Pages를 가리키는 DNS 레코드는 그대로 두었습니다.
 - GitHub Pages로 되돌리기: Cloudflare 화면(Workers → `fellowsurvivor-home` → Domains)에서 `fellowsurvivor.com/*` 규칙을 지우면 즉시 GitHub Pages로 돌아갑니다. 다음 배포 때 다시 켜지지 않도록 `wrangler.jsonc`에서도 같은 규칙을 지웁니다. 하위 경로는 각 저장소에서 같은 방법으로 되돌립니다.
 - 기존 `github.io` 주소는 앱에 포함된 정책 문서가 안내하므로, 전환 후에도 GitHub Pages를 끄지 않고 대표 주소로 넘겨주는 용도로 유지합니다.
