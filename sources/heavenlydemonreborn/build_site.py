@@ -10,7 +10,7 @@ import runpy
 
 SOURCE = Path(__file__).resolve().parent
 ROOT = SOURCE.parents[1] / "heavenlydemonreborn"
-BASE = "https://fellow-survivor-studio.github.io/heavenlydemonreborn/"
+BASE = "https://fellowsurvivor.com/heavenlydemonreborn/"
 
 
 def build(out):
