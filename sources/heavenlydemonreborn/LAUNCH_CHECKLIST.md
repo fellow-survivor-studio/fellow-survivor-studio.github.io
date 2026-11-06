@@ -45,9 +45,9 @@ Firestore 서울 저장은 Authentication과 AdMob의 국내 전용 처리를 �
 
 ## Play Console 제출
 
-- [ ] 개인정보처리방침: `https://fellowsurvivor.com/heavenlydemonreborn/privacy/`
-- [ ] 계정 삭제 웹 URL: `https://fellowsurvivor.com/heavenlydemonreborn/delete-account/`
-- [ ] 지원 사이트: `https://fellowsurvivor.com/heavenlydemonreborn/support/`
+- [ ] 개인정보처리방침: `https://fellowsurvivor.com/products/heavenlydemonreborn/privacy/`
+- [ ] 계정 삭제 웹 URL: `https://fellowsurvivor.com/products/heavenlydemonreborn/delete-account/`
+- [ ] 지원 사이트: `https://fellowsurvivor.com/products/heavenlydemonreborn/support/`
 - [ ] 데이터 보안 설문: 로그인·저장·구매·광고 SDK의 실제 전송·수집·공유·삭제 동작과 일치시킨다. 수탁자 처리가 Play 설문의 공유 예외에 해당하는지는 정의를 확인하고, 정책에서 개인정보처리방침과 용어가 다를 수 있음을 고려한다.
 - [ ] 광고 포함 여부, 대상 연령, 콘텐츠 등급 설문, 앱 접근 권한·심사용 로그인 방법, 개발자 연락처·사업자 확인을 작성한다.
 - [ ] 현재 적용되는 SDK·대상 API·결제 라이브러리·테스트 트랙 및 계정별 출시 접근 요건은 제출 시 Console에서 다시 확인한다. 해당 요건은 수시로 변경될 수 있다.

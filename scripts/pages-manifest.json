@@ -20,14 +20,14 @@
     "assets/reel-nest-screen-3.png", "assets/reel-nest-screen-4.png",
     "assets/studio-everyday.jpg", "assets/studio-games.jpg",
     "assets/studio-utilities.svg", "assets/studio-utilities.jpg",
-    "heavenlydemonreborn/.nojekyll", "heavenlydemonreborn/404.html", "heavenlydemonreborn/index.html",
-    "heavenlydemonreborn/favicon.svg", "heavenlydemonreborn/styles.css",
-    "heavenlydemonreborn/robots.txt", "heavenlydemonreborn/sitemap.xml",
-    "heavenlydemonreborn/consent/index.html", "heavenlydemonreborn/delete-account/index.html",
-    "heavenlydemonreborn/notices/index.html", "heavenlydemonreborn/operation-policy/index.html",
-    "heavenlydemonreborn/privacy/index.html", "heavenlydemonreborn/probabilities/index.html",
-    "heavenlydemonreborn/refund/index.html", "heavenlydemonreborn/support/index.html",
-    "heavenlydemonreborn/terms/index.html"
+    "products/heavenlydemonreborn/.nojekyll", "products/heavenlydemonreborn/404.html", "products/heavenlydemonreborn/index.html",
+    "products/heavenlydemonreborn/favicon.svg", "products/heavenlydemonreborn/styles.css",
+    "products/heavenlydemonreborn/robots.txt", "products/heavenlydemonreborn/sitemap.xml",
+    "products/heavenlydemonreborn/consent/index.html", "products/heavenlydemonreborn/delete-account/index.html",
+    "products/heavenlydemonreborn/notices/index.html", "products/heavenlydemonreborn/operation-policy/index.html",
+    "products/heavenlydemonreborn/privacy/index.html", "products/heavenlydemonreborn/probabilities/index.html",
+    "products/heavenlydemonreborn/refund/index.html", "products/heavenlydemonreborn/support/index.html",
+    "products/heavenlydemonreborn/terms/index.html"
   ],
   "maintenance_files": [
     ".gitignore", "README.md", "docs/pages-preflight.md",
