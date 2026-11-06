@@ -2,3 +2,7 @@
 /.preview/
 __pycache__/
 *.pyc
+
+# Cloudflare build output and wrangler cache
+.cf-dist/
+.wrangler/

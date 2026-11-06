@@ -1,10 +1,12 @@
 // Cloudflare Workers static hosting for https://fellowsurvivor.com/
-// Runs alongside GitHub Pages until the switch. Files in .assetsignore are not published.
+// Runs alongside GitHub Pages until the switch.
 {
   "name": "fellowsurvivor-home",
   "compatibility_date": "2026-11-01",
+  // Copies the published files into .cf-dist/ (repository tooling left out).
+  "build": { "command": "sh scripts/cloudflare-build.sh" },
   "assets": {
-    "directory": ".",
+    "directory": "./.cf-dist",
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "none"
   },
