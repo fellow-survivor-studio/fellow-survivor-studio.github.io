@@ -1,9 +1,0 @@
-# Repository tooling that Cloudflare does not publish (see scripts/pages-manifest.json "maintenance_files").
-.git
-.gitignore
-.assetsignore
-wrangler.jsonc
-README.md
-docs/
-scripts/
-.preview/
