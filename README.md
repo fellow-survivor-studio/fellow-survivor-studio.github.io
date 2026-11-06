@@ -42,8 +42,9 @@ Reel Nest 목록에서는 설명 바로 아래에 자세히 보기 링크를 배
 | --- | --- | --- |
 | Reel Nest 개인정보처리방침·이용약관 | [개인정보처리방침](https://fellowsurvivor.com/products/reel-nest/privacy/), [이용약관](https://fellowsurvivor.com/products/reel-nest/terms/) | [`sources/reel-nest/`](sources/reel-nest/README.md) |
 | 환생천마 정책 및 고객지원 | [정책·지원 페이지](https://fellowsurvivor.com/products/heavenlydemonreborn/) | [`sources/heavenlydemonreborn/`](sources/heavenlydemonreborn/README.md) |
+| Transporter 정책 및 고객지원(한국어·영어) | [정책·지원 페이지](https://fellowsurvivor.com/products/transporter/) | [`sources/transporter/`](sources/transporter/README.md) |
 
-`products/heavenlydemonreborn/`, `products/reel-nest/privacy/`, `products/reel-nest/terms/`는 생성 결과이므로 직접 고치지 않고 원문을 고친 뒤 재생성합니다.
+`products/heavenlydemonreborn/`, `products/transporter/`, `products/reel-nest/privacy/`, `products/reel-nest/terms/`는 생성 결과이므로 직접 고치지 않고 원문을 고친 뒤 재생성합니다.
 Reel Nest 소개 페이지(`products/reel-nest/index.html`)와 정책 페이지 스타일(`products/reel-nest/policy.css`)은 손으로 관리하며, 생성 스크립트가 덮어쓰지 않습니다.
 새 제품(예: transporter)의 정책 페이지도 같은 방식으로 `/products/<제품>/` 경로와 `sources/<제품>/`에 만듭니다.
 주소를 옮기면 옛 주소는 `scripts/cloudflare-build.sh`의 넘김 규칙으로 영구히 연결합니다(예: `/heavenlydemonreborn/…` → `/products/heavenlydemonreborn/…`).
@@ -77,6 +78,7 @@ python -m http.server 8765 --bind 127.0.0.1
 ├── products/
 │   ├── index.html                   # 프로덕트 목록
 │   ├── heavenlydemonreborn/         # 환생천마 정책·지원 페이지 (생성 결과)
+│   ├── transporter/                 # Transporter 정책·지원 페이지, en/ 영어판 (생성 결과)
 │   └── reel-nest/
 │       ├── index.html               # Reel Nest 소개
 │       ├── policy.css               # Reel Nest 정책 페이지 스타일
@@ -96,7 +98,8 @@ python -m http.server 8765 --bind 127.0.0.1
 │   └── reel-nest-screen-4.png
 ├── sources/
 │   ├── heavenlydemonreborn/         # 환생천마 정책 원문·생성·검증 스크립트 (게시하지 않음)
-│   └── reel-nest/                   # Reel Nest 정책 원문·이전 버전 원문·생성·검증 스크립트 (게시하지 않음)
+│   ├── reel-nest/                   # Reel Nest 정책 원문·이전 버전 원문·생성·검증 스크립트 (게시하지 않음)
+│   └── transporter/                 # Transporter 정책 원문·생성·검증 스크립트 (게시하지 않음)
 ├── app-ads.txt                      # 앱 광고 판매자 인증
 ├── googleabe82689611d6157.html       # Google Search Console 소유권 확인
 └── .nojekyll                        # Jekyll 처리 없이 정적 파일 제공

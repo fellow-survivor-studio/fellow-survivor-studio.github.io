@@ -3,4 +3,6 @@
 products/heavenlydemonreborn/** text eol=lf
 # Same for the generated Reel Nest policy pages (sources/reel-nest/validate_site.py).
 products/reel-nest/** text eol=lf
+# Same for the generated Transporter policy pages (sources/transporter/validate_site.py).
+products/transporter/** text eol=lf
 sources/** text eol=lf
