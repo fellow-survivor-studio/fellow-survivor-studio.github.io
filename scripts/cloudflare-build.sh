@@ -11,7 +11,7 @@ rm -rf "$out"
 mkdir -p "$out"
 
 git ls-files -z -- . \
-  ':!README.md' ':!docs/' ':!scripts/' ':!.gitignore' ':!wrangler.jsonc' \
+  ':!README.md' ':!docs/' ':!scripts/' ':!sources/' ':!.github/' ':!.gitignore' ':!.gitattributes' ':!wrangler.jsonc' \
   | xargs -0 cp --parents -t "$out"
 
 # GitHub Pages serves the Search Console file at its .html address.

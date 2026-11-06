@@ -1,0 +1,4 @@
+# The 환생천마 policy pages are generated; keep them and their sources LF so the
+# rebuild check (sources/heavenlydemonreborn/validate_site.py) matches on Windows too.
+heavenlydemonreborn/** text eol=lf
+sources/** text eol=lf

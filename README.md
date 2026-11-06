@@ -37,11 +37,22 @@ Reel Nest 목록에서는 설명 바로 아래에 자세히 보기 링크를 배
 | --- | --- |
 | Reel Nest 개인정보처리방침 | [정책 페이지](https://fellowsurvivor.com/reel-nest/) |
 | Reel Nest 이용약관 | [이용약관](https://fellowsurvivor.com/reel-nest/terms/) |
-| 환생천마 정책 및 고객지원 | [정책·지원 페이지](https://fellowsurvivor.com/heavenlydemonreborn/) |
 | Paper Markdown for Windows | [제품 저장소](https://github.com/fellow-survivor-studio/paper-markdown-for-windows) |
 
 Reel Nest 소개는 `/products/reel-nest/`, 개인정보처리방침은 `/reel-nest/`입니다.
 소개 페이지를 수정할 때 정책 페이지 주소를 덮어쓰지 않습니다.
+Reel Nest 정책은 출시된 앱의 문서와 함께 관리해야 해서 별도 저장소(`reel-nest`)에 둡니다.
+
+### 이 저장소에서 관리하는 출시 전 제품 정책 페이지
+
+출시 전 제품의 정책·지원 페이지는 처음부터 대표 도메인 주소로 이 저장소에서 관리합니다.
+
+| 페이지 | 주소 | 원문·생성 스크립트 |
+| --- | --- | --- |
+| 환생천마 정책 및 고객지원 | [정책·지원 페이지](https://fellowsurvivor.com/heavenlydemonreborn/) | [`sources/heavenlydemonreborn/`](sources/heavenlydemonreborn/README.md) |
+
+`heavenlydemonreborn/`은 생성 결과이므로 직접 고치지 않고 원문을 고친 뒤 재생성합니다.
+새 제품(예: transporter)의 정책 페이지도 같은 방식으로 `/<제품>/` 경로와 `sources/<제품>/`에 만듭니다.
 
 ## 로컬 미리보기
 
@@ -84,6 +95,9 @@ python -m http.server 8765 --bind 127.0.0.1
 │   ├── reel-nest-screen-2.png
 │   ├── reel-nest-screen-3.png
 │   └── reel-nest-screen-4.png
+├── heavenlydemonreborn/             # 환생천마 정책·지원 페이지 (생성 결과)
+├── sources/
+│   └── heavenlydemonreborn/         # 환생천마 정책 원문·생성·검증 스크립트 (게시하지 않음)
 ├── app-ads.txt                      # 앱 광고 판매자 인증
 ├── googleabe82689611d6157.html       # Google Search Console 소유권 확인
 └── .nojekyll                        # Jekyll 처리 없이 정적 파일 제공
