@@ -180,8 +180,9 @@ Reel Nest의 기능, Android 요구사항, 무료·Pro 조건은
 GitHub Pages 설정은 **Settings → Pages → Deploy from a branch → main → / (root)**를 사용합니다.
 
 대표 도메인은 `https://fellowsurvivor.com/`이며 루트 `CNAME` 파일에 호스트명을 유지합니다.
-Cloudflare는 DNS를 관리하고, 실제 정적 호스팅과 자동 배포는 기존 GitHub Pages가 담당합니다.
-루트 A/AAAA 레코드는 GitHub Pages 주소를, `www` CNAME은 `fellow-survivor-studio.github.io`를 가리키며 DNS only로 설정합니다.
+Cloudflare는 DNS를 관리하고, 실제 정적 호스팅과 자동 배포는 현재 GitHub Pages가 담당합니다(아래 **Cloudflare 동시 운영** 참고).
+루트 A/AAAA 레코드는 GitHub Pages 주소를, `www` CNAME은 `fellow-survivor-studio.github.io`를 가리키며, 2026-11-06부터 Cloudflare 프록시(Proxied)를 거칩니다.
+SSL/TLS 암호화 모드는 **Full**로 고정해 GitHub 인증서 갱신 여부와 관계없이 연결되게 했습니다.
 기존 `github.io` 주소와 `www`·HTTP 주소가 대표 HTTPS 도메인의 동일한 경로로 이동하는지도 배포 후 검사합니다.
 GitHub 계정의 도메인 소유권 인증도 완료했습니다. Cloudflare의 `_github-pages-challenge-fellow-survivor-studio` TXT 레코드는 인증 유지용이므로 삭제하지 않습니다.
 루트와 `www`의 HTTPS 인증서가 발급되었으며, 회사 홈페이지와 두 정책 저장소 모두 **Enforce HTTPS**를 켰습니다.
@@ -203,6 +204,16 @@ python -X utf8 scripts/check-pages.py --online --report .preview/pages-preflight
 
 `scripts/pages-manifest.json`에 배포 파일과 보호 경로가 정의되어 있습니다.
 스테이징 후 `--require-index` 옵션으로 새 파일 누락까지 확인합니다. `.preview/`는 Git에서 제외됩니다.
+
+### Cloudflare 동시 운영
+
+GitHub Pages와 함께 Cloudflare Workers 정적 호스팅을 준비하고 있습니다. Cloudflare가 이 저장소에 연결되면 같은 `main` 푸시가 양쪽에 배포됩니다.
+
+- `wrangler.jsonc`: Cloudflare 프로젝트 `fellowsurvivor-home`의 설정입니다. 시험 주소는 `https://new.fellowsurvivor.com/`입니다.
+- `.assetsignore`: Cloudflare에 게시하지 않는 저장소 관리 파일 목록입니다. 두 파일 모두 `scripts/pages-manifest.json`의 `maintenance_files`에 등록되어 있습니다.
+- `/reel-nest/`와 `/heavenlydemonreborn/`은 각 저장소의 Cloudflare 프로젝트가 같은 주소의 하위 경로로 제공합니다.
+- 전환 전까지 `https://fellowsurvivor.com/`은 GitHub Pages가 제공합니다. 전환할 때 `wrangler.jsonc`의 `routes`에 대표 주소를 추가합니다.
+- 기존 `github.io` 주소는 앱에 포함된 정책 문서가 안내하므로, 전환 후에도 GitHub Pages를 끄지 않고 대표 주소로 넘겨주는 용도로 유지합니다.
 
 ### 배포 전 확인
 

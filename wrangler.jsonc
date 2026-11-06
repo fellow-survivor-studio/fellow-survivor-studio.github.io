@@ -1,0 +1,17 @@
+// Cloudflare Workers static hosting for https://fellowsurvivor.com/
+// Runs alongside GitHub Pages until the switch. Files in .assetsignore are not published.
+{
+  "name": "fellowsurvivor-home",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": ".",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none"
+  },
+  "workers_dev": false,
+  "preview_urls": true,
+  // Test address while GitHub Pages still serves fellowsurvivor.com.
+  "routes": [
+    { "pattern": "new.fellowsurvivor.com", "custom_domain": true }
+  ]
+}
