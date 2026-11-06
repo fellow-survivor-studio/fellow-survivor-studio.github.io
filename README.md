@@ -224,7 +224,7 @@ python -X utf8 scripts/check-pages.py --online --report .preview/pages-preflight
 
 `https://fellowsurvivor.com/`은 Cloudflare Workers 정적 호스팅이 제공합니다. GitHub Pages도 켜 두므로 같은 `main` 푸시가 양쪽에 배포됩니다.
 
-- `wrangler.jsonc`: Cloudflare 프로젝트 `fellowsurvivor-home`의 설정입니다. 시험 주소는 `https://new.fellowsurvivor.com/`입니다.
+- `wrangler.jsonc`: Cloudflare 프로젝트 `fellowsurvivor-home`의 설정입니다. 전환 전 비교에 쓰던 시험 주소(`new.fellowsurvivor.com`)는 2026-11-06에 정리했습니다.
 - `scripts/cloudflare-build.sh`: 배포 때마다 자동으로 실행되어, GitHub Pages가 공개하는 파일을 `.cf-dist/`에 복사합니다. README·`docs/`·`scripts/` 같은 저장소 관리 파일은 빼고, Search Console 확인 파일이 `.html` 주소 그대로 열리도록 규칙을 함께 만듭니다. 두 파일 모두 `scripts/pages-manifest.json`의 `maintenance_files`에 등록되어 있습니다.
 - `.cf-dist/`와 `.wrangler/`는 빌드 결과라 Git에서 제외합니다. 이 PC에서 직접 배포할 때도 `npx wrangler deploy`가 같은 스크립트를 먼저 실행합니다(Linux·macOS 또는 Git Bash 필요).
 - `/reel-nest/`와 `/heavenlydemonreborn/`은 각 저장소의 Cloudflare 프로젝트가 같은 주소의 하위 경로로 제공합니다.
