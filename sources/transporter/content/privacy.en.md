@@ -1,0 +1,185 @@
+Fellow Survivor Studio ("we") handles the personal information of people who use the Android app Transporter ("the app") as described in this policy. This policy takes effect on {{DATE}}.
+
+- Received messages, filters and forwarding history are stored only on your phone. We run no server of our own, and message content is never sent to us.
+- A message is forwarded only when it matches conditions you set, only to numbers you add, and through your own mobile carrier.
+- For ads (Google AdMob) and crash and usage statistics (Google Firebase), some information such as the advertising ID and device details is sent to Google. Message content, phone numbers and contacts are never included.
+- The app has no sign-up and does not ask for your name, email or other account details.
+
+## 1. Why we use personal information
+
+We use personal information only for the purposes below. If a purpose changes, we will tell you first and ask for consent where required.
+
+| Purpose | What it covers | Legal basis (EEA/UK) |
+| --- | --- | --- |
+| Forwarding messages | Checks each received message against your filters and sends matching ones to the numbers you added | Performing the service you asked for |
+| History and notifications | Keeps forwarding results (sent, failed, skipped and why) on your phone and notifies you of results and app status | Performing the service |
+| Advertising | Shows ads so the app can stay free | Consent for personalized ads; legitimate interests for non-personalized ads |
+| Fixing crashes | Finds and fixes the causes of crashes and errors | Legitimate interests (a working app) |
+| Improving features | Counts which features are used and how often forwarding succeeds | Legitimate interests (making the app easier to use); you can opt out at any time |
+| Support | Replies when you email us | Legitimate interests |
+
+## 2. Information the app handles
+
+Some information stays only on your phone; some leaves it for ads, crash reports and statistics. We cannot see anything in the first table.
+
+### Stored only on your phone
+
+| Information | When it is created | Required/optional |
+| --- | --- | --- |
+| Received SMS and MMS: sender number, content, time received, receiving SIM | When a message arrives | Required |
+| Messaging-app notifications: conversation title, sender, content (RCS chat messages) | When "Also receive via messaging app notifications" is on and a message notification arrives | Optional |
+| Filters: conditions, destination numbers, message format, sending hours | When you create a filter | Required |
+| Forwarding history: destination number, text sent, result, failure reason | When a message is forwarded | Required |
+| Names saved in your contacts | When you allow contacts access and a number is shown with its name | Optional |
+| App settings (forwarding on/off, retention period, display settings, etc.) | When you change a setting | Required |
+
+- If you turn off "Keep message content in history", the history keeps only the sender and the result.
+- Messages containing verification codes (OTP) or passwords are not forwarded by default, and their content is not kept in history.
+- "Filter Backup and Restore" saves your filters (including destination numbers) as a file in a location you choose (your files, a cloud drive, etc.). Message content and history are not included.
+- App data is excluded from Android cloud backup and device-to-device transfer.
+
+### Leaves your phone
+
+| Information | Recipient | Purpose | Required/optional |
+| --- | --- | --- | --- |
+| Text of the forwarded message | The numbers you added (via your carrier) | Forwarding | Required |
+| Advertising ID, IP address, device model, OS version, language, ad views and clicks | Google (AdMob) | Advertising | Required (personalized ads optional) |
+| Crash data (where and when the error happened), device model, OS version, app version, a random per-install identifier | Google (Firebase Crashlytics) | Fixing crashes | Required |
+| Feature usage counts, forwarding success/failure counts, app version, device model, a random per-install identifier, approximate location estimated from the IP address | Google (Firebase) | Improving features | On by default; can be turned off in Settings |
+
+- Ad, crash and statistics data never include message content, sender or destination numbers, contacts or filter details.
+- We do not try to identify who you are from this information.
+
+## 3. App permissions
+
+Only the SMS permissions are required; the others are requested only when you turn on the feature that needs them. Before any permission is requested, the app's first screen explains what it reads and where it sends it, and asks for your agreement.
+
+| Permission | Used for | Required/optional | If you don't allow it |
+| --- | --- | --- | --- |
+| Receive and read SMS/MMS | Detecting received messages, catching up on missed ones, sending earlier messages | Required | Messages cannot be forwarded |
+| Send SMS | Forwarding to the numbers you added | Required | Messages cannot be forwarded |
+| Notification access | Reading RCS chat messages from messaging-app notifications. Only messaging apps are read; other apps' notifications are ignored | Optional | RCS chat messages are not forwarded |
+| Post notifications | Result, failure and app-status alerts | Optional | No alerts (forwarding still works) |
+| Phone (phone state) | Choosing the receiving and sending SIM on dual-SIM phones | Optional | SIM cannot be chosen; the default SIM is used |
+| Contacts | Showing contact names next to numbers, finding the number for a name shown in an RCS notification | Optional | Only numbers are shown |
+
+- The app also uses permissions Android grants automatically, such as run-at-startup and internet. Run-at-startup is used so messages that arrive during a restart are not missed; internet is used only for ads and crash/statistics reporting.
+- "App lock" uses your phone's fingerprint, face or screen-lock check. Android performs the check; the app never receives or stores fingerprint or face data.
+- You can turn off any permission at any time in Settings > Apps > Transporter > Permissions. Notification access is turned off in your phone's notification access settings.
+
+## 4. Retention and deletion
+
+Messages and history on your phone are deleted automatically after the retention period you choose (30 days by default), and everything is deleted when you uninstall the app.
+
+| Information | Kept for | How it is deleted |
+| --- | --- | --- |
+| Received messages, forwarding history | The "Keep history for" setting: 1, 7 or 30 days (default 30). Messages still being sent are kept until sending ends | Deleted automatically during the app's regular check. "Clear all history" deletes immediately |
+| Filters, app settings | Until you delete them or uninstall the app | "Delete filter", uninstall |
+| Filter backup file | Until you delete it | Delete it yourself where you saved it (it remains after uninstall) |
+| Crash data (Crashlytics) | 90 days | Deleted by Google after the period |
+| Usage statistics (Firebase) | 2 months | Deleted by Google after the period |
+| Ad data (AdMob) | Under Google's Privacy Policy | Deleted by Google. You can reset or delete your phone's advertising ID |
+
+Information on your phone is deleted from the app's database so it cannot be recovered. No law requires us to keep any of it.
+
+## 5. Sharing, service providers and international transfers
+
+We do not sell your personal information or give it to other companies. Legal requests are the only exception, and we hold no message content or history to hand over.
+
+Forwarding is something you set up: messages go from your phone, through your carrier, to the numbers you chose, and never pass through us.
+
+Ads, crash reports and statistics use Google services, so this information is transferred to Google servers in the United States and other countries.
+
+| Item | Firebase Crashlytics, Firebase (statistics) | Google AdMob |
+| --- | --- | --- |
+| Recipient | Google LLC | Google LLC |
+| Role | Service provider (processes crash and usage data on our behalf) | Collects data directly to serve ads |
+| Countries | United States and other countries where Google has servers | United States and other countries where Google has servers |
+| Data | The crash and statistics rows in section 2 | The advertising row in section 2 |
+| When and how | While you use the app or on the next launch after a crash, over encrypted connections | When an ad is loaded, over encrypted connections |
+| Retention | As in section 4 | Under Google's policies |
+| How to opt out | Turn off "Send usage statistics" in Settings | Turn off personalized ads (section 8). Ads themselves cannot be turned off |
+| More information | [Google Privacy Policy](https://policies.google.com/privacy), [Privacy and Security in Firebase](https://firebase.google.com/support/privacy) | [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites) |
+
+Transfers out of the EEA and UK rely on the safeguards Google provides, such as the European Commission's Standard Contractual Clauses. You can read this policy in the store before installing, and if you do not want these transfers you can stop using the app or opt out as described above.
+
+## 6. Your rights
+
+You can see, correct, delete and stop the processing of your personal information at any time. For information on your phone, you can do this directly in the app.
+
+| Right | How |
+| --- | --- |
+| See | The History tab (received messages and results), the Filters tab (conditions and destination numbers) |
+| Correct | Edit filters, change settings |
+| Delete | "Clear all history", "Delete filter", uninstall the app |
+| Stop | Turn off "Turn on forwarding", turn off permissions in phone settings, turn off "Send usage statistics", turn off personalized ads |
+
+Crash and statistics data sent to Google is linked only to a random per-install identifier, with no name or number, so we may not be able to find a specific person's data. To request deletion, contact us (section 10); we will act within what we can verify and reply within 10 days. Uninstalling the app removes the identifier, so no further data is collected.
+
+A legal guardian or authorized agent may exercise these rights for you. If the law where you live gives you further rights, such as objecting to processing, data portability or complaining to a data protection authority (for example in the EEA, the UK or some US states), we will honour them. We do not sell personal information.
+
+## 7. Security
+
+Our first priority is keeping message content from leaving your phone.
+
+- Storage: messages, filters and history are kept only in the app's private storage, which other apps cannot read.
+- Backup exclusion: app data is excluded from Android cloud backup and device-to-device transfer.
+- Verification codes: messages with verification codes or passwords are not forwarded by default and their content is not kept in history. Turning this on in a filter shows a warning.
+- App lock: you can require fingerprint, face or screen lock to open the app.
+- Notifications: result alerts never include message content, only the sender, destination number and filter name.
+- Sending limits: the number of messages to one number in 10 minutes is capped, and forwarded messages that come back are not sent again.
+- Crash and statistics data: the app is built so that message content, phone numbers and contacts are never included, and we check this before each release.
+- Our accounts: the Google accounts used to view crash and statistics data use two-step verification, and access is limited to our representative.
+
+## 8. Advertising ID and personalized ads
+
+The app uses no web cookies; Google AdMob uses your phone's advertising ID to choose ads. You can turn off personalized ads, and you will then see ads not based on your interests.
+
+| Item | Details |
+| --- | --- |
+| Data collected | Advertising ID, ad views and clicks, time of app use |
+| Collected by | Google (directly, through the AdMob SDK in the app) |
+| Purpose | Showing ads, choosing ads that match your interests, measuring ads, preventing invalid clicks |
+| Retention | Under Google's Privacy Policy |
+| Never used | Message content, phone numbers, contacts and filters are not collected for ads or used to choose them |
+
+How to turn off personalized ads:
+
+1. On your phone, open Settings > Google > Ads and tap "Delete advertising ID" or "Reset advertising ID" (on older phones, "Opt out of Ads Personalization").
+2. In the EEA, the UK and Switzerland, a consent screen appears the first time you open the app. If you do not consent, you will not see personalized ads. You can change your choice in the app's settings under "Change ad consent".
+3. In US states with privacy laws, showing personalized ads may count as "sharing" personal information for targeted advertising. You can opt out in the app's settings under "Do not sell or share my personal information".
+
+## 9. Children
+
+The app is not directed at children, and we do not knowingly collect personal information from children under 14 (or the age set by local law, such as 13 in the US or up to 16 in some EEA countries). Children under that age may use the app only with a parent's or guardian's consent. If we learn that a child's information has been collected, we will delete it promptly.
+
+## 10. Contact
+
+Send questions, complaints and deletion requests to the contact below. We reply within 10 days.
+
+| Item | Details |
+| --- | --- |
+| Privacy officer | 박인규 (Representative) |
+| Email | fellow.survivor.studio@gmail.com |
+| Operator | Fellow Survivor Studio (펠로우서바이버스튜디오), business registration number 773-26-02197 (Republic of Korea) |
+| Address | Unit 302-S444, 7 Yonggudae-ro 2790beon-gil, Suji-gu, Yongin-si, Gyeonggi-do 16866, Republic of Korea |
+
+## 11. Complaints and remedies
+
+If you are not satisfied with our reply, you can contact the data protection authority where you live. In the EEA and the UK this is your national supervisory authority. Users in Korea can contact the bodies below.
+
+| Body | Phone (Korea) | Website |
+| --- | --- | --- |
+| Personal Information Infringement Report Center (KISA) | 118 | [privacy.kisa.or.kr](https://privacy.kisa.or.kr) |
+| Personal Information Dispute Mediation Committee | 1833-6972 | [www.kopico.go.kr](https://www.kopico.go.kr) |
+| Supreme Prosecutors' Office | 1301 | [www.spo.go.kr](https://www.spo.go.kr) |
+| Korean National Police Agency | 182 | [ecrm.police.go.kr](https://ecrm.police.go.kr) |
+
+## 12. Changes to this policy
+
+If we change this policy, we will announce it in the app and on this page at least 7 days before it takes effect, or at least 30 days before for changes that are less favourable to you or add new data. Previous versions remain available at the bottom of this page.
+
+- Announced: {{ISO}}
+- Effective: {{ISO}}
+
+If this English version and the Korean version differ, the Korean version prevails.

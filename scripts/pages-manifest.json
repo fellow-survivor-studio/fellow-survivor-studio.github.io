@@ -27,7 +27,12 @@
     "products/heavenlydemonreborn/notices/index.html", "products/heavenlydemonreborn/operation-policy/index.html",
     "products/heavenlydemonreborn/privacy/index.html", "products/heavenlydemonreborn/probabilities/index.html",
     "products/heavenlydemonreborn/refund/index.html", "products/heavenlydemonreborn/support/index.html",
-    "products/heavenlydemonreborn/terms/index.html"
+    "products/heavenlydemonreborn/terms/index.html",
+    "products/transporter/.nojekyll", "products/transporter/404.html", "products/transporter/index.html",
+    "products/transporter/favicon.svg", "products/transporter/styles.css", "products/transporter/robots.txt", "products/transporter/sitemap.xml",
+    "products/transporter/en/index.html", "products/transporter/en/privacy/index.html", "products/transporter/en/support/index.html",
+    "products/transporter/en/terms/index.html", "products/transporter/privacy/index.html", "products/transporter/support/index.html",
+    "products/transporter/terms/index.html"
   ],
   "maintenance_files": [
     ".gitignore", "README.md", "docs/pages-preflight.md",
@@ -36,7 +41,11 @@
     "scripts/check-cloudflare-deploy.sh", ".github/workflows/cloudflare-deploy-check.yml",
     ".gitattributes", "sources/heavenlydemonreborn/README.md",
     "sources/heavenlydemonreborn/LAUNCH_CHECKLIST.md", "sources/heavenlydemonreborn/content/site.py",
-    "sources/heavenlydemonreborn/build_site.py", "sources/heavenlydemonreborn/validate_site.py"
+    "sources/heavenlydemonreborn/build_site.py", "sources/heavenlydemonreborn/validate_site.py",
+    "sources/transporter/README.md", "sources/transporter/LAUNCH_CHECKLIST.md",
+    "sources/transporter/build_site.py", "sources/transporter/content/privacy.en.md", "sources/transporter/content/privacy.ko.md",
+    "sources/transporter/content/site.py", "sources/transporter/content/terms.en.md", "sources/transporter/content/terms.ko.md",
+    "sources/transporter/validate_site.py"
   ],
   "protected_sha256": {
     "app-ads.txt": "8c2bbca5f9ff26163ef688863943cd998c9fdfaaba330d93c4998222292a88fa",
