@@ -49,10 +49,11 @@ Reel Nest 정책은 출시된 앱의 문서와 함께 관리해야 해서 별도
 
 | 페이지 | 주소 | 원문·생성 스크립트 |
 | --- | --- | --- |
-| 환생천마 정책 및 고객지원 | [정책·지원 페이지](https://fellowsurvivor.com/heavenlydemonreborn/) | [`sources/heavenlydemonreborn/`](sources/heavenlydemonreborn/README.md) |
+| 환생천마 정책 및 고객지원 | [정책·지원 페이지](https://fellowsurvivor.com/products/heavenlydemonreborn/) | [`sources/heavenlydemonreborn/`](sources/heavenlydemonreborn/README.md) |
 
-`heavenlydemonreborn/`은 생성 결과이므로 직접 고치지 않고 원문을 고친 뒤 재생성합니다.
-새 제품(예: transporter)의 정책 페이지도 같은 방식으로 `/<제품>/` 경로와 `sources/<제품>/`에 만듭니다.
+`products/heavenlydemonreborn/`은 생성 결과이므로 직접 고치지 않고 원문을 고친 뒤 재생성합니다.
+새 제품(예: transporter)의 정책 페이지도 같은 방식으로 `/products/<제품>/` 경로와 `sources/<제품>/`에 만듭니다.
+주소를 옮기면 옛 주소는 `scripts/cloudflare-build.sh`의 넘김 규칙으로 영구히 연결합니다(예: `/heavenlydemonreborn/…` → `/products/heavenlydemonreborn/…`).
 
 ## 로컬 미리보기
 
@@ -81,6 +82,7 @@ python -m http.server 8765 --bind 127.0.0.1
 ├── favicon.svg                      # 스튜디오 파비콘
 ├── products/
 │   ├── index.html                   # 프로덕트 목록
+│   ├── heavenlydemonreborn/         # 환생천마 정책·지원 페이지 (생성 결과)
 │   └── reel-nest/
 │       └── index.html               # Reel Nest 소개
 ├── assets/
@@ -95,7 +97,6 @@ python -m http.server 8765 --bind 127.0.0.1
 │   ├── reel-nest-screen-2.png
 │   ├── reel-nest-screen-3.png
 │   └── reel-nest-screen-4.png
-├── heavenlydemonreborn/             # 환생천마 정책·지원 페이지 (생성 결과)
 ├── sources/
 │   └── heavenlydemonreborn/         # 환생천마 정책 원문·생성·검증 스크립트 (게시하지 않음)
 ├── app-ads.txt                      # 앱 광고 판매자 인증
@@ -227,7 +228,7 @@ python -X utf8 scripts/check-pages.py --online --report .preview/pages-preflight
 - `wrangler.jsonc`: Cloudflare 프로젝트 `fellowsurvivor-home`의 설정입니다. 전환 전 비교에 쓰던 시험 주소(`new.fellowsurvivor.com`)는 2026-11-06에 정리했습니다.
 - `scripts/cloudflare-build.sh`: 배포 때마다 자동으로 실행되어, GitHub Pages가 공개하는 파일을 `.cf-dist/`에 복사합니다. README·`docs/`·`scripts/` 같은 저장소 관리 파일은 빼고, Search Console 확인 파일이 `.html` 주소 그대로 열리도록 규칙을 함께 만듭니다. 두 파일 모두 `scripts/pages-manifest.json`의 `maintenance_files`에 등록되어 있습니다.
 - `.cf-dist/`와 `.wrangler/`는 빌드 결과라 Git에서 제외합니다. 이 PC에서 직접 배포할 때도 `npx wrangler deploy`가 같은 스크립트를 먼저 실행합니다(Linux·macOS 또는 Git Bash 필요).
-- `/reel-nest/`와 `/heavenlydemonreborn/`은 각 저장소의 Cloudflare 프로젝트가 같은 주소의 하위 경로로 제공합니다.
+- `/reel-nest/`는 `reel-nest` 저장소의 Cloudflare 프로젝트가 같은 주소의 하위 경로로 제공합니다. 환생천마(`/products/heavenlydemonreborn/`)는 이 저장소가 직접 제공합니다.
 - 배포 확인: `main`에 푸시할 때마다 GitHub Actions **Cloudflare deploy check**가 Cloudflare 빌드 결과를 기다린 뒤, 실제 사이트가 푸시한 파일과 같은지 하나씩 비교합니다(`scripts/check-cloudflare-deploy.sh`). 빌드가 실패하거나 내용이 다르면 이 작업이 실패하고 GitHub이 실패 알림 메일을 보냅니다.
 - 대표 주소는 `wrangler.jsonc`의 `routes`에 있는 `fellowsurvivor.com/*` 경로 규칙으로 연결됩니다. GitHub Pages를 가리키는 DNS 레코드는 그대로 두었습니다.
 - GitHub Pages로 되돌리기: Cloudflare 화면(Workers → `fellowsurvivor-home` → Domains)에서 `fellowsurvivor.com/*` 규칙을 지우면 즉시 GitHub Pages로 돌아갑니다. 다음 배포 때 다시 켜지지 않도록 `wrangler.jsonc`에서도 같은 규칙을 지웁니다. 하위 경로는 각 저장소에서 같은 방법으로 되돌립니다.

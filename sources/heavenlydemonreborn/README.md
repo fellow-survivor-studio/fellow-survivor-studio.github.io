@@ -2,7 +2,7 @@
 
 한국 Google Play 출시를 위한 공식 정책 사이트입니다. 2026-11-06에 별도 저장소(`fellow-survivor-studio/heavenlydemonreborn`, 보관됨)에서 회사 홈페이지 저장소로 옮겼습니다.
 
-공개 주소: **https://fellowsurvivor.com/heavenlydemonreborn/**
+공개 주소: **https://fellowsurvivor.com/products/heavenlydemonreborn/**
 
 현재 문서는 **출시 준비 버전**입니다. 사이트 공개와 게임 출시 요건 충족은 별개입니다. 확정이 필요한 내용은 [출시 체크리스트](LAUNCH_CHECKLIST.md)에 기록했습니다.
 
@@ -31,19 +31,19 @@ python sources/heavenlydemonreborn/validate_site.py
 python -m http.server 8765 --bind 127.0.0.1
 ```
 
-로컬 미리보기 주소는 `http://127.0.0.1:8765/heavenlydemonreborn/`입니다.
+로컬 미리보기 주소는 `http://127.0.0.1:8765/products/heavenlydemonreborn/`입니다.
 
 - 정책 원문·사업자 정보: `sources/heavenlydemonreborn/content/site.py`
 - HTML 공통 구조: `sources/heavenlydemonreborn/build_site.py`
-- 디자인: `heavenlydemonreborn/styles.css`, `heavenlydemonreborn/favicon.svg`
-- 빌드 결과: `heavenlydemonreborn/` 아래 각 페이지의 `index.html`, `404.html`, `sitemap.xml`, `robots.txt`, `.nojekyll`
+- 디자인: `products/heavenlydemonreborn/styles.css`, `products/heavenlydemonreborn/favicon.svg`
+- 빌드 결과: `products/heavenlydemonreborn/` 아래 각 페이지의 `index.html`, `404.html`, `sitemap.xml`, `robots.txt`, `.nojekyll`
 
 원문 수정 후 반드시 재빌드하고 결과 HTML도 함께 커밋합니다. 검증 스크립트는 내부 링크·목차, 메타데이터, 메일 작성 링크, 원문과 빌드 결과의 일치 여부를 확인합니다. 법률 적합성이나 앱의 실제 데이터 처리 동작을 자동 검증하는 도구는 아닙니다.
 결과 파일을 추가하거나 지울 때는 저장소의 `scripts/pages-manifest.json` `files` 목록도 함께 고칩니다.
 
 ## 게시
 
-회사 홈페이지와 같은 방식으로 게시됩니다. `main`에 푸시하면 Cloudflare가 `https://fellowsurvivor.com/heavenlydemonreborn/`에 배포하고, GitHub Actions **Cloudflare deploy check**가 실제 사이트 파일을 확인합니다. 이전 `github.io` 주소는 GitHub Pages가 대표 주소로 넘겨줍니다.
+회사 홈페이지와 같은 방식으로 게시됩니다. `main`에 푸시하면 Cloudflare가 `https://fellowsurvivor.com/products/heavenlydemonreborn/`에 배포하고, GitHub Actions **Cloudflare deploy check**가 실제 사이트 파일을 확인합니다. 2026-11-06에 `/heavenlydemonreborn/`에서 `/products/heavenlydemonreborn/`으로 옮겼습니다. 옛 주소(`/heavenlydemonreborn/…`와 `github.io/heavenlydemonreborn/…`)는 `scripts/cloudflare-build.sh`가 만드는 넘김 규칙으로 새 주소에 영구히 연결됩니다.
 
 `sources/`는 Cloudflare에 게시하지 않습니다. 공개 저장소이므로 Firebase 서비스 계정, 결제 검증 키, 실제 이용자 데이터 등을 넣지 않습니다.
 

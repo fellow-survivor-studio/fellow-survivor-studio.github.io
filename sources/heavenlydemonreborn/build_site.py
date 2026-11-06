@@ -1,6 +1,6 @@
 """Build the dependency-free Korean policy site. Source: content/site.py.
 
-Writes the published pages to <repository root>/heavenlydemonreborn/.
+Writes the published pages to <repository root>/products/heavenlydemonreborn/.
 """
 from pathlib import Path
 from html import escape
@@ -9,8 +9,8 @@ import argparse
 import runpy
 
 SOURCE = Path(__file__).resolve().parent
-ROOT = SOURCE.parents[1] / "heavenlydemonreborn"
-BASE = "https://fellowsurvivor.com/heavenlydemonreborn/"
+ROOT = SOURCE.parents[1] / "products" / "heavenlydemonreborn"
+BASE = "https://fellowsurvivor.com/products/heavenlydemonreborn/"
 
 
 def build(out):

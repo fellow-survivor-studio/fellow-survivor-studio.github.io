@@ -71,7 +71,7 @@ def live_paths():
         paths.extend(prefix + lang for lang in CONFIG["locales"])
     paths.extend(f"/reel-nest/archive/{date}/{lang}"
                  for date in CONFIG["privacy_archives"] for lang in CONFIG["locales"])
-    paths.extend("/heavenlydemonreborn/" + path for path in CONFIG["game_paths"])
+    paths.extend("/products/heavenlydemonreborn/" + path for path in CONFIG["game_paths"])
     return sorted(set(paths))
 
 
