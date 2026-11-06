@@ -107,7 +107,7 @@ Ads and usage statistics use Google services, so this information is transferred
 | How to opt out | Tap Decline in the first-launch dialog, or turn off "Send usage statistics" in Settings (this also deletes the statistics identifier on your phone). Declining does not limit the app | Turn off personalized ads (section 8). Ads appear only when you choose to watch one | Nothing is sent unless you open the website. No cookies are used, and it has nothing to do with using the app |
 | More information | [Google Privacy Policy](https://policies.google.com/privacy), [Privacy and Security in Firebase](https://firebase.google.com/support/privacy) | [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites) | [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/) |
 
-Transfers out of the EEA and UK rely on the safeguards Google provides, such as the European Commission's Standard Contractual Clauses. You can read this policy in the store before installing, and if you do not want these transfers you can stop using the app or opt out as described above.
+Transfers out of the EEA and UK rely on the safeguards Google and Cloudflare provide, such as the European Commission's Standard Contractual Clauses. You can read this policy in the store before installing, and if you do not want these transfers you can stop using the app or opt out as described above.
 
 ## 6. Your rights
 
