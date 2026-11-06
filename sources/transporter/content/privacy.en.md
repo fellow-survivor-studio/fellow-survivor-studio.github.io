@@ -18,6 +18,7 @@ We use personal information only for the purposes below. If a purpose changes, w
 | Subscription | Provides forwarding without a daily limit to subscribers and checks subscription status with Google Play | Performing the service you bought |
 | Improving features | Shows where people get stuck after installing, whether forwarding works, and which features are used | Consent: statistics are sent only if you agree in the dialog shown when you first open the app |
 | Support | Replies when you email us | Legitimate interests |
+| Website | Delivers this website and counts visits | Legitimate interests |
 
 ## 2. Information the app handles
 
@@ -93,18 +94,18 @@ We do not sell your personal information or give it to other companies. Legal re
 
 Forwarding is something you set up: messages go from your phone, through your carrier, to the numbers you chose, and never pass through us.
 
-Ads and usage statistics use Google services, so this information is transferred to Google servers in the United States and other countries. Usage statistics, sent only for people who agree in the first-launch dialog to both their collection and their transfer abroad, are processed by Google on our behalf under its data processing terms. We do not use the data-sharing settings that let Google use this data for its own purposes, and we do not link it to advertising. Subscription payments are handled by Google Play.
+Ads and usage statistics use Google services, so this information is transferred to Google servers in the United States and other countries. Usage statistics, sent only for people who agree in the first-launch dialog to both their collection and their transfer abroad, are processed by Google on our behalf under its data processing terms. We do not use the data-sharing settings that let Google use this data for its own purposes, and we do not link it to advertising. Subscription payments are handled by Google Play. This policy and the support pages are on a website served through Cloudflare, which also provides its visitor statistics.
 
-| Item | Firebase (usage statistics) | Google AdMob |
-| --- | --- | --- |
-| Recipient | Google LLC | Google LLC |
-| Role | Service provider (processes usage statistics on our behalf) | Collects data directly to serve ads |
-| Countries | United States and other countries where Google has servers | United States and other countries where Google has servers |
-| Data | The usage statistics row in section 2 | The advertising row in section 2 |
-| When and how | After you agree, while you use the app and once a day, over encrypted connections | When an ad is loaded, over encrypted connections |
-| Retention | As in section 4 | Under Google's policies |
-| How to opt out | Tap Decline in the first-launch dialog, or turn off "Send usage statistics" in Settings (this also deletes the statistics identifier on your phone). Declining does not limit the app | Turn off personalized ads (section 8). Ads appear only when you choose to watch one |
-| More information | [Google Privacy Policy](https://policies.google.com/privacy), [Privacy and Security in Firebase](https://firebase.google.com/support/privacy) | [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites) |
+| Item | Firebase (usage statistics) | Google AdMob | Cloudflare (website) |
+| --- | --- | --- | --- |
+| Recipient | Google LLC | Google LLC | Cloudflare, Inc. |
+| Role | Service provider (processes usage statistics on our behalf) | Collects data directly to serve ads | Service provider (delivers this website and its visitor statistics on our behalf) |
+| Countries | United States and other countries where Google has servers | United States and other countries where Google has servers | United States and other countries where Cloudflare has servers |
+| Data | The usage statistics row in section 2 | The advertising row in section 2 | When you open this website: IP address, the page address and the referring page, country, browser, operating system and device type, page load time |
+| When and how | After you agree, while you use the app and once a day, over encrypted connections | When an ad is loaded, over encrypted connections | When you open this website (fellowsurvivor.com), over encrypted connections. The app sends nothing to Cloudflare |
+| Retention | As in section 4 | Under Google's policies | Under Cloudflare's policies (raw visit data for 7 days, then only aggregates) |
+| How to opt out | Tap Decline in the first-launch dialog, or turn off "Send usage statistics" in Settings (this also deletes the statistics identifier on your phone). Declining does not limit the app | Turn off personalized ads (section 8). Ads appear only when you choose to watch one | Nothing is sent unless you open the website. No cookies are used, and it has nothing to do with using the app |
+| More information | [Google Privacy Policy](https://policies.google.com/privacy), [Privacy and Security in Firebase](https://firebase.google.com/support/privacy) | [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites) | [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/) |
 
 Transfers out of the EEA and UK rely on the safeguards Google provides, such as the European Commission's Standard Contractual Clauses. You can read this policy in the store before installing, and if you do not want these transfers you can stop using the app or opt out as described above.
 
