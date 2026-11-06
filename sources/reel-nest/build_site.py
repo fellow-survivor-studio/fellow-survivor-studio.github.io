@@ -84,11 +84,12 @@ ARCHIVE_LABELS = {
 ARCHIVE = CONTENT / "archive"
 ARCHIVE_NAME_RE = re.compile(r"^(?P<source>[a-z_]+)_(?P<lang>[a-z]{2})_(?P<date>\d{4}-\d{2}-\d{2})\.txt$")
 # Documents shown with each version's period of application ("from …", "… to …") instead of
-# current/previous wording, which would turn wrong on a date. Needed when a revision is
-# published before its effective date (terms of use: 7 days' notice, Article 3(2)): the newest
-# text goes in content/ on the day it is published, the text it replaces goes in content/archive/,
-# and nothing has to change on the effective date.
-DATED_DOCS = {"terms"}
+# current/previous wording, which would turn wrong on a date. This lets a revision be published
+# before its effective date (terms of use: 7 days' notice, Article 3(2); the privacy policy may go
+# up before the release day): the newest text goes in content/ on the day it is published, the
+# text it replaces goes in content/archive/, and nothing has to change on the effective date.
+# (The archive-notice wording below is kept for any document left out of this set.)
+DATED_DOCS = {"privacy", "terms"}
 # Reason for each revision, shown on its revision page: content/revisions/<source>_<lang>_<date>.txt
 REVISIONS = CONTENT / "revisions"
 # Revision pages (<prefix>revision/<date>/: reason, before/after comparison, full revised text)
@@ -229,6 +230,8 @@ def period_text(lang: str, start: str, end: str | None) -> str:
     labels = REVISION_LABELS[lang]
     if end is None:
         return labels["from"].format(start=localized_date(lang, start))
+    if end == start:  # replaced the next day: a single day
+        return localized_date(lang, start)
     return labels["range"].format(start=localized_date(lang, start), end=localized_date(lang, end))
 
 
