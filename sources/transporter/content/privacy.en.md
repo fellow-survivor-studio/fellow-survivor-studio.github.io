@@ -93,7 +93,7 @@ We do not sell your personal information or give it to other companies. Legal re
 
 Forwarding is something you set up: messages go from your phone, through your carrier, to the numbers you chose, and never pass through us.
 
-Ads and usage statistics use Google services, so this information is transferred to Google servers in the United States and other countries. Usage statistics, sent only for people who agree, are processed by Google on our behalf under its data processing terms. We do not use the data-sharing settings that let Google use this data for its own purposes, and we do not link it to advertising. Subscription payments are handled by Google Play.
+Ads and usage statistics use Google services, so this information is transferred to Google servers in the United States and other countries. Usage statistics, sent only for people who agree in the first-launch dialog to both their collection and their transfer abroad, are processed by Google on our behalf under its data processing terms. We do not use the data-sharing settings that let Google use this data for its own purposes, and we do not link it to advertising. Subscription payments are handled by Google Play.
 
 | Item | Firebase (usage statistics) | Google AdMob |
 | --- | --- | --- |
