@@ -16,9 +16,8 @@
   "previews": {},
   // A zone route (not a custom domain) keeps the GitHub Pages DNS records in place, so removing
   // this route sends traffic straight back to GitHub Pages. /reel-nest/ and /heavenlydemonreborn/
-  // have more specific routes in their own repositories. new.fellowsurvivor.com is the test address.
+  // have more specific routes in their own repositories.
   "routes": [
-    { "pattern": "new.fellowsurvivor.com", "custom_domain": true },
     { "pattern": "fellowsurvivor.com/*", "zone_name": "fellowsurvivor.com" }
   ]
 }
