@@ -45,14 +45,14 @@ LANGS = {
         "open_toc": "문서 목차 열기", "top": "맨 위로 ↑", "eyebrow": "TRANSPORTER · 문자 자동전달",
         "published": "게시일", "version": "문서 버전",
         "notice_title": "출시 준비 안내",
-        "notice": "Transporter는 Google Play 출시를 준비하고 있습니다. 개인정보처리방침의 광고(Google AdMob), 구독(Google Play 결제), 오류 기록(Firebase Crashlytics), 사용 통계(Firebase) 항목과 이용약관의 무료 한도·광고·구독 조건은 그 기능을 넣은 앱 버전부터 적용됩니다. 이 사이트의 문의 안내는 지금 이용할 수 있습니다.",
+        "notice": "Transporter는 Google Play 출시를 준비하고 있습니다. 개인정보처리방침의 광고(Google AdMob), 구독(Google Play 결제), 사용 통계(Firebase) 항목과 이용약관의 무료 한도·광고·구독 조건은 그 기능을 넣은 앱 버전부터 적용됩니다. 이 사이트의 문의 안내는 지금 이용할 수 있습니다.",
         "support_subject": "[Transporter] 문의",
         "not_found_title": "페이지를 찾을 수 없습니다.", "not_found_body": "주소가 바뀌었거나 없는 페이지입니다.", "not_found_home": "정책 및 고객지원 홈으로",
         "pages": [
             page("", "안내 홈", "정책 및 고객지원", "Transporter(문자 자동전달)의 개인정보처리방침, 이용약관과 고객지원 안내입니다.", [
                 section("필요한 안내를 찾아보세요", """
 <div class="cards">
-<a class="card" href="{{HOME}}privacy/"><strong>개인정보처리방침</strong><span>폰 안에만 저장하는 문자와, 광고·오류·통계로 Google에 가는 정보</span></a>
+<a class="card" href="{{HOME}}privacy/"><strong>개인정보처리방침</strong><span>폰 안에만 저장하는 문자와, 광고·구독·사용 통계로 Google에 가는 정보</span></a>
 <a class="card" href="{{HOME}}terms/"><strong>이용약관 및 운영정책</strong><span>허용되는 사용, 금지 행위, 책임의 한계</span></a>
 <a class="card" href="{{HOME}}support/"><strong>고객지원</strong><span>문의 방법과 문의할 때 적어 주실 것</span></a>
 </div>"""),
@@ -89,14 +89,14 @@ LANGS = {
         "open_toc": "Show contents", "top": "Back to top ↑", "eyebrow": "TRANSPORTER · SMS FORWARDING",
         "published": "Published", "version": "Version",
         "notice_title": "Before launch",
-        "notice": "Transporter is preparing for release on Google Play. The advertising (Google AdMob), subscription (Google Play billing), crash reporting (Firebase Crashlytics) and usage statistics (Firebase) parts of the Privacy Policy, and the free limit, ads and subscription terms of the Terms of Use, apply from the app version that adds those features. The contact details on this site can be used now.",
+        "notice": "Transporter is preparing for release on Google Play. The advertising (Google AdMob), subscription (Google Play billing) and usage statistics (Firebase) parts of the Privacy Policy, and the free limit, ads and subscription terms of the Terms of Use, apply from the app version that adds those features. The contact details on this site can be used now.",
         "support_subject": "[Transporter] Support request",
         "not_found_title": "Page not found.", "not_found_body": "The address has changed or the page does not exist.", "not_found_home": "Go to policies and support",
         "pages": [
             page("", "Home", "Policies and support", "The Privacy Policy, Terms of Use and support information for Transporter.", [
                 section("Find what you need", """
 <div class="cards">
-<a class="card" href="{{HOME}}en/privacy/"><strong>Privacy Policy</strong><span>Messages that stay on your phone, and what goes to Google for ads, crash reports and statistics</span></a>
+<a class="card" href="{{HOME}}en/privacy/"><strong>Privacy Policy</strong><span>Messages that stay on your phone, and what goes to Google for ads, subscriptions and usage statistics</span></a>
 <a class="card" href="{{HOME}}en/terms/"><strong>Terms of Use and Acceptable Use Policy</strong><span>Permitted use, prohibited conduct, limitation of liability</span></a>
 <a class="card" href="{{HOME}}en/support/"><strong>Support</strong><span>How to contact us and what to include</span></a>
 </div>"""),
