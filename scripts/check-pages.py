@@ -67,10 +67,12 @@ def page_file(path):
 
 def live_paths():
     paths = list(CONFIG["other_live_paths"])
-    for prefix in ("/reel-nest/", "/reel-nest/terms/"):
-        paths.extend(prefix + lang for lang in CONFIG["locales"])
-    paths.extend(f"/reel-nest/archive/{date}/{lang}"
-                 for date in CONFIG["privacy_archives"] for lang in CONFIG["locales"])
+    reel_nest = "/products/reel-nest/"
+    paths.append(reel_nest)
+    for doc, archives in (("privacy/", "privacy_archives"), ("terms/", "terms_archives")):
+        paths.extend(reel_nest + doc + lang for lang in CONFIG["locales"])
+        paths.extend(f"{reel_nest}{doc}archive/{date}/{lang}"
+                     for date in CONFIG[archives] for lang in CONFIG["locales"])
     paths.extend("/products/heavenlydemonreborn/" + path for path in CONFIG["game_paths"])
     return sorted(set(paths))
 
@@ -243,7 +245,7 @@ def main():
             redirects = [(origin, path) for origin in CONFIG.get("legacy_base_urls", [])
                          for path in sorted(live | set(CONFIG["pages"]))]
             redirects += [(origin, path) for origin in CONFIG.get("domain_aliases", [])
-                          for path in ("/", "/app-ads.txt", "/reel-nest/terms/")]
+                          for path in ("/", "/app-ads.txt", "/products/reel-nest/terms/")]
             with ThreadPoolExecutor(max_workers=4) as pool:
                 redirect_results = list(pool.map(lambda target: fetch(target[1], target[0]), redirects))
             canonical = {row["path"]: row for row in results}

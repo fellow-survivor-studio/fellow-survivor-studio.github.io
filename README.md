@@ -22,39 +22,33 @@
 언어를 자동 감지해 리디렉션하지 않으며, 기본 주소는 기존 한국어 페이지입니다.
 영문 페이지에는 `lang="en"`, 독립 canonical/OG URL, 한국어·영어 `hreflang`을 제공합니다.
 이미지와 스타일은 공유하며, 한국어 본문이나 제품 조건을 바꾸면 대응하는 영문 HTML도 함께 갱신합니다.
-영문 Reel Nest 소개는 기존 `/reel-nest/en/` 개인정보처리방침과 `/reel-nest/terms/en/` 이용약관으로 연결합니다.
+영문 Reel Nest 소개는 `/products/reel-nest/privacy/en/` 개인정보처리방침과 `/products/reel-nest/terms/en/` 이용약관으로 연결합니다.
 
 홈페이지 메뉴에서 프로덕트 목록으로 이동하고, Reel Nest 소개 영역의 이미지나 자세히 보기 링크에서 상세 소개를 볼 수 있습니다.
 Reel Nest 목록에서는 설명 바로 아래에 자세히 보기 링크를 배치하고, 그다음에 Google Play 다운로드를 아이콘이 있는 텍스트 링크로 표시합니다. 이용약관은 상세 소개 페이지에서 안내합니다.
 홈페이지에는 개별 제품을 노출하지 않으며, 유틸리티·게임 소개 섹션에서 프로덕트 목록의 해당 카테고리로 이동합니다.
 
-### 별도로 운영하는 정책·지원 페이지
-
-아래 주소는 이 저장소의 제품 소개 페이지와 별도로 운영합니다.
-기존 경로를 유지하고, 필요한 곳에서 전체 URL로 연결합니다. 이전 `github.io` 주소도 같은 경로의 새 도메인으로 이동합니다.
+### 다른 곳에서 운영하는 페이지
 
 | 페이지 | 주소 |
 | --- | --- |
-| Reel Nest 개인정보처리방침 | [정책 페이지](https://fellowsurvivor.com/reel-nest/) |
-| Reel Nest 이용약관 | [이용약관](https://fellowsurvivor.com/reel-nest/terms/) |
 | Paper Markdown for Windows | [제품 저장소](https://github.com/fellow-survivor-studio/paper-markdown-for-windows) |
 
-Reel Nest 소개는 `/products/reel-nest/`, 개인정보처리방침은 `/reel-nest/`입니다.
-소개 페이지를 수정할 때 정책 페이지 주소를 덮어쓰지 않습니다.
-Reel Nest 정책은 출시된 앱의 문서와 함께 관리해야 해서 별도 저장소(`reel-nest`)에 둡니다.
+### 이 저장소에서 관리하는 제품 정책 페이지
 
-### 이 저장소에서 관리하는 출시 전 제품 정책 페이지
-
-출시 전 제품의 정책·지원 페이지는 처음부터 대표 도메인 주소로 이 저장소에서 관리합니다.
+제품의 정책·지원 페이지는 대표 도메인의 `/products/<제품>/` 아래에 두고 이 저장소에서 관리합니다.
 
 | 페이지 | 주소 | 원문·생성 스크립트 |
 | --- | --- | --- |
+| Reel Nest 개인정보처리방침·이용약관 | [개인정보처리방침](https://fellowsurvivor.com/products/reel-nest/privacy/), [이용약관](https://fellowsurvivor.com/products/reel-nest/terms/) | [`sources/reel-nest/`](sources/reel-nest/README.md) |
 | 환생천마 정책 및 고객지원 | [정책·지원 페이지](https://fellowsurvivor.com/products/heavenlydemonreborn/) | [`sources/heavenlydemonreborn/`](sources/heavenlydemonreborn/README.md) |
 | Transporter 정책 및 고객지원(한국어·영어) | [정책·지원 페이지](https://fellowsurvivor.com/products/transporter/) | [`sources/transporter/`](sources/transporter/README.md) |
 
-`products/heavenlydemonreborn/`과 `products/transporter/`는 생성 결과이므로 직접 고치지 않고 원문을 고친 뒤 재생성합니다.
+`products/heavenlydemonreborn/`, `products/transporter/`, `products/reel-nest/privacy/`, `products/reel-nest/terms/`는 생성 결과이므로 직접 고치지 않고 원문을 고친 뒤 재생성합니다.
+Reel Nest 소개 페이지(`products/reel-nest/index.html`)와 정책 페이지 스타일(`products/reel-nest/policy.css`)은 손으로 관리하며, 생성 스크립트가 덮어쓰지 않습니다.
 새 제품(예: transporter)의 정책 페이지도 같은 방식으로 `/products/<제품>/` 경로와 `sources/<제품>/`에 만듭니다.
 주소를 옮기면 옛 주소는 `scripts/cloudflare-build.sh`의 넘김 규칙으로 영구히 연결합니다(예: `/heavenlydemonreborn/…` → `/products/heavenlydemonreborn/…`).
+Reel Nest 정책은 2026-11-06에 별도 저장소(`reel-nest`, `/reel-nest/`)에서 옮겨 왔습니다. 1.3.0 이전 앱이 안내하는 `github.io/reel-nest/…`와 `/reel-nest/…` 주소는 같은 넘김 규칙으로 새 주소에 연결됩니다.
 
 ## 로컬 미리보기
 
@@ -86,7 +80,10 @@ python -m http.server 8765 --bind 127.0.0.1
 │   ├── heavenlydemonreborn/         # 환생천마 정책·지원 페이지 (생성 결과)
 │   ├── transporter/                 # Transporter 정책·지원 페이지, en/ 영어판 (생성 결과)
 │   └── reel-nest/
-│       └── index.html               # Reel Nest 소개
+│       ├── index.html               # Reel Nest 소개
+│       ├── policy.css               # Reel Nest 정책 페이지 스타일
+│       ├── privacy/, terms/         # Reel Nest 개인정보처리방침·이용약관과 이전 버전 (생성 결과)
+│       └── sitemap.xml              # Reel Nest 사이트맵 (생성 결과)
 ├── assets/
 │   ├── fonts/                       # Pretendard Regular 및 SIL OFL 라이선스
 │   ├── google-play-icon.png         # Google Play 다운로드 링크 아이콘
@@ -101,6 +98,7 @@ python -m http.server 8765 --bind 127.0.0.1
 │   └── reel-nest-screen-4.png
 ├── sources/
 │   ├── heavenlydemonreborn/         # 환생천마 정책 원문·생성·검증 스크립트 (게시하지 않음)
+│   ├── reel-nest/                   # Reel Nest 정책 원문·이전 버전 원문·생성·검증 스크립트 (게시하지 않음)
 │   └── transporter/                 # Transporter 정책 원문·생성·검증 스크립트 (게시하지 않음)
 ├── app-ads.txt                      # 앱 광고 판매자 인증
 ├── googleabe82689611d6157.html       # Google Search Console 소유권 확인
@@ -231,10 +229,10 @@ python -X utf8 scripts/check-pages.py --online --report .preview/pages-preflight
 - `wrangler.jsonc`: Cloudflare 프로젝트 `fellowsurvivor-home`의 설정입니다. 전환 전 비교에 쓰던 시험 주소(`new.fellowsurvivor.com`)는 2026-11-06에 정리했습니다.
 - `scripts/cloudflare-build.sh`: 배포 때마다 자동으로 실행되어, GitHub Pages가 공개하는 파일을 `.cf-dist/`에 복사합니다. README·`docs/`·`scripts/` 같은 저장소 관리 파일은 빼고, Search Console 확인 파일이 `.html` 주소 그대로 열리도록 규칙을 함께 만듭니다. 두 파일 모두 `scripts/pages-manifest.json`의 `maintenance_files`에 등록되어 있습니다.
 - `.cf-dist/`와 `.wrangler/`는 빌드 결과라 Git에서 제외합니다. 이 PC에서 직접 배포할 때도 `npx wrangler deploy`가 같은 스크립트를 먼저 실행합니다(Linux·macOS 또는 Git Bash 필요).
-- `/reel-nest/`는 `reel-nest` 저장소의 Cloudflare 프로젝트가 같은 주소의 하위 경로로 제공합니다. 환생천마(`/products/heavenlydemonreborn/`)는 이 저장소가 직접 제공합니다.
+- 제품 정책 페이지(`/products/reel-nest/…`, `/products/heavenlydemonreborn/…`)도 이 저장소가 직접 제공합니다. 옛 주소 `/reel-nest/…`, `/heavenlydemonreborn/…`는 `_redirects` 넘김 규칙이 새 주소로 연결합니다. 이 넘김 규칙은 지우지 않습니다.
 - 배포 확인: `main`에 푸시할 때마다 GitHub Actions **Cloudflare deploy check**가 Cloudflare 빌드 결과를 기다린 뒤, 실제 사이트가 푸시한 파일과 같은지 하나씩 비교합니다(`scripts/check-cloudflare-deploy.sh`). 빌드가 실패하거나 내용이 다르면 이 작업이 실패하고 GitHub이 실패 알림 메일을 보냅니다.
 - 대표 주소는 `wrangler.jsonc`의 `routes`에 있는 `fellowsurvivor.com/*` 경로 규칙으로 연결됩니다. GitHub Pages를 가리키는 DNS 레코드는 그대로 두었습니다.
-- GitHub Pages로 되돌리기: Cloudflare 화면(Workers → `fellowsurvivor-home` → Domains)에서 `fellowsurvivor.com/*` 규칙을 지우면 즉시 GitHub Pages로 돌아갑니다. 다음 배포 때 다시 켜지지 않도록 `wrangler.jsonc`에서도 같은 규칙을 지웁니다. 하위 경로는 각 저장소에서 같은 방법으로 되돌립니다.
+- GitHub Pages로 되돌리기: Cloudflare 화면(Workers → `fellowsurvivor-home` → Domains)에서 `fellowsurvivor.com/*` 규칙을 지우면 즉시 GitHub Pages로 돌아갑니다. 다음 배포 때 다시 켜지지 않도록 `wrangler.jsonc`에서도 같은 규칙을 지웁니다.
 - 기존 `github.io` 주소는 앱에 포함된 정책 문서가 안내하므로, 전환 후에도 GitHub Pages를 끄지 않고 대표 주소로 넘겨주는 용도로 유지합니다.
 
 ### 배포 전 확인

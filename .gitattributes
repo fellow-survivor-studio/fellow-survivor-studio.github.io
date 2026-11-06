@@ -1,5 +1,8 @@
 # The 환생천마 policy pages are generated; keep them and their sources LF so the
 # rebuild check (sources/heavenlydemonreborn/validate_site.py) matches on Windows too.
 products/heavenlydemonreborn/** text eol=lf
+# Same for the generated Reel Nest policy pages (sources/reel-nest/validate_site.py).
+products/reel-nest/** text eol=lf
+# Same for the generated Transporter policy pages (sources/transporter/validate_site.py).
 products/transporter/** text eol=lf
 sources/** text eol=lf
