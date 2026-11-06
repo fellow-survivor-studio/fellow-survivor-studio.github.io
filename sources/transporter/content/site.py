@@ -45,7 +45,7 @@ LANGS = {
         "open_toc": "문서 목차 열기", "top": "맨 위로 ↑", "eyebrow": "TRANSPORTER · 문자 자동전달",
         "published": "게시일", "version": "문서 버전",
         "notice_title": "출시 준비 안내",
-        "notice": "Transporter는 Google Play 출시를 준비하고 있습니다. 개인정보처리방침의 광고(Google AdMob), 오류 기록(Firebase Crashlytics), 사용 통계(Firebase) 항목은 그 기능을 넣은 앱 버전부터 적용됩니다. 이 사이트의 문의 안내는 지금 이용할 수 있습니다.",
+        "notice": "Transporter는 Google Play 출시를 준비하고 있습니다. 개인정보처리방침의 광고(Google AdMob), 구독(Google Play 결제), 오류 기록(Firebase Crashlytics), 사용 통계(Firebase) 항목과 이용약관의 무료 한도·광고·구독 조건은 그 기능을 넣은 앱 버전부터 적용됩니다. 이 사이트의 문의 안내는 지금 이용할 수 있습니다.",
         "support_subject": "[Transporter] 문의",
         "not_found_title": "페이지를 찾을 수 없습니다.", "not_found_body": "주소가 바뀌었거나 없는 페이지입니다.", "not_found_home": "정책 및 고객지원 홈으로",
         "pages": [
@@ -74,6 +74,8 @@ LANGS = {
                 section("문의할 때 적어 주실 것", """
 <ul><li>일어난 날짜와 시각, 무엇이 안 되는지</li><li>앱 버전(설정 &gt; 정보), 폰 기종과 Android 버전</li><li>문제가 난 필터의 조건(받는 번호는 가려도 됩니다)</li></ul>
 <p>인증번호, 비밀번호, 다른 사람의 전화번호와 문자 내용은 보내지 마세요. 화면을 첨부할 때는 이런 정보를 가려 주세요.</p>"""),
+                section("구독 해지와 환불", """
+<p>구독은 Google Play 앱의 「결제 및 정기 결제」에서 언제든 해지할 수 있습니다. 앱을 지워도 구독은 해지되지 않습니다. 환불은 위 이메일이나 Google Play에서 요청할 수 있으며, 기준은 <a href="{{HOME}}terms/">이용약관 및 운영정책</a> 5절에 있습니다. 결제 정보는 Google이 처리하므로 카드 번호는 보내지 마세요.</p>"""),
                 section("원치 않는 문자를 받고 있다면", """
 <p>이 앱으로 원치 않는 문자를 받고 있다면 보낸 번호를 차단하고, 불법스팸대응센터(118, <a href="https://spam.kisa.or.kr">spam.kisa.or.kr</a>)나 경찰(112)에 신고할 수 있습니다. 운영자에게도 위 이메일로 알려 주세요. 처리 기준은 <a href="{{HOME}}terms/">이용약관 및 운영정책</a>에 있습니다.</p>"""),
                 section("사업자 정보", "{{BUSINESS}}"),
@@ -87,7 +89,7 @@ LANGS = {
         "open_toc": "Show contents", "top": "Back to top ↑", "eyebrow": "TRANSPORTER · SMS FORWARDING",
         "published": "Published", "version": "Version",
         "notice_title": "Before launch",
-        "notice": "Transporter is preparing for release on Google Play. The advertising (Google AdMob), crash reporting (Firebase Crashlytics) and usage statistics (Firebase) parts of the Privacy Policy apply from the app version that adds those features. The contact details on this site can be used now.",
+        "notice": "Transporter is preparing for release on Google Play. The advertising (Google AdMob), subscription (Google Play billing), crash reporting (Firebase Crashlytics) and usage statistics (Firebase) parts of the Privacy Policy, and the free limit, ads and subscription terms of the Terms of Use, apply from the app version that adds those features. The contact details on this site can be used now.",
         "support_subject": "[Transporter] Support request",
         "not_found_title": "Page not found.", "not_found_body": "The address has changed or the page does not exist.", "not_found_home": "Go to policies and support",
         "pages": [
@@ -116,6 +118,8 @@ LANGS = {
                 section("What to include", """
 <ul><li>The date and time it happened and what is not working</li><li>The app version (Settings &gt; About), your phone model and Android version</li><li>The conditions of the filter involved (you may hide the destination numbers)</li></ul>
 <p>Do not send verification codes, passwords, or other people's phone numbers or messages. If you attach screenshots, please hide this information.</p>"""),
+                section("Cancelling a subscription and refunds", """
+<p>You can cancel a subscription at any time in the Google Play app under Payments &amp; subscriptions. Uninstalling the app does not cancel it. You can ask for a refund at the email address above or through Google Play; the rules are in section 5 of the <a href="{{HOME}}en/terms/">Terms of Use and Acceptable Use Policy</a>. Google handles payment details, so please do not send card numbers.</p>"""),
                 section("If you are receiving unwanted messages", """
 <p>If you are receiving unwanted messages through this app, block the sending number and report it to your local spam or police authority (in Korea: the Illegal Spam Response Center, 118, <a href="https://spam.kisa.or.kr">spam.kisa.or.kr</a>, or the police, 112). Please also tell us at the email address above. How we handle reports is described in the <a href="{{HOME}}en/terms/">Terms of Use and Acceptable Use Policy</a>.</p>"""),
                 section("Operator", "{{BUSINESS}}"),

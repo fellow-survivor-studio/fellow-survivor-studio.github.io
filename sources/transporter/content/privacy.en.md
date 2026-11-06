@@ -2,7 +2,8 @@ Fellow Survivor Studio ("we") handles the personal information of people who use
 
 - Received messages, filters and forwarding history are stored only on your phone. We run no server of our own, and message content is never sent to us.
 - A message is forwarded only when it matches conditions you set, only to numbers you add, and through your own mobile carrier.
-- For ads (Google AdMob) and crash and usage statistics (Google Firebase), some information such as the advertising ID and device details is sent to Google. Message content, phone numbers and contacts are never included.
+- For ads (Google AdMob) and crash and usage statistics (Google Firebase), some information such as the advertising ID and device details is sent to Google. Message content, phone numbers and contacts are never included. Ads appear only when you choose to watch one to unlock unlimited forwarding.
+- You can forward up to 10 messages a day for free. Watching an ad to the end removes the limit until midnight, and a subscription removes it for as long as you subscribe. Google Play handles subscription payments; we never receive your card or other payment details.
 - The app has no sign-up and does not ask for your name, email or other account details.
 
 ## 1. Why we use personal information
@@ -13,9 +14,10 @@ We use personal information only for the purposes below. If a purpose changes, w
 | --- | --- | --- |
 | Forwarding messages | Checks each received message against your filters and sends matching ones to the numbers you added | Performing the service you asked for |
 | History and notifications | Keeps forwarding results (sent, failed, skipped and why) on your phone and notifies you of results and app status | Performing the service |
-| Advertising | Shows ads so the app can stay free | Consent for personalized ads; legitimate interests for non-personalized ads |
+| Advertising | Shows a rewarded ad when you choose to watch one; watching to the end removes the daily limit until midnight | Consent for personalized ads; legitimate interests for non-personalized ads |
+| Subscription | Provides forwarding without a daily limit to subscribers and checks subscription status with Google Play | Performing the service you bought |
 | Fixing crashes | Finds and fixes the causes of crashes and errors | Legitimate interests (a working app) |
-| Improving features | Counts which features are used and how often forwarding succeeds | Legitimate interests (making the app easier to use); you can opt out at any time |
+| Improving features | Shows where people get stuck after installing, whether forwarding works, and which features are used | Consent: in the EEA, the UK and Switzerland, usage statistics are sent only if you turn them on |
 | Support | Replies when you email us | Legitimate interests |
 
 ## 2. Information the app handles
@@ -43,12 +45,16 @@ Some information stays only on your phone; some leaves it for ads, crash reports
 | Information | Recipient | Purpose | Required/optional |
 | --- | --- | --- | --- |
 | Text of the forwarded message | The numbers you added (via your carrier) | Forwarding | Required |
-| Advertising ID, IP address, device model, OS version, language, ad views and clicks | Google (AdMob) | Advertising | Required (personalized ads optional) |
+| Advertising ID, IP address, device model, OS version, language, ad views and clicks, whether the reward was granted | Google (AdMob) | Advertising | Only when you choose to watch an ad (personalized ads optional) |
 | Crash data (where and when the error happened), device model, OS version, app version, a random per-install identifier | Google (Firebase Crashlytics) | Fixing crashes | Required |
-| Feature usage counts, forwarding success/failure counts, app version, device model, a random per-install identifier, approximate location estimated from the IP address | Google (Firebase) | Improving features | On by default; can be turned off in Settings |
+| Feature usage counts, forwarding success/failure counts, setup step results, the first successful forward, a once-a-day summary (forwarded, failed, spam-blocked and held messages counted in ranges such as 0, 1–3, 4–10 and 11+, and whether key settings are on), the kinds of filter conditions used, screens opened, results of the ad and subscription screens, automatically recorded install, launch, update and subscription purchase (product, price) events, app version, device model, a random per-install identifier, approximate location estimated from the IP address | Google (Firebase) | Improving features | Sent after you acknowledge the notice shown on first launch; can be turned off in Settings (EEA, UK and Switzerland: only if you turn it on) |
+| Subscription purchase details (product, purchase status, order number) | Google (Google Play billing) | Subscription payment and checking it | Only if you subscribe |
 
 - Ad, crash and statistics data never include message content, sender or destination numbers, contacts or filter details.
 - We do not try to identify who you are from this information.
+- Usage statistics never include message text, phone numbers, contact names, the text of your filters, the names of apps that sent notifications, or the advertising ID. Counts cover only what the app did (forwarded, failed, spam-blocked, held), once a day, in ranges.
+- The ad and statistics tools are not used while messages are received or forwarded, and the app never passes message text or numbers to them.
+- Google Play handles subscription payments, and Google processes your payment details directly under the Google Privacy Policy. We never receive card numbers or other payment details.
 
 ## 3. App permissions
 
@@ -63,7 +69,7 @@ Only the SMS permissions are required; the others are requested only when you tu
 | Phone (phone state) | Choosing the receiving and sending SIM on dual-SIM phones | Optional | SIM cannot be chosen; the default SIM is used |
 | Contacts | Showing contact names next to numbers, finding the number for a name shown in an RCS notification | Optional | Only numbers are shown |
 
-- The app also uses permissions Android grants automatically, such as run-at-startup and internet. Run-at-startup is used so messages that arrive during a restart are not missed; internet is used only for ads and crash/statistics reporting.
+- The app also uses permissions Android grants automatically, such as run-at-startup, internet and Google Play billing. Run-at-startup is used so messages that arrive during a restart are not missed; internet is used only for ads, checking subscriptions, and crash/statistics reporting.
 - "App lock" uses your phone's fingerprint, face or screen-lock check. Android performs the check; the app never receives or stores fingerprint or face data.
 - You can turn off any permission at any time in Settings > Apps > Transporter > Permissions. Notification access is turned off in your phone's notification access settings.
 
@@ -74,11 +80,13 @@ Messages and history on your phone are deleted automatically after the retention
 | Information | Kept for | How it is deleted |
 | --- | --- | --- |
 | Received messages, forwarding history | The "Keep history for" setting: 1, 7 or 30 days (default 30). Messages still being sent are kept until sending ends | Deleted automatically during the app's regular check. "Clear all history" deletes immediately |
+| Messages held because of the daily limit | Wait up to 24 hours from receipt to be sent; after that they are not sent and stay only in the history | Deleted with the history when the retention period ends |
 | Filters, app settings | Until you delete them or uninstall the app | "Delete filter", uninstall |
 | Filter backup file | Until you delete it | Delete it yourself where you saved it (it remains after uninstall) |
 | Crash data (Crashlytics) | 90 days | Deleted by Google after the period |
 | Usage statistics (Firebase) | 2 months | Deleted by Google after the period |
 | Ad data (AdMob) | Under Google's Privacy Policy | Deleted by Google. You can reset or delete your phone's advertising ID |
+| Subscription purchase details | Only the subscription status is stored on your phone; payment records follow Google Play's policies | The status on your phone is deleted when the subscription ends or you uninstall the app |
 
 Information on your phone is deleted from the app's database so it cannot be recovered. No law requires us to keep any of it.
 
@@ -88,7 +96,7 @@ We do not sell your personal information or give it to other companies. Legal re
 
 Forwarding is something you set up: messages go from your phone, through your carrier, to the numbers you chose, and never pass through us.
 
-Ads, crash reports and statistics use Google services, so this information is transferred to Google servers in the United States and other countries.
+Ads, crash reports and statistics use Google services, so this information is transferred to Google servers in the United States and other countries. Crash reports and statistics are processed by Google on our behalf under its data processing terms. We do not use the data-sharing settings that let Google use this data for its own purposes, and we do not link it to advertising. Subscription payments are handled by Google Play.
 
 | Item | Firebase Crashlytics, Firebase (statistics) | Google AdMob |
 | --- | --- | --- |
@@ -98,7 +106,7 @@ Ads, crash reports and statistics use Google services, so this information is tr
 | Data | The crash and statistics rows in section 2 | The advertising row in section 2 |
 | When and how | While you use the app or on the next launch after a crash, over encrypted connections | When an ad is loaded, over encrypted connections |
 | Retention | As in section 4 | Under Google's policies |
-| How to opt out | Turn off "Send usage statistics" in Settings | Turn off personalized ads (section 8). Ads themselves cannot be turned off |
+| How to opt out | Usage statistics: turn off "Send usage statistics" in Settings (this also deletes the statistics identifier on your phone). Crash reports: stop when you uninstall the app | Turn off personalized ads (section 8). Ads appear only when you choose to watch one |
 | More information | [Google Privacy Policy](https://policies.google.com/privacy), [Privacy and Security in Firebase](https://firebase.google.com/support/privacy) | [How Google uses information from sites or apps that use its services](https://policies.google.com/technologies/partner-sites) |
 
 Transfers out of the EEA and UK rely on the safeguards Google provides, such as the European Commission's Standard Contractual Clauses. You can read this policy in the store before installing, and if you do not want these transfers you can stop using the app or opt out as described above.
@@ -114,7 +122,7 @@ You can see, correct, delete and stop the processing of your personal informatio
 | Delete | "Clear all history", "Delete filter", uninstall the app |
 | Stop | Turn off "Turn on forwarding", turn off permissions in phone settings, turn off "Send usage statistics", turn off personalized ads |
 
-Crash and statistics data sent to Google is linked only to a random per-install identifier, with no name or number, so we may not be able to find a specific person's data. To request deletion, contact us (section 10); we will act within what we can verify and reply within 10 days. Uninstalling the app removes the identifier, so no further data is collected.
+Crash and statistics data sent to Google is linked only to a random per-install identifier, with no name or number, so we may not be able to find a specific person's data. To request deletion, contact us (section 10); we will act within what we can verify and reply within 10 days. Uninstalling the app removes the identifier, so no further data is collected. Turning off usage statistics also deletes the statistics identifier on your phone.
 
 A legal guardian or authorized agent may exercise these rights for you. If the law where you live gives you further rights, such as objecting to processing, data portability or complaining to a data protection authority (for example in the EEA, the UK or some US states), we will honour them. We do not sell personal information.
 
@@ -133,11 +141,11 @@ Our first priority is keeping message content from leaving your phone.
 
 ## 8. Advertising ID and personalized ads
 
-The app uses no web cookies; Google AdMob uses your phone's advertising ID to choose ads. You can turn off personalized ads, and you will then see ads not based on your interests.
+The app uses only rewarded ads: an ad is loaded and shown only when you choose to watch one, and there are no banner or full-screen ads. The app uses no web cookies; Google AdMob uses your phone's advertising ID to choose ads. You can turn off personalized ads, and you will then see ads not based on your interests.
 
 | Item | Details |
 | --- | --- |
-| Data collected | Advertising ID, ad views and clicks, time of app use |
+| Data collected | Advertising ID, ad views and clicks, whether the reward was granted, time of app use |
 | Collected by | Google (directly, through the AdMob SDK in the app) |
 | Purpose | Showing ads, choosing ads that match your interests, measuring ads, preventing invalid clicks |
 | Retention | Under Google's Privacy Policy |
