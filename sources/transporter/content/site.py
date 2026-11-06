@@ -17,8 +17,8 @@ COMPANY = {
 }
 
 # Publication (and effective) date of the current documents. Change it, rebuild, and add a row to VERSIONS.
-PUBLISHED = "2026-11-06"
-VERSIONS = [("1.0", "2026-11-06")]
+PUBLISHED = "2026-11-07"
+VERSIONS = [("1.0", "2026-11-07")]
 
 
 def section(title, body):
