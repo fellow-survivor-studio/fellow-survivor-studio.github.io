@@ -11,7 +11,7 @@ from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
 
 from build_site import (BASE_URL, CONTENT, DOCUMENTS, EXTRA_SITEMAP_PATHS, LANGUAGES, OUT,
-                        archived_versions, build, output_path)
+                        archived_versions, build, output_path, revisions)
 
 
 class Document(HTMLParser):
@@ -30,16 +30,20 @@ class Document(HTMLParser):
 
 
 def expected_pages():
-    """{path below products/reel-nest/: (doc, lang, archived date or None)}"""
+    """{path below products/reel-nest/: (doc, lang, kind, date)} with kind 'current' (date None),
+    'archive' (previous version effective `date`) or 'revision' (revision page of `date`)."""
     pages = {}
     for doc, info in DOCUMENTS.items():
         for lang in LANGUAGES:
             assert (CONTENT / f"{info['source']}_{lang}.txt").is_file(), f"Missing text: {info['source']}_{lang}.txt"
-            pages[output_path(doc, lang)] = (doc, lang, None)
+            pages[output_path(doc, lang)] = (doc, lang, "current", None)
         for date, langs in archived_versions(doc).items():
             assert "ko" in langs, f"Previous version {date} of {doc} has no Korean text"
             for lang in langs:
-                pages[output_path(doc, lang, date)] = (doc, lang, date)
+                pages[output_path(doc, lang, date)] = (doc, lang, "archive", date)
+        for date, (_, pairs) in revisions(doc).items():
+            for lang in pairs:
+                pages[output_path(doc, lang, revision=date)] = (doc, lang, "revision", date)
     return pages
 
 
@@ -49,8 +53,9 @@ def check():
                  for info in DOCUMENTS.values() for p in (OUT / info["prefix"]).rglob("index.html")}
     assert generated == set(pages), f"Pages differ from the texts: extra {sorted(generated - set(pages))}, missing {sorted(set(pages) - generated)}"
     docs = {path: Document(OUT / path / "index.html") for path in pages}
+    pending = {doc: next((d for d, (state, _) in revisions(doc).items() if state == "upcoming"), None) for doc in DOCUMENTS}
     checked_links = 0
-    for path, (doc_name, lang, archived) in pages.items():
+    for path, (doc_name, lang, kind, when) in pages.items():
         doc, file = docs[path], OUT / path / "index.html"
         counts = Counter(tag for tag, _ in doc.tags)
         assert counts["h1"] == counts["title"] == 1, f"Heading/title: {file}"
@@ -61,7 +66,18 @@ def check():
         canonical = [a.get("href") for tag, a in doc.tags if tag == "link" and a.get("rel") == "canonical"]
         assert canonical == [BASE_URL + path], f"Canonical: {file} -> {canonical}"
         robots = next(a.get("content") for tag, a in doc.tags if tag == "meta" and a.get("name") == "robots")
-        assert robots == ("noindex, follow" if archived else "index, follow"), f"Robots: {file}"
+        assert robots == ("index, follow" if kind == "current" else "noindex, follow"), f"Robots: {file}"
+        classes = {a.get("class") for _, a in doc.tags}
+        if kind == "revision":
+            assert {"reason", "changes", "full-text"} <= set(doc.ids) and "changes" in classes, f"Revision page parts: {file}"
+            assert counts["tr"] >= 2, f"Empty comparison table: {file}"
+        if kind == "current":
+            # While a revision awaits its effective date, the text in force says so and links to it;
+            # it must never be labelled as a previous version.
+            assert "archive-notice" not in classes, f"Current page labelled as previous version: {file}"
+            if pending[doc_name]:
+                assert "status-notice" in classes and any("revision/" + pending[doc_name] in link for link in doc.links), \
+                    f"Current page does not announce the {pending[doc_name]} revision: {file}"
         for href in doc.links:
             parsed = urlsplit(href)
             if parsed.scheme == "data":
@@ -85,7 +101,7 @@ def check():
     assert (OUT / "policy.css").is_file() and (OUT / "index.html").is_file()
     ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
     listed = [node.text for node in ET.parse(OUT / "sitemap.xml").findall("s:url/s:loc", ns)]
-    current = [path for path, (_, _, archived) in pages.items() if not archived]
+    current = [path for path, (_, _, kind, _) in pages.items() if kind == "current"]
     assert sorted(listed) == sorted(BASE_URL + p for p in EXTRA_SITEMAP_PATHS + current), "Sitemap differs from the current pages"
     with TemporaryDirectory(prefix="reel-nest-site-check-") as folder:
         fresh = Path(folder)
@@ -94,8 +110,9 @@ def check():
             if result.is_file():
                 existing = OUT / result.relative_to(fresh)
                 assert existing.is_file() and existing.read_bytes() == result.read_bytes(), f"Rebuild required: {existing}"
-    archived = len(pages) - len(current)
-    print(f"PASS: {len(current)} current pages, {archived} previous-version pages, {checked_links} links, sitemap, rebuild matches.")
+    kinds = Counter(kind for _, _, kind, _ in pages.values())
+    print(f"PASS: {kinds['current']} current pages, {kinds['archive']} previous-version pages, "
+          f"{kinds['revision']} revision pages, {checked_links} links, sitemap, rebuild matches.")
 
 
 if __name__ == "__main__":

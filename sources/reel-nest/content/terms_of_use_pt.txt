@@ -1,6 +1,6 @@
 Termos de Uso do Reel Nest
 
-Data de vigência: 14 de novembro de 2026
+Data de vigência: 25 de outubro de 2026
 
 ※ As disposições marcadas com 【Importante】 afetam de forma significativa os direitos e obrigações do Usuário. Leia-as com atenção.
 
@@ -16,9 +16,9 @@ Artigo 2 (Definições)
 6. "Plano gratuito" ou "Usuário gratuito" significa a situação de não utilizar o Serviço pago, ou o Usuário que se encontra nessa situação.
 
 Artigo 3 (Vigência e alteração dos Termos)
-1. Estes Termos são levados ao conhecimento dos Usuários por meio de sua publicação no Serviço e na página web de termos da Empresa (https://fellowsurvivor.com/products/reel-nest/terms/). Antes de o Usuário utilizar o recurso de download pela primeira vez, a Empresa apresentará os principais pontos destes Termos e obterá o seu consentimento; o Usuário que não consentir não poderá utilizar o recurso de download.
-2. A Empresa poderá alterar estes Termos na medida permitida pela legislação aplicável. Nesse caso, anunciará os principais pontos da alteração e a data de aplicação em um aviso exibido ao abrir o aplicativo, com antecedência mínima de 7 dias da data de aplicação (30 dias no caso de alterações desfavoráveis ao Usuário ou de especial importância). O motivo da alteração e o texto integral dos Termos alterados serão publicados na tela de termos do aplicativo, que pode ser aberta a partir do aviso, e na página web de termos mencionada no item 1; os Termos anteriores e a comparação do conteúdo antes e depois da alteração podem ser consultados na página web de termos mencionada no item 1.
-3. 【Importante】 Alterações desfavoráveis ao Usuário só se aplicarão a ele se ele concordar com os Termos alterados, e a Empresa obterá esse consentimento antes que o Usuário volte a utilizar o recurso de download ou o Nest. As demais alterações se aplicam a partir da data de aplicação anunciada conforme o item 2. O Usuário que não concordar com os Termos alterados poderá deixar de utilizar o Serviço, e o Usuário Pro poderá cancelar antecipadamente e obter reembolso nos termos do artigo 6, item 3, alínea b.
+1. Estes Termos são levados ao conhecimento dos Usuários por meio de sua publicação no Serviço e na página web de termos da Empresa (https://fellow-survivor-studio.github.io/reel-nest/terms/). Antes de o Usuário utilizar o recurso de download pela primeira vez, a Empresa apresentará os principais pontos destes Termos e obterá o seu consentimento; o Usuário que não consentir não poderá utilizar o recurso de download.
+2. A Empresa poderá alterar estes Termos na medida permitida pela legislação aplicável. Nesse caso, anunciará a data de aplicação, o motivo da alteração e uma comparação do conteúdo antes e depois da alteração em um aviso exibido ao abrir o aplicativo e na página web de termos mencionada no item 1, com antecedência mínima de 7 dias da data de aplicação (30 dias no caso de alterações desfavoráveis ao Usuário ou de especial importância).
+3. 【Importante】 Alterações desfavoráveis ao Usuário só se aplicarão a ele se ele concordar com os Termos alterados, e a Empresa obterá esse consentimento antes que o Usuário volte a utilizar o recurso de download ou o Nest. Quanto às demais alterações, se a Empresa tiver informado de forma clara e separada no aviso do item 2 que "você será considerado de acordo se não manifestar sua recusa até a data de aplicação", e o Usuário não manifestar sua recusa até essa data por meio do botão [Não concordo] do aviso ou do contato da Empresa, o Usuário será considerado de acordo com os Termos alterados. O Usuário que não concordar com os Termos alterados poderá deixar de utilizar o Serviço, e o Usuário Pro poderá cancelar antecipadamente e obter reembolso nos termos do artigo 6, item 3, alínea b.
 
 Artigo 4 (Prestação e alteração do Serviço)
 1. A Empresa oferece os seguintes serviços:
@@ -102,7 +102,7 @@ Artigo 13 (Traduções)
 Estes Termos foram redigidos em coreano e podem ser disponibilizados em tradução. Se uma tradução divergir da versão em coreano, prevalecerá a versão em coreano.
 
 Disposição final
-Estes Termos entram em vigor em 14 de novembro de 2026.
+Estes Termos entram em vigor em 21 de outubro de 2026.
 
 Informações da empresa
 Nome: Fellow Survivor Studio

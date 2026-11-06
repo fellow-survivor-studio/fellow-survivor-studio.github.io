@@ -68,14 +68,17 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--new-only", action="store_true", help="skip the earlier addresses")
     args = ap.parse_args()
-    pages = sorted(expected_pages())
+    expected = expected_pages()
+    pages = sorted(expected)
     jobs = [(check_new, (path,)) for path in [""] + pages]  # "" = the product page
     jobs += [(check_file, (name,)) for name in ("sitemap.xml", "policy.css")]
     new_count = len(jobs)
     if not args.new_only:
         extra = {"/reel-nest": "privacy/", "/reel-nest/terms": "terms/", "/reel-nest/home/": "",
                  "/reel-nest/sitemap.xml": "sitemap.xml"}
-        targets = [(old_path(p), p) for p in pages] + list(extra.items())
+        # Revision pages are new; only current and previous versions had /reel-nest/ addresses.
+        legacy = [p for p in pages if expected[p][2] != "revision"]
+        targets = [(old_path(p), p) for p in legacy] + list(extra.items())
         jobs += [(check_old, (host + old, BASE_URL + new)) for host in OLD_HOSTS for old, new in targets]
     with ThreadPoolExecutor(max_workers=4) as pool:
         results = list(pool.map(lambda job: job[0](*job[1]), jobs))

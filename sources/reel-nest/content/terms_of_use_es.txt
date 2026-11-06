@@ -1,6 +1,6 @@
 Términos de Uso de Reel Nest
 
-Fecha de vigencia: 14 de noviembre de 2026
+Fecha de vigencia: 25 de octubre de 2026
 
 ※ Las disposiciones marcadas con 【Importante】 afectan de forma significativa a los derechos y obligaciones del Usuario. Léalas con atención.
 
@@ -16,9 +16,9 @@ Artículo 2 (Definiciones)
 6. "Plan gratuito" o "Usuario gratuito" significa la situación de no utilizar el Servicio de pago, o el Usuario que se encuentra en dicha situación.
 
 Artículo 3 (Efecto y modificación de los Términos)
-1. Estos Términos se ponen en conocimiento de los Usuarios mediante su publicación en el Servicio y en la página web de términos de la Compañía (https://fellowsurvivor.com/products/reel-nest/terms/). Antes de que el Usuario utilice por primera vez la función de descarga, la Compañía le presentará los puntos principales de estos Términos y obtendrá su consentimiento; el Usuario que no lo otorgue no podrá utilizar la función de descarga.
-2. La Compañía podrá modificar estos Términos en la medida permitida por la legislación aplicable. En tal caso, anunciará los puntos principales del cambio y la fecha de aplicación en un aviso que se muestra al iniciar la aplicación, con una antelación mínima de 7 días a la fecha de aplicación (30 días en el caso de cambios desfavorables para el Usuario o de especial importancia). El motivo del cambio y el texto completo de los Términos modificados se publicarán en la pantalla de términos de la aplicación, que puede abrirse desde el aviso, y en la página web de términos del apartado 1; los Términos anteriores y la comparación del contenido antes y después del cambio pueden consultarse en la página web de términos del apartado 1.
-3. 【Importante】 Los cambios desfavorables para el Usuario solo se le aplicarán si este acepta los Términos modificados, y la Compañía obtendrá dicho consentimiento antes de que el Usuario vuelva a utilizar la función de descarga o Nest. Los demás cambios se aplicarán a partir de la fecha de aplicación anunciada conforme al apartado 2. El Usuario que no acepte los Términos modificados podrá dejar de utilizar el Servicio, y el Usuario Pro podrá cancelar anticipadamente y obtener un reembolso conforme al artículo 6, apartado 3, letra b).
+1. Estos Términos se ponen en conocimiento de los Usuarios mediante su publicación en el Servicio y en la página web de términos de la Compañía (https://fellow-survivor-studio.github.io/reel-nest/terms/). Antes de que el Usuario utilice por primera vez la función de descarga, la Compañía le presentará los puntos principales de estos Términos y obtendrá su consentimiento; el Usuario que no lo otorgue no podrá utilizar la función de descarga.
+2. La Compañía podrá modificar estos Términos en la medida permitida por la legislación aplicable. En tal caso, anunciará la fecha de aplicación, el motivo del cambio y una comparación del contenido antes y después del cambio en un aviso que se muestra al iniciar la aplicación y en la página web de términos del apartado 1, con una antelación mínima de 7 días a la fecha de aplicación (30 días en el caso de cambios desfavorables para el Usuario o de especial importancia).
+3. 【Importante】 Los cambios desfavorables para el Usuario solo se le aplicarán si este acepta los Términos modificados, y la Compañía obtendrá dicho consentimiento antes de que el Usuario vuelva a utilizar la función de descarga o Nest. Respecto de los demás cambios, si la Compañía ha indicado de forma clara y separada en el aviso del apartado 2 que "se considerará que usted acepta si no manifiesta su rechazo antes de la fecha de aplicación", y el Usuario no manifiesta su rechazo antes de dicha fecha mediante el botón [No acepto] del aviso o a través del contacto de la Compañía, se considerará que el Usuario acepta los Términos modificados. El Usuario que no acepte los Términos modificados podrá dejar de utilizar el Servicio, y el Usuario Pro podrá cancelar anticipadamente y obtener un reembolso conforme al artículo 6, apartado 3, letra b).
 
 Artículo 4 (Prestación y modificación del Servicio)
 1. La Compañía ofrece los siguientes servicios:
@@ -102,7 +102,7 @@ Artículo 13 (Traducciones)
 Estos Términos se redactaron en coreano y pueden ofrecerse traducidos a otros idiomas. Si una traducción difiere de la versión en coreano, prevalecerá la versión en coreano.
 
 Disposición adicional
-Estos Términos entran en vigor el 14 de noviembre de 2026.
+Estos Términos entran en vigor el 21 de octubre de 2026.
 
 Información de la empresa
 Nombre: Fellow Survivor Studio
