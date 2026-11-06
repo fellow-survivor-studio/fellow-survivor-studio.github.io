@@ -1,6 +1,6 @@
 Reel Nest Terms of Use
 
-Effective date: October 25, 2026
+Effective date: November 14, 2026
 
 ※ Provisions marked 【Important】 significantly affect your rights and obligations. Please be sure to read them.
 
@@ -16,9 +16,9 @@ Article 2 (Definitions)
 6. "Free Plan" or "Free User" means the state of not using the Paid Service, or a User in that state.
 
 Article 3 (Effect and Amendment of Terms)
-1. These Terms are made known to Users by being posted in the Service and on the Company's terms web page (https://fellow-survivor-studio.github.io/reel-nest/terms/). Before a User uses the download feature for the first time, the Company presents the key points of these Terms and obtains the User's consent; a User who does not consent cannot use the download feature.
-2. The Company may amend these Terms to the extent permitted by applicable law. When amending these Terms, the Company will announce the effective date, the reason for the change, and a comparison of the provisions before and after the change in a notice shown when the app is launched and on the terms web page in paragraph 1, starting at least 7 days before the effective date (at least 30 days for changes that are unfavorable to Users or otherwise significant).
-3. 【Important】 A change that is unfavorable to Users applies to a User only if that User agrees to the amended Terms, and the Company will obtain that consent before the User uses the download feature or Nest again. For other changes, if the Company has clearly and separately stated in the notice under paragraph 2 that "you will be deemed to agree unless you indicate that you refuse by the effective date," and the User does not indicate refusal by the effective date through the [Disagree] button in the notice or the Company's contact address, the User is deemed to agree to the amended Terms. A User who does not agree to the amended Terms may stop using the Service, and a Pro User may cancel early and receive a refund under Article 6(3)(b).
+1. These Terms are made known to Users by being posted in the Service and on the Company's terms web page (https://fellowsurvivor.com/products/reel-nest/terms/). Before a User uses the download feature for the first time, the Company presents the key points of these Terms and obtains the User's consent; a User who does not consent cannot use the download feature.
+2. The Company may amend these Terms to the extent permitted by applicable law. When amending these Terms, the Company will announce the key points of the change and the effective date in a notice shown when the app is launched, starting at least 7 days before the effective date (at least 30 days for changes that are unfavorable to Users or otherwise significant). The reason for the change and the full text of the amended Terms are posted on the in-app terms screen, which can be opened from the notice, and on the terms web page in paragraph 1; the previous Terms and a comparison of the provisions before and after the change can be found on the terms web page in paragraph 1.
+3. 【Important】 A change that is unfavorable to Users applies to a User only if that User agrees to the amended Terms, and the Company will obtain that consent before the User uses the download feature or Nest again. Other changes apply from the effective date announced under paragraph 2. A User who does not agree to the amended Terms may stop using the Service, and a Pro User may cancel early and receive a refund under Article 6(3)(b).
 
 Article 4 (Provision and Modification of the Service)
 1. The Company provides the following features:
@@ -102,7 +102,7 @@ Article 13 (Translations)
 These Terms were written in Korean and may be provided in translation. If a translation differs from the Korean version, the Korean version prevails.
 
 Addendum
-These Terms take effect on October 21, 2026.
+These Terms take effect on November 14, 2026.
 
 Business Information
 Name: Fellow Survivor Studio
