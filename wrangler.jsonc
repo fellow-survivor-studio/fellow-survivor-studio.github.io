@@ -1,5 +1,5 @@
 // Cloudflare Workers static hosting for https://fellowsurvivor.com/
-// Runs alongside GitHub Pages until the switch.
+// Serves fellowsurvivor.com since 2026-11-06. GitHub Pages stays on to forward github.io addresses.
 {
   "name": "fellowsurvivor-home",
   "compatibility_date": "2026-11-01",
@@ -14,8 +14,11 @@
   "preview_urls": true,
   // Branch and pull-request previews (wrangler preview needs this block, even empty).
   "previews": {},
-  // Test address while GitHub Pages still serves fellowsurvivor.com.
+  // A zone route (not a custom domain) keeps the GitHub Pages DNS records in place, so removing
+  // this route sends traffic straight back to GitHub Pages. /reel-nest/ and /heavenlydemonreborn/
+  // have more specific routes in their own repositories. new.fellowsurvivor.com is the test address.
   "routes": [
-    { "pattern": "new.fellowsurvivor.com", "custom_domain": true }
+    { "pattern": "new.fellowsurvivor.com", "custom_domain": true },
+    { "pattern": "fellowsurvivor.com/*", "zone_name": "fellowsurvivor.com" }
   ]
 }
