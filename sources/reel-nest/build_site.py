@@ -83,10 +83,12 @@ ARCHIVE_LABELS = {
 }
 ARCHIVE = CONTENT / "archive"
 ARCHIVE_NAME_RE = re.compile(r"^(?P<source>[a-z_]+)_(?P<lang>[a-z]{2})_(?P<date>\d{4}-\d{2}-\d{2})\.txt$")
-# A revised text announced before its effective date goes in content/upcoming/ (same naming,
-# date = its future effective date) while content/<source>_<lang>.txt keeps the text in force.
-# On the effective date, archive the text in force and move the upcoming one into content/.
-UPCOMING = CONTENT / "upcoming"
+# Documents shown with each version's period of application ("from …", "… to …") instead of
+# current/previous wording, which would turn wrong on a date. Needed when a revision is
+# published before its effective date (terms of use: 7 days' notice, Article 3(2)): the newest
+# text goes in content/ on the day it is published, the text it replaces goes in content/archive/,
+# and nothing has to change on the effective date.
+DATED_DOCS = {"terms"}
 # Reason for each revision, shown on its revision page: content/revisions/<source>_<lang>_<date>.txt
 REVISIONS = CONTENT / "revisions"
 # Revision pages (<prefix>revision/<date>/: reason, before/after comparison, full revised text)
@@ -94,41 +96,47 @@ REVISIONS = CONTENT / "revisions"
 # 2026-11-14 revision, promises the reason, the full text and the comparison on the web page.
 REVISION_PAGES_SINCE = {"terms": "2026-11-14"}
 REVISION_LABELS = {
-    "ko": {"in_force_until": "이 문서는 {end}까지 적용되는 현행 버전입니다. {date}부터 개정 버전이 시행됩니다.",
-           "see_revision": "개정 버전과 변경 전후 비교 보기", "pending": "이 문서는 {date}부터 시행될 예정인 개정 버전입니다. 그 전까지는 현행 버전이 적용됩니다.",
-           "in_force_from": "이 개정 버전은 {date}부터 시행되었습니다.", "revisions": "개정 안내", "page_title": "{title} 개정 안내",
-           "reason": "변경 사유", "changes": "변경 전후 비교", "changes_intro": "{before} 시행 버전과 비교해 바뀐 문단만 보여 줍니다.",
-           "section": "조항", "before": "변경 전 ({date} 시행)", "after": "변경 후 ({date} 시행)", "none": "(없음)",
+    "ko": {"period": "적용 기간", "from": "{start}부터", "range": "{start} ~ {end}", "versions": "판별 적용 기간",
+           "this_page": "이 페이지", "version_of": "{date} 판", "see_revision": "변경 사유와 변경 전후 비교",
+           "latest": "최신 판 보기", "applies": "{date}부터 적용되는 개정 버전입니다.", "revisions": "개정 안내",
+           "page_title": "{title} 개정 안내", "reason": "변경 사유", "changes": "변경 전후 비교",
+           "changes_intro": "{before} 시행 버전과 비교해 바뀐 문단만 보여 줍니다.", "section": "조항",
+           "before": "변경 전 ({date} 시행)", "after": "변경 후 ({date} 시행)", "none": "(없음)",
            "full_text": "개정 버전 전문", "header": "머리말"},
-    "en": {"in_force_until": "This is the version in force until {end}. A revised version takes effect on {date}.",
-           "see_revision": "View the revised version and the comparison", "pending": "This revised version takes effect on {date}. Until then, the current version applies.",
-           "in_force_from": "This revised version took effect on {date}.", "revisions": "Revisions", "page_title": "{title}: revision",
-           "reason": "Reason for the change", "changes": "Comparison of changes", "changes_intro": "Only the paragraphs that differ from the version effective {before} are shown.",
-           "section": "Section", "before": "Before (effective {date})", "after": "After (effective {date})", "none": "(none)",
+    "en": {"period": "Period of application", "from": "From {start}", "range": "{start} to {end}", "versions": "Versions and periods of application",
+           "this_page": "this page", "version_of": "Version of {date}", "see_revision": "Reasons for the change and comparison",
+           "latest": "View the latest version", "applies": "This revised version applies from {date}.", "revisions": "Revisions",
+           "page_title": "{title}: revision", "reason": "Reason for the change", "changes": "Comparison of changes",
+           "changes_intro": "Only the paragraphs that differ from the version effective {before} are shown.", "section": "Section",
+           "before": "Before (effective {date})", "after": "After (effective {date})", "none": "(none)",
            "full_text": "Full text of the revised version", "header": "Heading"},
-    "ja": {"in_force_until": "この文書は{end}まで適用される現行版です。{date}から改定版が施行されます。",
-           "see_revision": "改定版と変更前後の比較を見る", "pending": "この文書は{date}から施行予定の改定版です。それまでは現行版が適用されます。",
-           "in_force_from": "この改定版は{date}から施行されました。", "revisions": "改定のお知らせ", "page_title": "{title} 改定のお知らせ",
-           "reason": "変更の理由", "changes": "変更前後の比較", "changes_intro": "{before}施行版と比べて変更された段落のみを表示します。",
-           "section": "条項", "before": "変更前（{date}施行）", "after": "変更後（{date}施行）", "none": "（なし）",
+    "ja": {"period": "適用期間", "from": "{start}から", "range": "{start}～{end}", "versions": "版ごとの適用期間",
+           "this_page": "このページ", "version_of": "{date}版", "see_revision": "変更の理由と変更前後の比較",
+           "latest": "最新版を見る", "applies": "{date}から適用される改定版です。", "revisions": "改定のお知らせ",
+           "page_title": "{title} 改定のお知らせ", "reason": "変更の理由", "changes": "変更前後の比較",
+           "changes_intro": "{before}施行版と比べて変更された段落のみを表示します。", "section": "条項",
+           "before": "変更前（{date}施行）", "after": "変更後（{date}施行）", "none": "（なし）",
            "full_text": "改定版の全文", "header": "冒頭"},
-    "zh": {"in_force_until": "本文件为适用至{end}的现行版本。修订版本将于{date}起生效。",
-           "see_revision": "查看修订版本及修改前后对照", "pending": "本文件为将于{date}起生效的修订版本。在此之前适用现行版本。",
-           "in_force_from": "本修订版本已于{date}起生效。", "revisions": "修订说明", "page_title": "{title} 修订说明",
-           "reason": "修改理由", "changes": "修改前后对照", "changes_intro": "仅显示与{before}生效版本相比有修改的段落。",
-           "section": "条款", "before": "修改前（{date}生效）", "after": "修改后（{date}生效）", "none": "（无）",
+    "zh": {"period": "适用期间", "from": "自{start}起", "range": "{start}至{end}", "versions": "各版本适用期间",
+           "this_page": "本页", "version_of": "{date}版本", "see_revision": "修改理由及修改前后对照",
+           "latest": "查看最新版本", "applies": "本修订版本自{date}起适用。", "revisions": "修订说明",
+           "page_title": "{title} 修订说明", "reason": "修改理由", "changes": "修改前后对照",
+           "changes_intro": "仅显示与{before}生效版本相比有修改的段落。", "section": "条款",
+           "before": "修改前（{date}生效）", "after": "修改后（{date}生效）", "none": "（无）",
            "full_text": "修订版本全文", "header": "开头"},
-    "es": {"in_force_until": "Esta es la versión vigente hasta el {end}. Una versión revisada entra en vigor el {date}.",
-           "see_revision": "Ver la versión revisada y la comparación", "pending": "Esta versión revisada entra en vigor el {date}. Hasta entonces se aplica la versión vigente.",
-           "in_force_from": "Esta versión revisada entró en vigor el {date}.", "revisions": "Revisiones", "page_title": "{title}: revisión",
-           "reason": "Motivo del cambio", "changes": "Comparación de cambios", "changes_intro": "Solo se muestran los párrafos que difieren de la versión vigente desde el {before}.",
-           "section": "Sección", "before": "Antes (vigente desde el {date})", "after": "Después (vigente desde el {date})", "none": "(ninguno)",
+    "es": {"period": "Período de aplicación", "from": "Desde el {start}", "range": "Del {start} al {end}", "versions": "Versiones y períodos de aplicación",
+           "this_page": "esta página", "version_of": "Versión del {date}", "see_revision": "Motivos del cambio y comparación",
+           "latest": "Ver la versión más reciente", "applies": "Esta versión revisada se aplica desde el {date}.", "revisions": "Revisiones",
+           "page_title": "{title}: revisión", "reason": "Motivo del cambio", "changes": "Comparación de cambios",
+           "changes_intro": "Solo se muestran los párrafos que difieren de la versión vigente desde el {before}.", "section": "Sección",
+           "before": "Antes (vigente desde el {date})", "after": "Después (vigente desde el {date})", "none": "(ninguno)",
            "full_text": "Texto completo de la versión revisada", "header": "Encabezado"},
-    "pt": {"in_force_until": "Esta é a versão em vigor até {end}. Uma versão revisada entra em vigor em {date}.",
-           "see_revision": "Ver a versão revisada e a comparação", "pending": "Esta versão revisada entra em vigor em {date}. Até lá, aplica-se a versão em vigor.",
-           "in_force_from": "Esta versão revisada entrou em vigor em {date}.", "revisions": "Revisões", "page_title": "{title}: revisão",
-           "reason": "Motivo da alteração", "changes": "Comparação das alterações", "changes_intro": "Apenas os parágrafos que diferem da versão em vigor desde {before} são mostrados.",
-           "section": "Seção", "before": "Antes (em vigor desde {date})", "after": "Depois (em vigor desde {date})", "none": "(nenhum)",
+    "pt": {"period": "Período de aplicação", "from": "A partir de {start}", "range": "De {start} a {end}", "versions": "Versões e períodos de aplicação",
+           "this_page": "esta página", "version_of": "Versão de {date}", "see_revision": "Motivos da alteração e comparação",
+           "latest": "Ver a versão mais recente", "applies": "Esta versão revisada se aplica a partir de {date}.", "revisions": "Revisões",
+           "page_title": "{title}: revisão", "reason": "Motivo da alteração", "changes": "Comparação das alterações",
+           "changes_intro": "Apenas os parágrafos que diferem da versão em vigor desde {before} são mostrados.", "section": "Seção",
+           "before": "Antes (em vigor desde {date})", "after": "Depois (em vigor desde {date})", "none": "(nenhum)",
            "full_text": "Texto completo da versão revisada", "header": "Cabeçalho"},
 }
 EN_MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -165,32 +173,19 @@ def output_path(doc: str, lang: str, archived: str | None = None, revision: str 
     return prefix if lang == "ko" else f"{prefix}{lang}/"
 
 
-def dated_texts(folder: Path, doc: str) -> dict[str, dict[str, Path]]:
-    """{date: {lang: path}} of <source>_<lang>_<date>.txt files in a folder, newest first."""
+def archived_versions(doc: str) -> dict[str, dict[str, Path]]:
+    """{date: {lang: path}} of the previous versions of a document, newest first."""
     versions: dict[str, dict[str, Path]] = {}
-    if folder.exists():
-        for path in folder.iterdir():
+    if ARCHIVE.exists():
+        for path in ARCHIVE.iterdir():
             match = ARCHIVE_NAME_RE.match(path.name)
             if match and match["source"] == DOCUMENTS[doc]["source"] and match["lang"] in LANGUAGES:
                 versions.setdefault(match["date"], {})[match["lang"]] = path
     return dict(sorted(versions.items(), reverse=True))
 
 
-def archived_versions(doc: str) -> dict[str, dict[str, Path]]:
-    """{date: {lang: path}} of the previous versions of a document, newest first."""
-    return dated_texts(ARCHIVE, doc)
-
-
-def upcoming_version(doc: str) -> tuple[str, dict[str, Path]] | None:
-    """(date, {lang: path}) of the announced revision not yet in force, if any (at most one)."""
-    upcoming = dated_texts(UPCOMING, doc)
-    if len(upcoming) > 1:
-        raise ValueError(f"More than one upcoming {doc} version: {sorted(upcoming)}")
-    return next(iter(upcoming.items()), None)
-
-
 def current_date(doc: str) -> str:
-    """Effective date (YYYY-MM-DD) of the text in force, read from its Korean effective-date line."""
+    """Effective date (YYYY-MM-DD) of the newest text, read from its Korean effective-date line."""
     text = (CONTENT / f"{DOCUMENTS[doc]['source']}_ko.txt").read_text(encoding="utf-8")
     effective = next(line for line in text.splitlines()[1:] if line.strip())
     match = KO_DATE_RE.search(effective)
@@ -212,39 +207,50 @@ def localized_date(lang: str, iso: str) -> str:
     return f"{EN_MONTHS[d.month - 1]} {d.day}, {d.year}"
 
 
-def version_chain(doc: str) -> list[tuple[str, str, dict[str, Path]]]:
-    """Every version of a document, oldest first: (date, 'archive' | 'current' | 'upcoming', {lang: path})."""
+def version_chain(doc: str) -> list[tuple[str, dict[str, Path]]]:
+    """Every version of a document, oldest first: (effective date, {lang: path}); the last one is content/."""
     source = DOCUMENTS[doc]["source"]
-    chain = [(d, "archive", langs) for d, langs in sorted(archived_versions(doc).items())]
-    chain.append((current_date(doc), "current", {lang: CONTENT / f"{source}_{lang}.txt" for lang in LANGUAGES}))
-    upcoming = upcoming_version(doc)
-    if upcoming:
-        chain.append((upcoming[0], "upcoming", upcoming[1]))
-    dates = [d for d, _, _ in chain]
+    chain = sorted(archived_versions(doc).items())
+    chain.append((current_date(doc), {lang: CONTENT / f"{source}_{lang}.txt" for lang in LANGUAGES}))
+    dates = [d for d, _ in chain]
     if dates != sorted(set(dates)):
         raise ValueError(f"{doc} versions are not in date order or repeat a date: {dates}")
     return chain
 
 
-def revisions(doc: str) -> dict[str, tuple[str, dict[str, tuple[Path, str, Path]]]]:
-    """{date: (state, {lang: (new text, previous version's date, previous text)})} of the versions that
-    get a revision page, newest first. state is 'upcoming' or 'in force' (current or archived)."""
+def periods(doc: str) -> dict[str, str | None]:
+    """{effective date: last day it applies, or None for the newest version}."""
+    dates = [d for d, _ in version_chain(doc)]
+    return {d: (date.fromisoformat(nxt) - timedelta(days=1)).isoformat() if nxt else None
+            for d, nxt in zip(dates, dates[1:] + [None])}
+
+
+def period_text(lang: str, start: str, end: str | None) -> str:
+    labels = REVISION_LABELS[lang]
+    if end is None:
+        return labels["from"].format(start=localized_date(lang, start))
+    return labels["range"].format(start=localized_date(lang, start), end=localized_date(lang, end))
+
+
+def revisions(doc: str) -> dict[str, dict[str, tuple[Path, str, Path]]]:
+    """{date: {lang: (new text, previous version's date, previous text)}} of the versions that get a
+    revision page, newest first."""
     since = REVISION_PAGES_SINCE.get(doc)
     result = {}
     if not since:
         return result
     chain = version_chain(doc)
-    for index, (when, kind, langs) in enumerate(chain):
+    for index, (when, langs) in enumerate(chain):
         if when < since or index == 0:
             continue
         pairs = {}
         for lang, path in langs.items():
-            before = next(((d, l[lang]) for d, _, l in reversed(chain[:index]) if lang in l), None)
+            before = next(((d, l[lang]) for d, l in reversed(chain[:index]) if lang in l), None)
             if before:
                 pairs[lang] = (path, before[0], before[1])
         if "ko" not in pairs:
             raise FileNotFoundError(f"Korean text needed for the {doc} revision of {when}")
-        result[when] = ("upcoming" if kind == "upcoming" else "in force", pairs)
+        result[when] = pairs
     return dict(sorted(result.items(), reverse=True))
 
 
@@ -344,8 +350,10 @@ def page_html(
     effective_value: str,
     notice: str,
     body: str,
+    period: str = "",
 ) -> str:
-    """The page shell shared by every generated page. page_paths = {lang: path} of this page's languages."""
+    """The page shell shared by every generated page. page_paths = {lang: path} of this page's languages;
+    period = the version's period of application, shown under the effective date (dated documents)."""
     meta = LANGUAGES[lang]
     labels = LABELS[lang]
     css_href = relative_href(here, "policy.css")
@@ -366,6 +374,8 @@ def page_html(
     toc_links = "".join(f'<li><a href="#{anchor}">{html.escape(label)}</a></li>' for anchor, label in toc)
     privacy_href = relative_href(here, output_path("privacy", lang))
     terms_href = relative_href(here, output_path("terms", lang))
+    period_line = (f'\n        <p class="effective period"><span>{html.escape(REVISION_LABELS[lang]["period"])}</span>'
+                   f'{html.escape(period)}</p>') if period else ""
     return f'''<!doctype html>
 <html lang="{meta["html_lang"]}">
 <head>
@@ -398,7 +408,7 @@ def page_html(
       <div class="document-heading">
         <p class="eyebrow">{html.escape(eyebrow)}</p>
         <h1>{html.escape(title)}</h1>
-        <p class="effective"><span>{html.escape(labels["updated"])}</span>{html.escape(effective_value)}</p>
+        <p class="effective"><span>{html.escape(labels["updated"])}</span>{html.escape(effective_value)}</p>{period_line}
       </div>
       {notice}
       <div class="document-body">{body}</div>
@@ -421,15 +431,17 @@ def render_page(
     text: str,
     archived: str | None = None,
     versions: dict[str, dict[str, Path]] | None = None,
-    revision_list: dict[str, tuple[str, dict]] | None = None,
+    revision_list: dict[str, dict] | None = None,
 ) -> str:
-    """Render a current page (archived=None, listing `versions` as previous versions and
-    `revision_list` as revision pages) or the previous version effective from `archived`
+    """Render the newest version (archived=None, listing `versions` as the other versions and
+    `revision_list` as revision pages) or the version effective from `archived`
     (versions = the languages it exists in)."""
     labels = LABELS[lang]
     archive_labels = ARCHIVE_LABELS[lang]
+    rev_labels = REVISION_LABELS[lang]
     versions = versions or {}
     revision_list = revision_list or {}
+    dated = doc in DATED_DOCS
     here = output_path(doc, lang, archived)
     title, effective, toc, body = render_document(doc, text)
     page_paths = {code: output_path(doc, code, archived) for code in LANGUAGES
@@ -437,40 +449,64 @@ def render_page(
     robots = "noindex, follow" if archived else "index, follow"
     notice = ""
     previous_versions = ""
-    if archived:
+    period = ""
+    if dated:
+        spans = periods(doc)
+        start = archived or current_date(doc)
+        period = period_text(lang, start, spans[start])
+    if archived and not dated:
         notice = (
             f'<p class="archive-notice">{html.escape(archive_labels["notice"])} '
             f'<a href="{relative_href(here, output_path(doc, lang))}">{html.escape(archive_labels["current"])}</a></p>'
         )
+    elif archived:
+        notice = (
+            f'<p class="status-notice">{html.escape(rev_labels["period"])}: {html.escape(period)} '
+            f'<a href="{relative_href(here, output_path(doc, lang))}">{html.escape(rev_labels["latest"])}</a></p>'
+        )
+    elif dated:
+        # Every version with its period of application, newest first; nothing here depends on today's date.
+        newest = current_date(doc)
+        rows = []
+        for start in sorted(spans, reverse=True):
+            label = html.escape(period_text(lang, start, spans[start]))
+            if start == newest:
+                link = html.escape(rev_labels["this_page"])
+                if newest in revision_list:
+                    target = lang if lang in revision_list[newest] else "ko"
+                    link += (f' · <a href="{relative_href(here, output_path(doc, target, revision=newest))}">'
+                             f'{html.escape(rev_labels["see_revision"])}</a>')
+            else:
+                target = lang if lang in versions[start] else "ko"
+                link = (f'<a href="{relative_href(here, output_path(doc, target, start))}">'
+                        f'{html.escape(rev_labels["version_of"].format(date=localized_date(lang, start)))}</a>')
+            rows.append((start, label, link))
+        notice = ('<div class="status-notice"><ul class="periods">'
+                  + "".join(f"<li><strong>{label}</strong>: {link}</li>" for _, label, link in rows[:2])
+                  + "</ul></div>")
+        items = "".join(f"<li><strong>{label}</strong>: {link}</li>" for _, label, link in rows)
+        previous_versions = (f'<nav class="previous-versions" aria-label="{html.escape(rev_labels["versions"], quote=True)}">'
+                             f'<h2>{html.escape(rev_labels["versions"])}</h2><ul>{items}</ul></nav>')
     else:
-        rev_labels = REVISION_LABELS[lang]
-        pending = next((d for d, (state, _) in revision_list.items() if state == "upcoming"), None)
-        if pending:
-            end = (date.fromisoformat(pending) - timedelta(days=1)).isoformat()
-            message = rev_labels["in_force_until"].format(end=localized_date(lang, end), date=localized_date(lang, pending))
-            target = lang if lang in revision_list[pending][1] else "ko"
-            notice = (
-                f'<p class="status-notice">{html.escape(message)} '
-                f'<a href="{relative_href(here, output_path(doc, target, revision=pending))}">{html.escape(rev_labels["see_revision"])}</a></p>'
-            )
         items = "".join(
             f'<li><a href="{relative_href(here, output_path(doc, lang if lang in langs else "ko", date))}">{date}</a></li>'
             for date, langs in versions.items()
         )
         if items:
             previous_versions = f'<nav class="previous-versions" aria-label="{html.escape(archive_labels["previous"], quote=True)}"><h2>{html.escape(archive_labels["previous"])}</h2><ul>{items}</ul></nav>'
+    if not archived:
         revision_items = "".join(
             f'<li><a href="{relative_href(here, output_path(doc, lang if lang in pairs else "ko", revision=when))}">{when}</a></li>'
-            for when, (_, pairs) in revision_list.items()
+            for when, pairs in revision_list.items()
         )
         if revision_items:
             previous_versions += f'<nav class="previous-versions revisions" aria-label="{html.escape(rev_labels["revisions"], quote=True)}"><h2>{html.escape(rev_labels["revisions"])}</h2><ul>{revision_items}</ul></nav>'
     return page_html(doc, lang, here, title, robots, page_paths, toc, f"Reel Nest · {labels[doc]}",
-                     effective_value_of(effective), notice, "".join(body) + previous_versions)
+                     effective_value_of(effective), notice, "".join(body) + previous_versions, period)
 
 
-def render_revision_page(doc: str, lang: str, when: str, state: str, pairs: dict[str, tuple[Path, str, Path]]) -> str:
-    """Revision page of the version effective `when`: status, reason, before/after comparison, full text."""
+def render_revision_page(doc: str, lang: str, when: str, pairs: dict[str, tuple[Path, str, Path]]) -> str:
+    """Revision page of the version effective `when`: period, reason, before/after comparison, full text."""
     labels = LABELS[lang]
     rev_labels = REVISION_LABELS[lang]
     new_path, before_date, before_path = pairs[lang]
@@ -504,18 +540,17 @@ def render_revision_page(doc: str, lang: str, when: str, state: str, pairs: dict
         f'<tbody>{table_rows}</tbody></table></div>'
         f'<h2 id="full-text">{html.escape(rev_labels["full_text"])}</h2>'
     )
-    status = rev_labels["pending" if state == "upcoming" else "in_force_from"].format(date=localized_date(lang, when))
-    archive_labels = ARCHIVE_LABELS[lang]
     notice = (
-        f'<p class="status-notice">{html.escape(status)} '
-        f'<a href="{relative_href(here, output_path(doc, lang))}">{html.escape(archive_labels["current"])}</a></p>'
+        f'<p class="status-notice">{html.escape(rev_labels["applies"].format(date=localized_date(lang, when)))} '
+        f'<a href="{relative_href(here, output_path(doc, lang))}">{html.escape(rev_labels["latest"])}</a></p>'
     )
     toc = [("reason", rev_labels["reason"]), ("changes", rev_labels["changes"]), ("full-text", rev_labels["full_text"])] + toc
     page_title = rev_labels["page_title"].format(title=title)
     page_paths = {code: output_path(doc, code, revision=when) for code in LANGUAGES if code in pairs}
+    period = period_text(lang, when, periods(doc)[when]) if doc in DATED_DOCS else ""
     return page_html(doc, lang, here, page_title, "noindex, follow", page_paths, toc,
                      f"Reel Nest · {labels[doc]} · {rev_labels['revisions']}", effective_value_of(effective),
-                     notice, comparison + "".join(body))
+                     notice, comparison + "".join(body), period)
 
 
 def build(out: Path) -> tuple[list[str], list[str], list[str]]:
@@ -554,10 +589,10 @@ def build(out: Path) -> tuple[list[str], list[str], list[str]]:
                 path = output_path(doc, lang, when)
                 write_page(path, render_page(doc, lang, source.read_text(encoding="utf-8"), archived=when, versions=versions))
                 archive_pages.append(path)
-        for when, (state, pairs) in revision_list.items():
+        for when, pairs in revision_list.items():
             for lang in pairs:
                 path = output_path(doc, lang, revision=when)
-                write_page(path, render_revision_page(doc, lang, when, state, pairs))
+                write_page(path, render_revision_page(doc, lang, when, pairs))
                 revision_pages.append(path)
     # Previous versions and revision pages are noindex and stay out of the sitemap.
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"  <url><loc>{BASE_URL}{path}</loc></url>\n" for path in EXTRA_SITEMAP_PATHS + pages) + "</urlset>\n"

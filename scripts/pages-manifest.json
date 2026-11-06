@@ -53,6 +53,9 @@
     "products/reel-nest/terms/archive/2026-10-21/en/index.html", "products/reel-nest/terms/archive/2026-10-21/es/index.html",
     "products/reel-nest/terms/archive/2026-10-21/index.html", "products/reel-nest/terms/archive/2026-10-21/ja/index.html",
     "products/reel-nest/terms/archive/2026-10-21/pt/index.html", "products/reel-nest/terms/archive/2026-10-21/zh/index.html",
+    "products/reel-nest/terms/archive/2026-10-25/en/index.html", "products/reel-nest/terms/archive/2026-10-25/es/index.html",
+    "products/reel-nest/terms/archive/2026-10-25/index.html", "products/reel-nest/terms/archive/2026-10-25/ja/index.html",
+    "products/reel-nest/terms/archive/2026-10-25/pt/index.html", "products/reel-nest/terms/archive/2026-10-25/zh/index.html",
     "products/reel-nest/terms/en/index.html", "products/reel-nest/terms/es/index.html",
     "products/reel-nest/terms/index.html", "products/reel-nest/terms/ja/index.html",
     "products/reel-nest/terms/pt/index.html", "products/reel-nest/terms/revision/2026-11-14/en/index.html",
@@ -87,11 +90,14 @@
     "sources/reel-nest/content/archive/privacy_policy_zh_2026-09-13.txt", "sources/reel-nest/content/archive/privacy_policy_zh_2026-09-14.txt",
     "sources/reel-nest/content/archive/privacy_policy_zh_2026-10-25.txt", "sources/reel-nest/content/archive/privacy_policy_zh_2026-11-06.txt",
     "sources/reel-nest/content/archive/terms_of_use_en_2026-09-13.txt", "sources/reel-nest/content/archive/terms_of_use_en_2026-10-21.txt",
-    "sources/reel-nest/content/archive/terms_of_use_es_2026-09-13.txt", "sources/reel-nest/content/archive/terms_of_use_es_2026-10-21.txt",
+    "sources/reel-nest/content/archive/terms_of_use_en_2026-10-25.txt", "sources/reel-nest/content/archive/terms_of_use_es_2026-09-13.txt",
+    "sources/reel-nest/content/archive/terms_of_use_es_2026-10-21.txt", "sources/reel-nest/content/archive/terms_of_use_es_2026-10-25.txt",
     "sources/reel-nest/content/archive/terms_of_use_ja_2026-09-13.txt", "sources/reel-nest/content/archive/terms_of_use_ja_2026-10-21.txt",
-    "sources/reel-nest/content/archive/terms_of_use_ko_2026-09-13.txt", "sources/reel-nest/content/archive/terms_of_use_ko_2026-10-21.txt",
+    "sources/reel-nest/content/archive/terms_of_use_ja_2026-10-25.txt", "sources/reel-nest/content/archive/terms_of_use_ko_2026-09-13.txt",
+    "sources/reel-nest/content/archive/terms_of_use_ko_2026-10-21.txt", "sources/reel-nest/content/archive/terms_of_use_ko_2026-10-25.txt",
     "sources/reel-nest/content/archive/terms_of_use_pt_2026-09-13.txt", "sources/reel-nest/content/archive/terms_of_use_pt_2026-10-21.txt",
-    "sources/reel-nest/content/archive/terms_of_use_zh_2026-09-13.txt", "sources/reel-nest/content/archive/terms_of_use_zh_2026-10-21.txt",
+    "sources/reel-nest/content/archive/terms_of_use_pt_2026-10-25.txt", "sources/reel-nest/content/archive/terms_of_use_zh_2026-09-13.txt",
+    "sources/reel-nest/content/archive/terms_of_use_zh_2026-10-21.txt", "sources/reel-nest/content/archive/terms_of_use_zh_2026-10-25.txt",
     "sources/reel-nest/content/privacy_policy_en.txt", "sources/reel-nest/content/privacy_policy_es.txt",
     "sources/reel-nest/content/privacy_policy_ja.txt", "sources/reel-nest/content/privacy_policy_ko.txt",
     "sources/reel-nest/content/privacy_policy_pt.txt", "sources/reel-nest/content/privacy_policy_zh.txt",
@@ -100,10 +106,7 @@
     "sources/reel-nest/content/revisions/terms_of_use_pt_2026-11-14.txt", "sources/reel-nest/content/revisions/terms_of_use_zh_2026-11-14.txt",
     "sources/reel-nest/content/terms_of_use_en.txt", "sources/reel-nest/content/terms_of_use_es.txt",
     "sources/reel-nest/content/terms_of_use_ja.txt", "sources/reel-nest/content/terms_of_use_ko.txt",
-    "sources/reel-nest/content/terms_of_use_pt.txt", "sources/reel-nest/content/terms_of_use_zh.txt",
-    "sources/reel-nest/content/upcoming/terms_of_use_en_2026-11-14.txt", "sources/reel-nest/content/upcoming/terms_of_use_es_2026-11-14.txt",
-    "sources/reel-nest/content/upcoming/terms_of_use_ja_2026-11-14.txt", "sources/reel-nest/content/upcoming/terms_of_use_ko_2026-11-14.txt",
-    "sources/reel-nest/content/upcoming/terms_of_use_pt_2026-11-14.txt", "sources/reel-nest/content/upcoming/terms_of_use_zh_2026-11-14.txt"
+    "sources/reel-nest/content/terms_of_use_pt.txt", "sources/reel-nest/content/terms_of_use_zh.txt"
   ],
   "protected_sha256": {
     "app-ads.txt": "8c2bbca5f9ff26163ef688863943cd998c9fdfaaba330d93c4998222292a88fa",
@@ -117,7 +120,7 @@
   "play_url": "https://play.google.com/store/apps/details?id=studio.fellowsurvivor.reelnest",
   "locales": ["", "en/", "ja/", "zh/", "es/", "pt/"],
   "privacy_archives": ["2026-09-11", "2026-09-13", "2026-09-14", "2026-10-25", "2026-11-06"],
-  "terms_archives": ["2026-09-13", "2026-10-21"],
+  "terms_archives": ["2026-09-13", "2026-10-21", "2026-10-25"],
   "game_paths": ["", "terms/", "privacy/", "delete-account/", "refund/", "probabilities/", "operation-policy/", "consent/", "support/", "notices/"],
   "other_live_paths": ["/", "/app-ads.txt", "/googleabe82689611d6157.html", "/products/reel-nest/sitemap.xml", "/products/heavenlydemonreborn/sitemap.xml"]
 }

@@ -10,8 +10,8 @@ from tempfile import TemporaryDirectory
 from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
 
-from build_site import (BASE_URL, CONTENT, DOCUMENTS, EXTRA_SITEMAP_PATHS, LANGUAGES, OUT,
-                        archived_versions, build, output_path, revisions)
+from build_site import (ARCHIVE_LABELS, BASE_URL, CONTENT, DATED_DOCS, DOCUMENTS, EXTRA_SITEMAP_PATHS, LANGUAGES,
+                        OUT, archived_versions, build, output_path, period_text, periods, revisions)
 
 
 class Document(HTMLParser):
@@ -41,7 +41,7 @@ def expected_pages():
             assert "ko" in langs, f"Previous version {date} of {doc} has no Korean text"
             for lang in langs:
                 pages[output_path(doc, lang, date)] = (doc, lang, "archive", date)
-        for date, (_, pairs) in revisions(doc).items():
+        for date, pairs in revisions(doc).items():
             for lang in pairs:
                 pages[output_path(doc, lang, revision=date)] = (doc, lang, "revision", date)
     return pages
@@ -53,7 +53,6 @@ def check():
                  for info in DOCUMENTS.values() for p in (OUT / info["prefix"]).rglob("index.html")}
     assert generated == set(pages), f"Pages differ from the texts: extra {sorted(generated - set(pages))}, missing {sorted(set(pages) - generated)}"
     docs = {path: Document(OUT / path / "index.html") for path in pages}
-    pending = {doc: next((d for d, (state, _) in revisions(doc).items() if state == "upcoming"), None) for doc in DOCUMENTS}
     checked_links = 0
     for path, (doc_name, lang, kind, when) in pages.items():
         doc, file = docs[path], OUT / path / "index.html"
@@ -71,13 +70,14 @@ def check():
         if kind == "revision":
             assert {"reason", "changes", "full-text"} <= set(doc.ids) and "changes" in classes, f"Revision page parts: {file}"
             assert counts["tr"] >= 2, f"Empty comparison table: {file}"
-        if kind == "current":
-            # While a revision awaits its effective date, the text in force says so and links to it;
-            # it must never be labelled as a previous version.
-            assert "archive-notice" not in classes, f"Current page labelled as previous version: {file}"
-            if pending[doc_name]:
-                assert "status-notice" in classes and any("revision/" + pending[doc_name] in link for link in doc.links), \
-                    f"Current page does not announce the {pending[doc_name]} revision: {file}"
+        if doc_name in DATED_DOCS:
+            # Dated documents carry each version's period of application and no wording that turns
+            # wrong on a date ("current", "previous version").
+            text = file.read_text(encoding="utf-8")
+            start = when if kind != "current" else max(periods(doc_name))
+            assert period_text(lang, start, periods(doc_name)[start]) in text, f"Period of application missing: {file}"
+            assert "archive-notice" not in classes and ARCHIVE_LABELS[lang]["notice"] not in text, \
+                f"Dated document labelled as previous version: {file}"
         for href in doc.links:
             parsed = urlsplit(href)
             if parsed.scheme == "data":
