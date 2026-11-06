@@ -23,7 +23,8 @@
   ],
   "maintenance_files": [
     ".gitignore", "README.md", "docs/pages-preflight.md",
-    "scripts/pages-manifest.json", "scripts/check-pages.py"
+    "scripts/pages-manifest.json", "scripts/check-pages.py",
+    "wrangler.jsonc", ".assetsignore"
   ],
   "protected_sha256": {
     "app-ads.txt": "8c2bbca5f9ff26163ef688863943cd998c9fdfaaba330d93c4998222292a88fa",
