@@ -5,7 +5,7 @@
 | Play Console → 앱 콘텐츠 → 개인정보처리방침 | `https://fellowsurvivor.com/products/transporter/privacy/` |
 | Play Console → 데이터 보안 → 계정 삭제 URL | 해당 없음(앱에 계정이 없음) |
 | Play Console → 스토어 등록정보 → 웹사이트 | `https://fellowsurvivor.com` (AdMob `app-ads.txt` 확인 위치라 바꾸지 않음) |
-| 지원 이메일·지원 사이트 | `fellow.survivor.studio@gmail.com`, `https://fellowsurvivor.com/products/transporter/support/` |
+| 지원 이메일·지원 사이트 | `support@fellowsurvivor.com`, `https://fellowsurvivor.com/products/transporter/support/` |
 | 앱 안 링크(설정 > 정보) | 개인정보처리방침 `…/transporter/privacy/`, 이용약관 `…/transporter/terms/` (영어 화면은 `…/transporter/en/privacy/`, `…/transporter/en/terms/`) |
 
 ## 앱과 맞춰야 할 것

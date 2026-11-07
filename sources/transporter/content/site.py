@@ -13,7 +13,7 @@ COMPANY = {
     "registration": "773-26-02197",
     "address": "(16866) 경기 용인시 수지구 용구대로2790번길 7, 302 - S444호",
     "address_en": "Unit 302-S444, 7 Yonggudae-ro 2790beon-gil, Suji-gu, Yongin-si, Gyeonggi-do 16866, Republic of Korea",
-    "email": "fellow.survivor.studio@gmail.com",
+    "email": "support@fellowsurvivor.com",
 }
 
 # Publication (and effective) date of the current documents. Change it, rebuild, and add a row to VERSIONS.

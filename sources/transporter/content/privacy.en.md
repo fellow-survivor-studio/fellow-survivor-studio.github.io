@@ -166,7 +166,7 @@ Send questions, complaints and deletion requests to the contact below. We reply 
 | Item | Details |
 | --- | --- |
 | Privacy officer | 박인규 (Representative) |
-| Email | fellow.survivor.studio@gmail.com |
+| Email | support@fellowsurvivor.com |
 | Operator | Fellow Survivor Studio (펠로우서바이버스튜디오), business registration number 773-26-02197 (Republic of Korea) |
 | Address | Unit 302-S444, 7 Yonggudae-ro 2790beon-gil, Suji-gu, Yongin-si, Gyeonggi-do 16866, Republic of Korea |
 
