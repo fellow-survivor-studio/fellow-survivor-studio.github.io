@@ -58,7 +58,7 @@ Article 6 (Paid Service and Payment)
 2. 【Important】 (Withdrawal) A User may withdraw from the purchase within 7 days of paying for Pro (or, for an automatic renewal, of the renewal payment date), and the Company will refund the full amount paid.
 3. 【Important】 (Cancellation) A User may cancel Pro at any time.
    (a) Regular cancellation: If the User cancels in Google Play's subscription management menu, no further charges are made from the next billing date, and the User can keep using Pro until the end of the period already paid for.
-   (b) Early cancellation: If the User requests it at the Company's contact address (fellow.survivor.studio@gmail.com), the Company ends the User's Pro access on the day it confirms the request and refunds the amount paid minus the amount for the period already used. The amount for the period already used is calculated by dividing the amount paid by the total number of days in that billing period and multiplying by the number of days used.
+   (b) Early cancellation: If the User requests it at the Company's contact address (support@fellowsurvivor.com), the Company ends the User's Pro access on the day it confirms the request and refunds the amount paid minus the amount for the period already used. The amount for the period already used is calculated by dividing the amount paid by the total number of days in that billing period and multiplying by the number of days used.
 4. Withdrawal and refunds may be requested through Google Play's refund request process or at the Company's contact address, and the Company will process the refund through Google Play within 3 business days of receiving the request.
 5. 【Important】 The subscription renews automatically at each billing cycle until the User cancels it. Subscription prices, plans, and benefits follow what is shown on the in-app subscription screen. If the Company intends to raise the subscription price, it will give notice of the new price and the effective date in the manner and within the period required by applicable law and will obtain the User's consent; if the User does not consent, the subscription will not renew at the higher price and will end when the current billing period ends.
 6. The basic features of the Service are available regardless of whether the User subscribes to Pro. However, a Free User must watch a rewarded ad to the end to download videos, and can then download videos for 15 minutes from the time the ad finishes (any remaining time is lost if the device restarts). If the Company cannot confirm the subscription status (because of a network error, a failure to connect to Google Play, etc.), video downloads may be temporarily unavailable.
@@ -107,4 +107,4 @@ These Terms take effect on November 14, 2026.
 Business Information
 Name: Fellow Survivor Studio
 Business registration number: 773-26-02197
-Contact email: fellow.survivor.studio@gmail.com
+Contact email: support@fellowsurvivor.com
