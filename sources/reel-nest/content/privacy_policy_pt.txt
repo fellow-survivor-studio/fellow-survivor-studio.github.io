@@ -1,6 +1,6 @@
 Política de Privacidade do Reel Nest
 
-Data de vigência: 7 de novembro de 2026
+Data de vigência: 8 de novembro de 2026
 
 A Fellow Survivor Studio (doravante "a Empresa") valoriza as informações pessoais dos usuários do aplicativo móvel "Reel Nest" (doravante "o Aplicativo") e cumpre a Lei de Proteção de Informações Pessoais da República da Coreia e as demais leis aplicáveis. Esta política explica como o Aplicativo acessa, coleta, usa, fornece, retém e destrói os dados do usuário e do dispositivo.
 
@@ -9,7 +9,7 @@ Nome: Fellow Survivor Studio
 Número de registro comercial: 773-26-02197
 Encarregado de proteção de informações pessoais: Representante
 Proteção de dados e atendimento a reclamações: Suporte ao cliente (a cargo do Representante)
-Contato: fellow.survivor.studio@gmail.com
+Contato: support@fellowsurvivor.com
 
 2. Dados tratados pelo Aplicativo
 
@@ -147,4 +147,4 @@ Esta política pode ser revisada se os recursos do Aplicativo, os serviços de t
 Esta política foi redigida em coreano e pode ser disponibilizada em tradução. Se uma tradução divergir da versão em coreano, prevalecerá a versão em coreano.
 
 17. Contato
-Envie as dúvidas sobre esta política ou sobre o tratamento de informações pessoais para fellow.survivor.studio@gmail.com.
+Envie as dúvidas sobre esta política ou sobre o tratamento de informações pessoais para support@fellowsurvivor.com.
