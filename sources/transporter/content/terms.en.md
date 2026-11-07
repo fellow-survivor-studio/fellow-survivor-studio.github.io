@@ -71,7 +71,7 @@ However, we are responsible for harm caused by our intent or gross negligence, a
 
 ## 7. Contact and appeals
 
-Send questions, reports and appeals against our actions to fellow.survivor.studio@gmail.com. We reply within 7 days; if it will take longer, we will tell you why and when to expect an answer.
+Send questions, reports and appeals against our actions to support@fellowsurvivor.com. We reply within 7 days; if it will take longer, we will tell you why and when to expect an answer.
 
 When reporting, include the date, what happened and the app version (Settings > About). If you send message text or screenshots, please hide verification codes and other people's numbers.
 
