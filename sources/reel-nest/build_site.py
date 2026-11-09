@@ -350,15 +350,17 @@ def page_html(
     page_paths: dict[str, str],
     toc: list[tuple[str, str]],
     eyebrow: str,
-    effective_value: str,
+    effective: str,
     notice: str,
     body: str,
     period: str = "",
 ) -> str:
     """The page shell shared by every generated page. page_paths = {lang: path} of this page's languages;
-    period = the version's period of application, shown under the effective date (dated documents)."""
+    effective = the text's effective-date line; period = the version's period of application, shown under
+    the effective date (dated documents)."""
     meta = LANGUAGES[lang]
     labels = LABELS[lang]
+    effective_label, effective_value = effective_parts(lang, effective)
     css_href = relative_href(here, "policy.css")
     canonical = BASE_URL + here
     language_items = []
@@ -411,7 +413,7 @@ def page_html(
       <div class="document-heading">
         <p class="eyebrow">{html.escape(eyebrow)}</p>
         <h1>{html.escape(title)}</h1>
-        <p class="effective"><span>{html.escape(labels["updated"])}</span>{html.escape(effective_value)}</p>{period_line}
+        <p class="effective"><span>{html.escape(effective_label)}</span>{html.escape(effective_value)}</p>{period_line}
       </div>
       {notice}
       <div class="document-body">{body}</div>
@@ -424,8 +426,12 @@ def page_html(
 '''
 
 
-def effective_value_of(effective: str) -> str:
-    return re.sub(r"^[^:：]+[:：]\s*", "", effective)
+def effective_parts(lang: str, effective: str) -> tuple[str, str]:
+    """(label, date) of a text's effective-date line. The label is taken from the text, so the page shows
+    the same words as the app (e.g. the Spanish privacy policy says "Fecha de entrada en vigor" while the
+    Spanish terms say "Fecha de vigencia"); LABELS["updated"] is used only for a line without a label."""
+    match = re.match(r"([^:：]+)[:：]\s*(.*)", effective)
+    return (match[1].strip(), match[2]) if match else (LABELS[lang]["updated"], effective)
 
 
 def render_page(
@@ -505,7 +511,7 @@ def render_page(
         if revision_items:
             previous_versions += f'<nav class="previous-versions revisions" aria-label="{html.escape(rev_labels["revisions"], quote=True)}"><h2>{html.escape(rev_labels["revisions"])}</h2><ul>{revision_items}</ul></nav>'
     return page_html(doc, lang, here, title, robots, page_paths, toc, f"Reel Nest · {labels[doc]}",
-                     effective_value_of(effective), notice, "".join(body) + previous_versions, period)
+                     effective, notice, "".join(body) + previous_versions, period)
 
 
 def render_revision_page(doc: str, lang: str, when: str, pairs: dict[str, tuple[Path, str, Path]]) -> str:
@@ -552,7 +558,7 @@ def render_revision_page(doc: str, lang: str, when: str, pairs: dict[str, tuple[
     page_paths = {code: output_path(doc, code, revision=when) for code in LANGUAGES if code in pairs}
     period = period_text(lang, when, periods(doc)[when]) if doc in DATED_DOCS else ""
     return page_html(doc, lang, here, page_title, "noindex, follow", page_paths, toc,
-                     f"Reel Nest · {labels[doc]} · {rev_labels['revisions']}", effective_value_of(effective),
+                     f"Reel Nest · {labels[doc]} · {rev_labels['revisions']}", effective,
                      notice, comparison + "".join(body), period)
 
 
