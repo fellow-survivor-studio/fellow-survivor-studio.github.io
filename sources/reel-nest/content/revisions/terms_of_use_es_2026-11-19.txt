@@ -1,0 +1,3 @@
+Esta modificación se realiza por los siguientes motivos.
+1. Para ofrecer la prueba gratuita de Pro y descuentos. Se establece cómo funcionan el pago, el consentimiento y la cancelación cuando termina un periodo de prueba gratuita o de descuento y se realiza un pago.
+2. Para proporcionar gratuitamente el pase Pro a los destinatarios que la Compañía determine, como los probadores beta. Se establece dónde puede usarse un pase, cuándo puede retirarse y qué ocurre con él si el Servicio finaliza.

@@ -1,6 +1,6 @@
 Reel Nest Terms of Use
 
-Effective date: November 14, 2026
+Effective date: November 19, 2026
 
 ※ Provisions marked 【Important】 significantly affect your rights and obligations. Please be sure to read them.
 
@@ -12,8 +12,9 @@ Article 2 (Definitions)
 2. "User" means a person who uses the Service under these Terms.
 3. "Content" means any web page, video, image, or other material a User views or downloads through the Service.
 4. "Protected Content" means content to which technical protection measures such as encryption or DRM (digital rights management) are applied.
-5. "Paid Service" or "Pro" means the paid subscription add-ons offered by the Company (ad-free video downloads, removal of the Nest storage limit, fast downloads and no limit on simultaneous downloads, etc.).
+5. "Paid Service" or "Pro" means the add-ons offered by the Company (ad-free video downloads, removal of the Nest storage limit, fast downloads and no limit on simultaneous downloads, etc.), provided as a "Pro subscription" paid on a recurring basis and as a "Pro pass" with no set term.
 6. "Free Plan" or "Free User" means the state of not using the Paid Service, or a User in that state.
+7. "Free trial" means a benefit that lets a User use the first set period of a Pro subscription free of charge.
 
 Article 3 (Effect and Amendment of Terms)
 1. These Terms are made known to Users by being posted in the Service and on the Company's terms web page (https://fellowsurvivor.com/products/reel-nest/terms/). Before a User uses the download feature for the first time, the Company presents the key points of these Terms and obtains the User's consent; a User who does not consent cannot use the download feature.
@@ -27,10 +28,10 @@ Article 4 (Provision and Modification of the Service)
    - Storage and management of downloaded files
    - Additional features such as browsing history, download history, and bookmarks
    - Private in-app storage ("Nest") (Free Users may use up to 2GB; see Article 5-2)
-   - Ad-free video downloads, removal of the Nest storage limit, fast downloads (each download split over up to 32 connections), and no limit on simultaneous downloads through a Pro subscription
+   - Ad-free video downloads, removal of the Nest storage limit, fast downloads (each download split over up to 32 connections), and no limit on simultaneous downloads through Pro (a subscription or a pass)
 2. The Company may modify all or part of the Service for operational or technical reasons, and will announce the content and effective date of such changes in advance.
 3. The Company may release updates to improve the Service, and some features may only be available in the latest version.
-4. If the Company discontinues the Service or changes the main features of the Paid Service to the disadvantage of Users, it will notify Users in the app at least 30 days before the change takes effect. In that case, a Pro User may cancel early under Article 6(3)(b) and receive a refund for the remaining period; if the Service is discontinued, the Company will refund the amount for the remaining period even without a request from the User.
+4. If the Company discontinues the Service or changes the main features of the Paid Service to the disadvantage of Users, it will notify Users in the app at least 30 days before the change takes effect. In that case, a Pro User may cancel early under Article 6(3)(b) and receive a refund for the remaining period; if the Service is discontinued, the Company will refund the amount for the remaining period even without a request from the User. However, a Pro pass provided free of charge by the Company is not eligible for a refund, and if the Service is discontinued, the Pro pass is governed by Article 6-4(5).
 
 Article 5 (Notes on Using the Download Feature)
 1. The Service is a general-purpose tool that helps Users save media resources detected on web pages they visit to their own device; it is not intended to provide, distribute, or circulate any specific content.
@@ -45,7 +46,7 @@ Article 5 (Notes on Using the Download Feature)
 
 Article 5-2 (Use of Nest)
 1. Free Users may keep up to 2GB (1GB = 1,000,000,000 bytes) of files in Nest, and Pro Users may use Nest without a storage limit within the storage available on their device.
-2. 【Important】 If a Pro subscription ends while the files kept in Nest exceed the free limit, the existing files are not deleted and can still be viewed or exported, but no new files can be added to Nest until the stored amount falls below the limit.
+2. 【Important】 If Pro use ends (because a subscription ends, a pass is revoked, etc.) while the files kept in Nest exceed the free limit, the existing files are not deleted and can still be viewed or exported, but no new files can be added to Nest until the stored amount falls below the limit.
 3. 【Important】 Liability related to the copyright, portrait rights, or other rights in content kept in Nest lies with the User who kept that content. However, this does not apply to any part caused by the intent or negligence of the Company (including its agents and employees).
 4. 【Important】 The Company does not provide backups of files kept in Nest. Files in Nest and their list, the download history, and the Nest lock PIN information are stored only inside the User's device, cannot be accessed by other apps, and are not included in cloud backups or device-to-device data transfer (moving to a new device). This does not apply to files the User exports to public storage or opens in another app, or to devices whose operating-system protections have been disabled (for example, by rooting).
 5. 【Important】 Uninstalling the app or resetting the device also deletes the files in Nest, and changing devices does not move them to the new device; the Company cannot recover them. Please export any files you want to keep to public storage in advance.
@@ -55,17 +56,36 @@ Article 5-2 (Use of Nest)
 
 Article 6 (Paid Service and Payment)
 1. 【Important】 Payment for Pro is made through the Google Play billing system. Matters of withdrawal, cancellation, and refunds not covered by these Terms or Google Play's policies are governed by applicable laws such as the Act on Consumer Protection in Electronic Commerce, etc. of the Republic of Korea, and where applicable law is more favorable to the User, applicable law prevails.
-2. 【Important】 (Withdrawal) A User may withdraw from the purchase within 7 days of paying for Pro (or, for an automatic renewal, of the renewal payment date), and the Company will refund the full amount paid.
+2. 【Important】 (Withdrawal) A User may withdraw from the purchase within 7 days of paying for a Pro subscription, and the Company will refund the full amount paid. Where the first payment is made after a free trial or discount period ends, and where the subscription renews automatically, the User may likewise withdraw within 7 days of that payment date.
 3. 【Important】 (Cancellation) A User may cancel Pro at any time.
    (a) Regular cancellation: If the User cancels in Google Play's subscription management menu, no further charges are made from the next billing date, and the User can keep using Pro until the end of the period already paid for.
    (b) Early cancellation: If the User requests it at the Company's contact address (support@fellowsurvivor.com), the Company ends the User's Pro access on the day it confirms the request and refunds the amount paid minus the amount for the period already used. The amount for the period already used is calculated by dividing the amount paid by the total number of days in that billing period and multiplying by the number of days used.
 4. Withdrawal and refunds may be requested through Google Play's refund request process or at the Company's contact address, and the Company will process the refund through Google Play within 3 business days of receiving the request.
-5. 【Important】 The subscription renews automatically at each billing cycle until the User cancels it. Subscription prices, plans, and benefits follow what is shown on the in-app subscription screen. If the Company intends to raise the subscription price, it will give notice of the new price and the effective date in the manner and within the period required by applicable law and will obtain the User's consent; if the User does not consent, the subscription will not renew at the higher price and will end when the current billing period ends.
-6. The basic features of the Service are available regardless of whether the User subscribes to Pro. However, a Free User must watch a rewarded ad to the end to download videos, and can then download videos for 15 minutes from the time the ad finishes (any remaining time is lost if the device restarts). If the Company cannot confirm the subscription status (because of a network error, a failure to connect to Google Play, etc.), video downloads may be temporarily unavailable.
+5. 【Important】 The subscription renews automatically at each billing cycle until the User cancels it. Subscription prices, plans, and benefits follow what is shown on the in-app subscription screen. If the Company intends to raise the subscription price, it will give notice of the new price and the effective date in the manner and within the period required by applicable law and will obtain the User's consent; if the User does not consent, the subscription will not renew at the higher price and will end when the current billing period ends. However, where a free trial ends and the subscription converts to a paid one, or a discount period ends and the payment amount increases, the Company will, for Users in the Republic of Korea, separately obtain consent through Google Play within 30 days before the conversion or increase, covering its date and time, the amounts before and after the change, and the payment method; if the User does not consent, the converted or increased amount will not be charged and the subscription will be cancelled.
+6. The basic features of the Service are available regardless of whether the User subscribes to Pro. However, a Free User must watch a rewarded ad to the end to download videos, and can then download videos for 15 minutes from the time the ad finishes (any remaining time is lost if the device restarts). If the Company cannot confirm the User's Pro status (subscription or pass) (because of a network error, a failure to connect to Google Play, etc.), video downloads may be temporarily unavailable.
 
 Article 6-2 (Use by Minors)
 1. The Service is not directed at children under the age of 14.
 2. If a minor under the age of 19 pays for the Paid Service without the consent of a legal guardian, the minor or the legal guardian may cancel the contract. However, this does not apply where cancellation is not permitted by applicable law, such as where the minor used deception to make the Company believe that he or she was an adult.
+
+Article 6-3 (Free Trials and Discounts)
+1. The Company may offer a free trial or a discount period for a Pro subscription through Google Play. Eligibility (such as Users subscribing for the first time) and the period follow the criteria set by Google Play, and the period and amount that apply to the User are shown on the subscription screen and on the Google Play payment screen.
+2. A free trial can be received only once, according to the criteria set by Google Play.
+3. During a free trial, the User can use the same features as a User who has paid for a Pro subscription.
+4. 【Important】 When a free trial or discount period ends, the amount shown on the subscription screen is charged, and the subscription then renews automatically at each billing cycle. Users in the Republic of Korea are charged only if they have consented under the proviso to Article 6(5).
+5. 【Important】 If the User cancels in Google Play's subscription management menu during a free trial, no charge is made, and the User can keep using Pro until the end of the remaining trial period. Cancellation during a discount period is governed by Article 6(3).
+
+Article 6-4 (Pro Pass)
+1. A Pro pass is a right to use Pro with no set term, which the Company provides free of charge through Google Play promotion codes to persons the Company designates, such as beta testers. The Company does not sell Pro passes.
+2. A Pro pass applies to the Google account with which the code was redeemed and can be used on devices where the app is installed with that account. It is not lost when the app is uninstalled, and if the app is reinstalled with the same account, it can be used again through [Restore purchase]. A Pro pass and its code may not be transferred, sold, or lent to another account or another person.
+3. A Pro pass holder can use the same Pro features as a Pro subscription User. If the Pro features change, the changes apply as well, and if they are changed to the User's disadvantage, the Company will notify the User in the app at least 30 days in advance under Article 4(4).
+4. 【Important】 The Company may revoke a Pro pass in any of the following cases. In that case, if there is a way to contact the User, the Company will notify the User of the reason in advance and give the User an opportunity to state an opinion.
+   (a) A person who is not a recipient designated by the Company obtained and redeemed a code by improper means
+   (b) A code or Pro pass was sold or transferred for consideration
+   (c) Article 8(5) was violated
+   A Pro pass also ceases to be valid if Google Play cancels the redemption under its own policies.
+5. 【Important】 "No set term" means that the pass can be used without a time limit for as long as the Company provides the Service. If the Company discontinues the Service under Article 4(4), the Pro pass also ends, and because it was provided free of charge, it is not refunded.
+6. A Pro pass provided free of charge is not subject to withdrawal or refunds. A User who holds both a Pro pass and a Pro subscription can continue to use Pro with the Pro pass even after cancelling the subscription, and withdrawal, cancellation, and refunds for the subscription are governed by Article 6.
 
 Article 7 (Advertising)
 The Company may show ads from third-party ad networks (such as Google AdMob) to Free Users to help operate the Service, and a Free User's video downloads are tied to watching rewarded ads under Article 6(6). Ads provided by the Company are not shown to Pro Users (ads that are part of the web pages Users visit are excluded).
@@ -92,7 +112,7 @@ Article 10 (Intellectual Property)
 3. Users may not reproduce, transmit, publish, distribute, broadcast, or otherwise use all or part of the Service, or allow a third party to do so, without the Company's prior written consent.
 
 Article 11 (Termination)
-Users may stop using the Service at any time by uninstalling the app. A Pro subscription must be cancelled separately under Article 6(3).
+Users may stop using the Service at any time by uninstalling the app. A Pro subscription must be cancelled separately under Article 6(3). A Pro pass is not lost when the app is uninstalled.
 
 Article 12 (Governing Law and Jurisdiction)
 1. 【Important】 These Terms and any dispute between the Company and a User are governed by the laws of the Republic of Korea, and any lawsuit will be brought before the court of competent jurisdiction under the Civil Procedure Act of the Republic of Korea.
@@ -102,7 +122,7 @@ Article 13 (Translations)
 These Terms were written in Korean and may be provided in translation. If a translation differs from the Korean version, the Korean version prevails.
 
 Addendum
-These Terms take effect on November 14, 2026.
+These Terms take effect on November 19, 2026.
 
 Business Information
 Name: Fellow Survivor Studio

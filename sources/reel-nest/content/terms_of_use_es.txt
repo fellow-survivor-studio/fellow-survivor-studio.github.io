@@ -1,6 +1,6 @@
 Términos de Uso de Reel Nest
 
-Fecha de vigencia: 14 de noviembre de 2026
+Fecha de vigencia: 19 de noviembre de 2026
 
 ※ Las disposiciones marcadas con 【Importante】 afectan de forma significativa a los derechos y obligaciones del Usuario. Léalas con atención.
 
@@ -12,8 +12,9 @@ Artículo 2 (Definiciones)
 2. "Usuario" significa la persona que utiliza el Servicio conforme a estos Términos.
 3. "Contenido" significa cualquier página web, video, imagen u otro material que el Usuario visualice o descargue a través del Servicio.
 4. "Contenido protegido" significa el contenido al que se aplican medidas técnicas de protección como el cifrado o la DRM (gestión de derechos digitales).
-5. "Servicio de pago" o "Pro" significa las funciones adicionales por suscripción que la Compañía ofrece a título oneroso (descargas de video sin anuncios, eliminación del límite de almacenamiento de Nest, descargas rápidas y sin límite de descargas simultáneas, etc.).
+5. "Servicio de pago" o "Pro" significa las funciones adicionales que ofrece la Compañía (descargas de video sin anuncios, eliminación del límite de almacenamiento de Nest, descargas rápidas y sin límite de descargas simultáneas, etc.), que se ofrecen como "suscripción Pro", con pago periódico, y como "pase Pro", sin plazo determinado.
 6. "Plan gratuito" o "Usuario gratuito" significa la situación de no utilizar el Servicio de pago, o el Usuario que se encuentra en dicha situación.
+7. "Prueba gratuita" significa el beneficio que permite utilizar gratuitamente un periodo inicial determinado de la suscripción Pro.
 
 Artículo 3 (Efecto y modificación de los Términos)
 1. Estos Términos se ponen en conocimiento de los Usuarios mediante su publicación en el Servicio y en la página web de términos de la Compañía (https://fellowsurvivor.com/products/reel-nest/terms/). Antes de que el Usuario utilice por primera vez la función de descarga, la Compañía le presentará los puntos principales de estos Términos y obtendrá su consentimiento; el Usuario que no lo otorgue no podrá utilizar la función de descarga.
@@ -27,10 +28,10 @@ Artículo 4 (Prestación y modificación del Servicio)
    - Almacenamiento y gestión de los archivos descargados
    - Funciones adicionales como el historial de navegación, el historial de descargas y los marcadores
    - Espacio de almacenamiento privado dentro de la aplicación ("Nest") (los Usuarios gratuitos pueden usar hasta 2 GB; véase el artículo 5-2)
-   - Descargas de video sin anuncios, eliminación del límite de almacenamiento de Nest, descargas rápidas (cada descarga dividida en hasta 32 conexiones) y sin límite de descargas simultáneas mediante la suscripción Pro
+   - Descargas de video sin anuncios, eliminación del límite de almacenamiento de Nest, descargas rápidas (cada descarga dividida en hasta 32 conexiones) y sin límite de descargas simultáneas mediante Pro (suscripción o pase)
 2. La Compañía podrá modificar la totalidad o parte del Servicio por necesidades operativas o técnicas, y en tal caso anunciará con antelación el contenido y la fecha de efecto de los cambios.
 3. La Compañía podrá publicar actualizaciones para mejorar el Servicio, y algunas funciones podrán estar disponibles únicamente en la versión más reciente.
-4. Si la Compañía pone fin al Servicio o modifica el contenido principal del Servicio de pago en perjuicio de los Usuarios, lo notificará en la aplicación al menos 30 días antes de la fecha de aplicación. En ese caso, el Usuario Pro podrá cancelar anticipadamente conforme al artículo 6, apartado 3, letra b) y recibir el reembolso del importe correspondiente al periodo restante; si se pone fin al Servicio, la Compañía reembolsará dicho importe aunque el Usuario no lo solicite.
+4. Si la Compañía pone fin al Servicio o modifica el contenido principal del Servicio de pago en perjuicio de los Usuarios, lo notificará en la aplicación al menos 30 días antes de la fecha de aplicación. En ese caso, el Usuario Pro podrá cancelar anticipadamente conforme al artículo 6, apartado 3, letra b) y recibir el reembolso del importe correspondiente al periodo restante; si se pone fin al Servicio, la Compañía reembolsará dicho importe aunque el Usuario no lo solicite. No obstante, el pase Pro proporcionado gratuitamente por la Compañía no es objeto de reembolso, y en caso de fin del Servicio el pase Pro se rige por el artículo 6-4, apartado 5.
 
 Artículo 5 (Notas sobre el uso de la función de descarga)
 1. El Servicio es una herramienta de uso general que ayuda al Usuario a detectar recursos multimedia en las páginas web que visita y a guardarlos en su dispositivo; no tiene por objeto proporcionar, distribuir ni hacer circular ningún contenido específico.
@@ -45,7 +46,7 @@ Artículo 5 (Notas sobre el uso de la función de descarga)
 
 Artículo 5-2 (Uso de Nest)
 1. Los Usuarios gratuitos pueden guardar en Nest hasta 2 GB (1 GB = 1.000.000.000 bytes) de archivos, y los Usuarios Pro pueden usar Nest sin límite de almacenamiento dentro del espacio disponible en su dispositivo.
-2. 【Importante】 Si finaliza la suscripción Pro y los archivos guardados en Nest superan el límite gratuito, los archivos existentes no se eliminan y pueden seguir visualizándose o exportándose, pero no se podrán añadir archivos nuevos a Nest hasta que el espacio ocupado baje del límite.
+2. 【Importante】 Si finaliza el uso de Pro (por la finalización de la suscripción, la retirada del pase, etc.) y los archivos guardados en Nest superan el límite gratuito, los archivos existentes no se eliminan y pueden seguir visualizándose o exportándose, pero no se podrán añadir archivos nuevos a Nest hasta que el espacio ocupado baje del límite.
 3. 【Importante】 La responsabilidad relativa a los derechos de autor, los derechos de imagen u otros derechos sobre el contenido guardado en Nest corresponde al Usuario que lo guardó. No obstante, esto no se aplica a la parte causada por dolo o culpa de la Compañía (incluidos sus auxiliares y empleados).
 4. 【Importante】 La Compañía no ofrece copias de seguridad de los archivos guardados en Nest. Los archivos de Nest y su lista, el historial de descargas y la información del PIN del bloqueo de Nest se almacenan únicamente en el dispositivo del Usuario, no son accesibles para otras aplicaciones y no se incluyen en las copias de seguridad en la nube ni en la transferencia de datos entre dispositivos (traslado a un dispositivo nuevo). Esto no se aplica a los archivos que el Usuario exporte al almacenamiento público o abra en otra aplicación, ni a los dispositivos cuyas protecciones del sistema operativo se hayan desactivado (por ejemplo, mediante root).
 5. 【Importante】 Si se desinstala la aplicación o se restablece el dispositivo, los archivos de Nest también se eliminan, y si se cambia de dispositivo, los archivos de Nest no se trasladan al nuevo; la Compañía no puede recuperarlos. Exporte con antelación al almacenamiento público los archivos que desee conservar.
@@ -55,17 +56,36 @@ Artículo 5-2 (Uso de Nest)
 
 Artículo 6 (Servicio de pago y pagos)
 1. 【Importante】 El pago de Pro se realiza a través del sistema de facturación de Google Play. Las cuestiones de desistimiento, cancelación y reembolso no previstas en estos Términos ni en las políticas de Google Play se rigen por la legislación aplicable, como la Ley de Protección del Consumidor en el Comercio Electrónico de la República de Corea, y cuando la legislación aplicable sea más favorable para el Usuario, prevalecerá esta.
-2. 【Importante】 (Desistimiento) El Usuario puede desistir de la compra en un plazo de 7 días desde el pago de Pro (o, en caso de renovación automática, desde la fecha del pago de renovación), y la Compañía reembolsará el importe íntegro pagado.
+2. 【Importante】 (Desistimiento) El Usuario puede desistir de la compra en un plazo de 7 días desde el pago de la suscripción Pro, y la Compañía reembolsará el importe íntegro pagado. En el caso del primer pago realizado tras finalizar una prueba gratuita o un periodo de descuento, y en el de las renovaciones automáticas, también puede desistir en un plazo de 7 días desde la fecha de cada uno de esos pagos.
 3. 【Importante】 (Cancelación) El Usuario puede cancelar Pro en cualquier momento.
    a) Cancelación ordinaria: si el Usuario cancela desde el menú de gestión de suscripciones de Google Play, no se realizarán más cargos a partir de la siguiente fecha de facturación y podrá seguir usando Pro hasta el final del periodo ya pagado.
    b) Cancelación anticipada: si el Usuario lo solicita a través del contacto de la Compañía (support@fellowsurvivor.com), la Compañía finalizará su acceso a Pro el día en que confirme la solicitud y le reembolsará el importe pagado menos el importe correspondiente al periodo ya utilizado. Dicho importe se calcula dividiendo el importe pagado entre el número total de días del periodo de facturación y multiplicándolo por el número de días utilizados.
 4. El desistimiento y los reembolsos pueden solicitarse mediante el procedimiento de solicitud de reembolso de Google Play o a través del contacto de la Compañía, y la Compañía tramitará el reembolso a través de Google Play en un plazo de 3 días hábiles desde la recepción de la solicitud.
-5. 【Importante】 La suscripción se renueva automáticamente en cada ciclo de facturación hasta que el Usuario la cancele. Los precios, planes y beneficios de la suscripción se rigen por lo indicado en la pantalla de suscripción de la aplicación. Si la Compañía pretende aumentar el precio de la suscripción, comunicará el nuevo importe y la fecha de aplicación en la forma y con la antelación que exija la legislación aplicable y obtendrá el consentimiento del Usuario; si el Usuario no lo otorga, la suscripción no se renovará al nuevo precio y finalizará al término del periodo de facturación en curso.
-6. Las funciones básicas del Servicio pueden utilizarse con independencia de la suscripción a Pro. No obstante, el Usuario gratuito debe ver un anuncio recompensado hasta el final para descargar videos, y a partir del momento en que termine podrá descargar videos durante 15 minutos (el tiempo restante se pierde si se reinicia el dispositivo). Si la Compañía no puede confirmar el estado de la suscripción (por un error de red, un fallo de conexión con Google Play, etc.), las descargas de video pueden quedar restringidas temporalmente.
+5. 【Importante】 La suscripción se renueva automáticamente en cada ciclo de facturación hasta que el Usuario la cancele. Los precios, planes y beneficios de la suscripción se rigen por lo indicado en la pantalla de suscripción de la aplicación. Si la Compañía pretende aumentar el precio de la suscripción, comunicará el nuevo importe y la fecha de aplicación en la forma y con la antelación que exija la legislación aplicable y obtendrá el consentimiento del Usuario; si el Usuario no lo otorga, la suscripción no se renovará al nuevo precio y finalizará al término del periodo de facturación en curso. No obstante, cuando una prueba gratuita termine y pase a ser de pago, o cuando termine un periodo de descuento y aumente el importe cobrado, la Compañía obtendrá por separado de los Usuarios de la República de Corea, a través de Google Play y dentro de los 30 días anteriores a la conversión o al aumento, su consentimiento sobre la fecha y hora, los importes antes y después del cambio y el método de pago; si el Usuario no lo otorga, no se cobrará el importe convertido o aumentado y la suscripción se cancelará.
+6. Las funciones básicas del Servicio pueden utilizarse con independencia de la suscripción a Pro. No obstante, el Usuario gratuito debe ver un anuncio recompensado hasta el final para descargar videos, y a partir del momento en que termine podrá descargar videos durante 15 minutos (el tiempo restante se pierde si se reinicia el dispositivo). Si la Compañía no puede confirmar el estado de uso de Pro (suscripción o pase), por ejemplo por un error de red o un fallo de conexión con Google Play, las descargas de video pueden quedar restringidas temporalmente.
 
 Artículo 6-2 (Uso por menores)
 1. El Servicio no está dirigido a menores de 14 años.
 2. Si un menor de 19 años paga el Servicio de pago sin el consentimiento de su representante legal, el menor o su representante legal podrán anular el contrato. No obstante, esto no se aplica cuando la legislación aplicable no permita la anulación, como cuando el menor haya utilizado engaños para hacer creer que era mayor de edad.
+
+Artículo 6-3 (Prueba gratuita y descuentos)
+1. La Compañía podrá establecer, a través de Google Play, una prueba gratuita o un periodo de descuento para la suscripción Pro. Los destinatarios (como los Usuarios que se suscriben por primera vez) y la duración se rigen por los criterios establecidos por Google Play, y la duración y el importe aplicables al Usuario se muestran en la pantalla de suscripción y en la pantalla de pago de Google Play.
+2. La prueba gratuita solo puede obtenerse una vez, conforme a los criterios establecidos por Google Play.
+3. Durante la prueba gratuita, el Usuario utiliza las mismas funciones que el Usuario que ha pagado la suscripción Pro.
+4. 【Importante】 Al finalizar la prueba gratuita o el periodo de descuento, se cobrará el importe mostrado en la pantalla de suscripción y, a partir de entonces, la suscripción se renovará automáticamente en cada ciclo de facturación. A los Usuarios de la República de Corea solo se les cobrará si han otorgado su consentimiento conforme a la salvedad del artículo 6, apartado 5.
+5. 【Importante】 Si el Usuario cancela durante la prueba gratuita desde el menú de gestión de suscripciones de Google Play, no se le cobrará y podrá seguir usando Pro hasta el final del periodo de prueba restante. La cancelación durante un periodo de descuento se rige por el artículo 6, apartado 3.
+
+Artículo 6-4 (Pase Pro)
+1. El pase Pro es el derecho a usar Pro sin plazo determinado, que la Compañía proporciona gratuitamente mediante códigos promocionales de Google Play a los destinatarios que la Compañía determine, como los probadores beta. La Compañía no vende el pase Pro.
+2. El pase Pro se aplica a la cuenta de Google con la que se canjeó el código y puede usarse en los dispositivos en los que se haya instalado la aplicación con esa cuenta. No se pierde al desinstalar la aplicación y, si se vuelve a instalar con la misma cuenta, puede usarse mediante [Restaurar compra]. El pase Pro y su código no pueden cederse, venderse ni prestarse a otra cuenta ni a otra persona.
+3. El titular de un pase Pro utiliza las mismas funciones Pro que el Usuario de la suscripción Pro. Si cambian las funciones Pro, los cambios también se le aplican, y si se modifican en perjuicio del Usuario, se le notificará en la aplicación al menos 30 días antes conforme al artículo 4, apartado 4.
+4. 【Importante】 La Compañía podrá retirar el pase Pro en los siguientes casos. En tal caso, si dispone de un medio para contactar con el Usuario, le comunicará previamente el motivo y le dará la oportunidad de presentar alegaciones.
+   a) Cuando una persona que no sea un destinatario determinado por la Compañía haya obtenido el código por medios fraudulentos y lo haya canjeado
+   b) Cuando se haya vendido el código o el pase Pro, o se haya transferido a cambio de una contraprestación
+   c) Cuando se haya infringido el artículo 8, número 5
+   El pase Pro también pierde su efecto cuando Google Play anule el canje conforme a sus propias políticas.
+5. 【Importante】 "Sin plazo determinado" significa que puede usarse sin límite de tiempo mientras la Compañía preste el Servicio. Si la Compañía pone fin al Servicio conforme al artículo 4, apartado 4, el pase Pro también finaliza y, al haberse proporcionado gratuitamente, no se reembolsa.
+6. El pase Pro proporcionado gratuitamente no es objeto de desistimiento ni de reembolso. El Usuario que tenga a la vez un pase Pro y una suscripción Pro puede seguir usando Pro con el pase Pro aunque cancele la suscripción, y el desistimiento, la cancelación y el reembolso de la suscripción se rigen por el artículo 6.
 
 Artículo 7 (Publicidad)
 La Compañía podrá mostrar a los Usuarios gratuitos anuncios de redes publicitarias de terceros (como Google AdMob) para contribuir al funcionamiento del Servicio, y las descargas de video del Usuario gratuito están vinculadas a la visualización de anuncios recompensados conforme al artículo 6, apartado 6. A los Usuarios Pro no se les muestran los anuncios proporcionados por la Compañía (se exceptúan los anuncios incluidos en las propias páginas web que visite el Usuario).
@@ -92,7 +112,7 @@ Artículo 10 (Propiedad intelectual)
 3. El Usuario no podrá reproducir, transmitir, publicar, distribuir, difundir ni utilizar de cualquier otro modo la totalidad o parte del Servicio, ni permitir que un tercero lo haga, sin el consentimiento previo por escrito de la Compañía.
 
 Artículo 11 (Terminación)
-El Usuario puede dejar de utilizar el Servicio en cualquier momento desinstalando la aplicación. La suscripción Pro debe cancelarse por separado conforme al artículo 6, apartado 3.
+El Usuario puede dejar de utilizar el Servicio en cualquier momento desinstalando la aplicación. La suscripción Pro debe cancelarse por separado conforme al artículo 6, apartado 3. El pase Pro no se pierde al desinstalar la aplicación.
 
 Artículo 12 (Ley aplicable y jurisdicción)
 1. 【Importante】 La interpretación de estos Términos y cualquier controversia entre la Compañía y el Usuario se rigen por las leyes de la República de Corea, y cualquier demanda se interpondrá ante el tribunal competente conforme a la Ley de Procedimiento Civil de la República de Corea.
@@ -102,7 +122,7 @@ Artículo 13 (Traducciones)
 Estos Términos se redactaron en coreano y pueden ofrecerse traducidos a otros idiomas. Si una traducción difiere de la versión en coreano, prevalecerá la versión en coreano.
 
 Disposición adicional
-Estos Términos entran en vigor el 14 de noviembre de 2026.
+Estos Términos entran en vigor el 19 de noviembre de 2026.
 
 Información de la empresa
 Nombre: Fellow Survivor Studio
