@@ -1,0 +1,3 @@
+Esta revisão é feita pelos seguintes motivos.
+1. Para oferecer o teste gratuito do Pro e descontos. Define-se como funcionam o pagamento, o consentimento e o cancelamento quando termina um período de teste gratuito ou de desconto e é feito um pagamento.
+2. Para fornecer gratuitamente o passe Pro às pessoas que a Empresa definir, como testadores beta. Define-se onde um passe pode ser usado, quando pode ser revogado e o que acontece com ele se o Serviço for encerrado.
