@@ -420,7 +420,7 @@ def page_html(
       <a class="back-to-top" href="#">↑ {html.escape(labels["top"])}</a>
     </article>
   </main>
-  <footer><a href="{terms_href}">{html.escape(TERMS_LINK[lang])}</a> · <a href="{privacy_href}">{html.escape(labels["privacy_link"])}</a><br>© 2026 Fellow Survivor Studio · Reel Nest</footer>
+  <footer><p class="footer-links"><a href="{terms_href}">{html.escape(TERMS_LINK[lang])}</a><a href="{privacy_href}">{html.escape(labels["privacy_link"])}</a></p>© 2026 Fellow Survivor Studio</footer>
 </body>
 </html>
 '''
@@ -483,7 +483,7 @@ def render_page(
                 link = html.escape(rev_labels["this_page"])
                 if newest in revision_list:
                     target = lang if lang in revision_list[newest] else "ko"
-                    link += (f' · <a href="{relative_href(here, output_path(doc, target, revision=newest))}">'
+                    link += (f'<br><a href="{relative_href(here, output_path(doc, target, revision=newest))}">'
                              f'{html.escape(rev_labels["see_revision"])}</a>')
             else:
                 target = lang if lang in versions[start] else "ko"
@@ -510,7 +510,7 @@ def render_page(
         )
         if revision_items:
             previous_versions += f'<nav class="previous-versions revisions" aria-label="{html.escape(rev_labels["revisions"], quote=True)}"><h2>{html.escape(rev_labels["revisions"])}</h2><ul>{revision_items}</ul></nav>'
-    return page_html(doc, lang, here, title, robots, page_paths, toc, f"Reel Nest · {labels[doc]}",
+    return page_html(doc, lang, here, title, robots, page_paths, toc, "Reel Nest",
                      effective, notice, "".join(body) + previous_versions, period)
 
 
@@ -558,7 +558,7 @@ def render_revision_page(doc: str, lang: str, when: str, pairs: dict[str, tuple[
     page_paths = {code: output_path(doc, code, revision=when) for code in LANGUAGES if code in pairs}
     period = period_text(lang, when, periods(doc)[when]) if doc in DATED_DOCS else ""
     return page_html(doc, lang, here, page_title, "noindex, follow", page_paths, toc,
-                     f"Reel Nest · {labels[doc]} · {rev_labels['revisions']}", effective,
+                     "Reel Nest", effective,
                      notice, comparison + "".join(body), period)
 
 
