@@ -1,0 +1,2 @@
+This revision is made for the following reasons.
+1. To raise the Nest storage limit for free users from 2GB to 3GB (Article 4 and Article 5-2(1)). All other provisions are the same as in the previous Terms. Because this change benefits users, it applies from November 18, 2026, before the effective date.

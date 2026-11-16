@@ -1,0 +1,2 @@
+Esta modificación se realiza por los siguientes motivos.
+1. Para aumentar el límite de almacenamiento de Nest para los Usuarios gratuitos de 2 GB a 3 GB (artículo 4 y artículo 5-2, apartado 1). Las demás disposiciones son las mismas que en los Términos anteriores. Como este cambio beneficia a los usuarios, se aplica desde el 18 de noviembre de 2026, antes de la fecha de entrada en vigor.

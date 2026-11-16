@@ -1,6 +1,6 @@
 Reel Nest Terms of Use
 
-Effective date: November 19, 2026
+Effective date: November 25, 2026
 
 ※ Provisions marked 【Important】 significantly affect your rights and obligations. Please be sure to read them.
 
@@ -27,7 +27,7 @@ Article 4 (Provision and Modification of the Service)
    - Detection and download of media resources within web pages (subject to the restrictions in Article 5; Free Users download each file over up to 2 connections and can run up to 5 downloads at the same time, and further downloads start in turn as earlier ones finish)
    - Storage and management of downloaded files
    - Additional features such as browsing history, download history, and bookmarks
-   - Private in-app storage ("Nest") (Free Users may use up to 2GB; see Article 5-2)
+   - Private in-app storage ("Nest") (Free Users may use up to 3GB; see Article 5-2)
    - Ad-free video downloads, removal of the Nest storage limit, fast downloads (each download split over up to 32 connections), and no limit on simultaneous downloads through Pro (a subscription or a pass)
 2. The Company may modify all or part of the Service for operational or technical reasons, and will announce the content and effective date of such changes in advance.
 3. The Company may release updates to improve the Service, and some features may only be available in the latest version.
@@ -45,7 +45,7 @@ Article 5 (Notes on Using the Download Feature)
 6. 【Important】 The Service cannot identify every technical protection measure, and the fact that content can be downloaded through the Service does not mean that the User has the right to save it. A User who wishes to save content with access restrictions such as a login, a paid pass, or a limited viewing period must first check the terms of the website concerned and whether the rights holder permits it.
 
 Article 5-2 (Use of Nest)
-1. Free Users may keep up to 2GB (1GB = 1,000,000,000 bytes) of files in Nest, and Pro Users may use Nest without a storage limit within the storage available on their device.
+1. Free Users may keep up to 3GB (1GB = 1,000,000,000 bytes) of files in Nest, and Pro Users may use Nest without a storage limit within the storage available on their device.
 2. 【Important】 If Pro use ends (because a subscription ends, a pass is revoked, etc.) while the files kept in Nest exceed the free limit, the existing files are not deleted and can still be viewed or exported, but no new files can be added to Nest until the stored amount falls below the limit.
 3. 【Important】 Liability related to the copyright, portrait rights, or other rights in content kept in Nest lies with the User who kept that content. However, this does not apply to any part caused by the intent or negligence of the Company (including its agents and employees).
 4. 【Important】 The Company does not provide backups of files kept in Nest. Files in Nest and their list, the download history, and the Nest lock PIN information are stored only inside the User's device, cannot be accessed by other apps, and are not included in cloud backups or device-to-device data transfer (moving to a new device). This does not apply to files the User exports to public storage or opens in another app, or to devices whose operating-system protections have been disabled (for example, by rooting).
@@ -122,7 +122,9 @@ Article 13 (Translations)
 These Terms were written in Korean and may be provided in translation. If a translation differs from the Korean version, the Korean version prevails.
 
 Addendum
-These Terms take effect on November 19, 2026.
+1. These Terms take effect on November 25, 2026.
+2. This revision raises the Nest storage limit for free users from 2GB to 3GB (Article 4 and Article 5-2(1)). All other provisions are the same as in the previous Terms.
+3. Because this change benefits users, the Company applies it from November 18, 2026, before the effective date.
 
 Business Information
 Name: Fellow Survivor Studio
